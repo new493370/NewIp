@@ -1,0 +1,17 @@
+accounts.google.com
+b.gg
+core.telegram.org
+date.now
+en.wikipedia.org
+g.td
+google.ml
+google.sn
+mx11.support.stel.com
+mx110.telegram.org
+mx12.support.stel.com
+schema.org
+telegram.org
+this.a.vg
+twitter.com
+www.google.com
+www.gstatic.com
