@@ -79,34 +79,23 @@ def download_sources():
     
     ensure_bank_dir()
     
-    index = load_source_index()
+    total_new = 0
+    total_sources = len(urls)
     
-    if index >= len(urls):
-        index = 0
-        save_source_index(index)
-        clear_all_banks()
+    for idx, url in enumerate(urls):
+        print(f"📥 [{idx + 1}/{total_sources}] {url}")
+        new_ips = fetch_source(url)
+        
+        if new_ips:
+            save_bank(idx, new_ips)
+            print(f"  ✅ {len(new_ips)} آیپی دانلود و ذخیره شد")
+            total_new += len(new_ips)
+        else:
+            print(f"  ⚠️  خطا یا خالی")
     
-    url = urls[index]
-    print(f"📥 [{index + 1}/{len(urls)}] {url}")
-    
-    new_ips = fetch_source(url)
-    
-    if new_ips:
-        save_bank(index, new_ips)
-        print(f"  ✅ {len(new_ips)} آیپی دانلود و ذخیره شد")
-        next_index = index + 1
-        if next_index >= len(urls):
-            next_index = 0
-        save_source_index(next_index)
-        print(f"  📌 NEXT SOURCE: {next_index + 1}/{len(urls)}")
-        return True
-    else:
-        print(f"  ⚠️  خطا یا خالی")
-        next_index = index + 1
-        if next_index >= len(urls):
-            next_index = 0
-        save_source_index(next_index)
-        return False
+    print(f"📊 TOTAL {total_new} IPS DOWNLOADED FROM {total_sources} SOURCES")
+    save_source_index(0)
+    return total_new > 0
 
 def download_loop():
     cfg = load_config()
