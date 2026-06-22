@@ -50,7 +50,23 @@ def exists(path):
 
 
 def should_update_bank():
-    return True
+    bank_file = "output/ip_bank.txt"
+    clean_file = "output/clean_ips.txt"
+
+    if not exists(bank_file) or not exists(clean_file):
+        return True
+
+    try:
+        mtime = os.path.getmtime(bank_file)
+        last_update = datetime.fromtimestamp(mtime)
+        age = datetime.now() - last_update
+        if age > timedelta(hours=24):
+            print(f"BANK AGE: {age.total_seconds()/3600:.1f} HOURS - UPDATING")
+            return True
+        print(f"BANK AGE: {age.total_seconds()/3600:.1f} HOURS - FRESH")
+        return False
+    except:
+        return True
 
 
 def prepare_artifact():
@@ -69,7 +85,9 @@ def prepare_artifact():
         "fingerprint_results.txt",
         "results.txt",
         "domains_raw.txt",
-        "domains.txt"
+        "domains.txt",
+        "live_bank.txt",
+        "scanned_cache.txt"
     ]
     for f in temp_files:
         if os.path.exists(f"output/{f}"):
@@ -82,34 +100,13 @@ def prepare():
     print("COMPACTING CACHE FILES")
     compact_cache_files()
 
-
-def prepare_clean():
-    ensure_output()
-
-    print("COMPACTING CACHE FILES")
-    compact_cache_files()
-    
-    cache_files = [
-        "output/tcp_live.txt",
-        "output/tls_live.txt",
-        "output/https_live.txt",
-        "output/fingerprint_results.txt",
-        "output/results.txt",
-        "output/live_bank.txt",
-        "output/domains_raw.txt",
-        "output/domains.txt"
-    ]
-    for f in cache_files:
-        if os.path.exists(f):
-            os.remove(f)
-            print(f"REMOVED CACHE: {f}")
-
-    print("DOWNLOAD START")
-    download_sources()
-    print("CLEAN START")
-    clean_ips()
-    reset_cursor()
-    print("BANK UPDATED - CURSOR RESET")
+    if should_update_bank():
+        print("DOWNLOAD START")
+        download_sources()
+        print("CLEAN START")
+        clean_ips()
+        reset_cursor()
+        print("BANK UPDATED - CURSOR RESET")
 
 
 def run_tcp():
@@ -310,16 +307,6 @@ def main():
         action="store_true"
     )
 
-    parser.add_argument(
-        "--full",
-        action="store_true"
-    )
-
-    parser.add_argument(
-        "--clean",
-        action="store_true"
-    )
-
     args = parser.parse_args()
 
     load_config()
@@ -328,19 +315,7 @@ def main():
         "ARISTA START"
     )
 
-    if args.full:
-        prepare_clean()
-        run_tcp()
-        run_tls()
-        run_https()
-        run_fp()
-        run_geo()
-        run_finalize()
-
-    elif args.clean:
-        prepare_clean()
-
-    elif args.tcp:
+    if args.tcp:
         run_tcp()
 
     elif args.tls:
