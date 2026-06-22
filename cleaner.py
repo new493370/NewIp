@@ -59,6 +59,18 @@ def load_bank(index):
             return []
     return []
 
+def load_all_banks():
+    all_ips = []
+    cfg = load_config()
+    urls = cfg.get("sources", [])
+    
+    for i in range(len(urls)):
+        ips = load_bank(i)
+        if ips:
+            all_ips.extend(ips)
+    
+    return all_ips
+
 def sample_network(net, count):
     hosts = int(net.num_addresses)
     if hosts <= 2:
@@ -114,14 +126,8 @@ def clean_ips():
     processed = 0
     changed = False
     
-    if os.path.exists(OUTPUT_FILE) and os.path.getsize(OUTPUT_FILE) > 0:
-        with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
-            for line in f:
-                ip = line.strip()
-                if ip:
-                    seen.add(ip)
-        print(f"✅ LOADED {len(seen)} EXISTING CLEAN IPS")
-        return len(seen)
+    if os.path.exists(OUTPUT_FILE):
+        os.remove(OUTPUT_FILE)
     
     index = load_source_index()
     cfg = load_config()
@@ -139,7 +145,11 @@ def clean_ips():
     
     if not ips:
         print(f"❌ NO IPS IN BANK {current_index + 1}")
-        return 0
+        ips = load_all_banks()
+        if ips:
+            print(f"✅ FOUND {len(ips)} IPS FROM ALL BANKS")
+        else:
+            return 0
     
     print(f"📂 SOURCE {current_index + 1}: {len(ips)} آیپی")
     
