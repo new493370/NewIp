@@ -36,5 +36,5 @@
         "cdn.cloudflare.net"
     ],
     "download_interval_hours": 0,
-    "loop_download": true
+    "loop_download": false
 }
