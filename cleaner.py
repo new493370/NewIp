@@ -8,6 +8,7 @@ BANK_DIR = "output/banks"
 OUTPUT_FILE = "output/clean_ips.txt"
 TEMP_FILE = "output/clean_ips.tmp"
 HISTORY_FILE = "output/clean_history.json"
+SOURCE_INDEX_FILE = "output/source_index.txt"
 
 MAX_CIDR_EXPAND = 3000
 LARGE_CIDR_SAMPLE = 3000
@@ -35,6 +36,15 @@ def save_history(history):
 def ensure_output():
     os.makedirs("output", exist_ok=True)
     os.makedirs(BANK_DIR, exist_ok=True)
+
+def load_source_index():
+    if os.path.exists(SOURCE_INDEX_FILE):
+        try:
+            with open(SOURCE_INDEX_FILE, "r", encoding="utf-8") as f:
+                return int(f.read().strip())
+        except:
+            return 0
+    return 0
 
 def get_bank_path(index):
     return os.path.join(BANK_DIR, f"source_{index}.txt")
@@ -113,6 +123,7 @@ def clean_ips():
         print(f"✅ LOADED {len(seen)} EXISTING CLEAN IPS")
         return len(seen)
     
+    index = load_source_index()
     cfg = load_config()
     urls = cfg.get("sources", [])
     
@@ -120,20 +131,21 @@ def clean_ips():
         print("❌ NO SOURCES FOUND")
         return 0
     
-    all_ips = []
-    for index in range(len(urls)):
-        ips = load_bank(index)
-        if ips:
-            all_ips.extend(ips)
-            print(f"  📂 SOURCE {index + 1}: {len(ips)} آیپی")
+    current_index = index - 1
+    if current_index < 0:
+        current_index = len(urls) - 1
     
-    if not all_ips:
-        print("❌ NO IPS IN BANKS")
+    ips = load_bank(current_index)
+    
+    if not ips:
+        print(f"❌ NO IPS IN BANK {current_index + 1}")
         return 0
+    
+    print(f"📂 SOURCE {current_index + 1}: {len(ips)} آیپی")
     
     try:
         with open(TEMP_FILE, "w", encoding="utf-8") as dst:
-            for ip in all_ips:
+            for ip in ips:
                 processed += 1
                 total += process_line(ip, dst, seen)
                 if processed % 10000 == 0:
