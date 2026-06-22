@@ -34,7 +34,7 @@ from cache import (
     compact_cache_files
 )
 
-from livebank import append_live
+from livebank import append_live, ensure_output as ensure_live_output
 
 RESULT_FILE = "output/results.txt"
 TCP_BATCH_WRITE_LIMIT = 100
@@ -232,6 +232,7 @@ def tcp_scan(
     input_file
 ):
     ensure_output()
+    ensure_live_output()
 
     cfg = load_config()
 
@@ -260,6 +261,7 @@ def tcp_scan(
     total_live = 0
     total_batch = 0
     stage_buffer = []
+    live_bank_created = False
 
     for batch in read_batches(
         input_file,
@@ -338,6 +340,7 @@ def tcp_scan(
                 append_live(stage_buffer)
                 total_live += len(stage_buffer)
                 stage_buffer = []
+                live_bank_created = True
 
         save_cache(
             cache
@@ -354,8 +357,9 @@ def tcp_scan(
         append_live(stage_buffer)
         total_live += len(stage_buffer)
         stage_buffer = []
+        live_bank_created = True
 
-    if total_live == 0:
+    if not live_bank_created:
         append_live([])
 
     print(
@@ -427,6 +431,7 @@ def tls_worker(
 
 def tls_scan():
     ensure_output()
+    ensure_live_output()
 
     cfg = load_config()
 
@@ -444,6 +449,7 @@ def tls_scan():
 
     tls_live = []
     buffer = []
+    live_bank_created = False
 
     with ThreadPoolExecutor(
         max_workers=threads
@@ -465,7 +471,9 @@ def tls_scan():
     if tls_live:
         append_tls_live(tls_live)
         append_live(tls_live)
-    else:
+        live_bank_created = True
+
+    if not live_bank_created:
         append_live([])
 
     print(
@@ -544,6 +552,7 @@ async def https_worker_async(
 
 def https_scan():
     ensure_output()
+    ensure_live_output()
 
     cfg = load_config()
 
@@ -566,9 +575,10 @@ def https_scan():
 
     https_live = []
     buffer = []
+    live_bank_created = False
 
     async def run_https_scan():
-        nonlocal https_live, buffer
+        nonlocal https_live, buffer, live_bank_created
 
         batch_size = 50
 
@@ -626,7 +636,9 @@ def https_scan():
 
     if https_live:
         append_https_live(https_live)
-    else:
+        live_bank_created = True
+
+    if not live_bank_created:
         append_live([])
 
     print(
@@ -675,6 +687,7 @@ def fp_worker(
 
 def fingerprint_scan():
     ensure_output()
+    ensure_live_output()
 
     cfg = load_config()
 
@@ -692,6 +705,7 @@ def fingerprint_scan():
 
     fp_results = []
     buffer = []
+    live_bank_created = False
 
     with ThreadPoolExecutor(
         max_workers=threads
@@ -712,7 +726,9 @@ def fingerprint_scan():
 
     if fp_results:
         append_fp(fp_results)
-    else:
+        live_bank_created = True
+
+    if not live_bank_created:
         append_live([])
 
     print(
