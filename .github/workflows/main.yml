@@ -62,10 +62,8 @@ jobs:
       - name: Prepare Bank
         run: |
           mkdir -p output
-          if [ ! -s output/ip_bank.txt ]; then
-            python downloader.py
-          fi
-          if [ ! -s output/clean_ips.txt ]; then
+          python downloader.py
+          if [ -s output/ip_bank.txt ]; then
             python cleaner.py
           fi
       - name: Compact Cache
