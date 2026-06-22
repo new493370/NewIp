@@ -197,7 +197,7 @@ jobs:
         run: python main.py --https
       - name: Clean HTTPS Files
         run: |
-          rm -f output/tcp_live.txt output/tls_live.txt
+          rm -f output/tcp_live.txt
           rm -f output/fingerprint_results.txt output/results.txt
           rm -f output/domains_raw.txt output/domains.txt output/live_bank.txt
       - name: Save HTTPS State
@@ -209,6 +209,7 @@ jobs:
             output/clean_ips.txt
             output/scan_cursor.txt
             output/current_part.txt
+            output/tls_live.txt
             output/https_live.txt
             output/https_meta.json
             output/scanned_cache.txt
@@ -240,7 +241,7 @@ jobs:
         run: python main.py --fp
       - name: Clean Fingerprint Files
         run: |
-          rm -f output/tcp_live.txt output/tls_live.txt output/https_live.txt
+          rm -f output/tcp_live.txt output/https_live.txt
           rm -f output/results.txt
           rm -f output/domains_raw.txt output/domains.txt output/live_bank.txt
       - name: Save Fingerprint State
@@ -252,6 +253,7 @@ jobs:
             output/clean_ips.txt
             output/scan_cursor.txt
             output/current_part.txt
+            output/tls_live.txt
             output/fingerprint_results.txt
             output/https_meta.json
             output/scanned_cache.txt
@@ -283,7 +285,7 @@ jobs:
         run: python main.py --geo
       - name: Clean GEO Files
         run: |
-          rm -f output/tcp_live.txt output/tls_live.txt output/https_live.txt
+          rm -f output/tcp_live.txt output/https_live.txt
           rm -f output/fingerprint_results.txt
           rm -f output/domains_raw.txt output/domains.txt output/live_bank.txt
       - name: Save GEO State
@@ -295,6 +297,7 @@ jobs:
             output/clean_ips.txt
             output/scan_cursor.txt
             output/current_part.txt
+            output/tls_live.txt
             output/results.txt
             output/https_meta.json
             output/scanned_cache.txt
@@ -326,7 +329,7 @@ jobs:
         run: python main.py --finalize
       - name: Clean Final Files
         run: |
-          rm -f output/tcp_live.txt output/tls_live.txt output/https_live.txt
+          rm -f output/tcp_live.txt output/https_live.txt
           rm -f output/fingerprint_results.txt output/results.txt
           rm -f output/domains_raw.txt output/domains.txt output/live_bank.txt
           rm -f output/scanned_cache.txt
@@ -339,6 +342,7 @@ jobs:
             output/clean_ips.txt
             output/scan_cursor.txt
             output/current_part.txt
+            output/tls_live.txt
             output/geo_cache.json
             output/best_ips.txt
             output/domains.txt
