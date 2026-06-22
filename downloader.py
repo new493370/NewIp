@@ -38,45 +38,28 @@ def download_sources():
     history = load_history()
     all_ips = set()
     
-    download_interval_hours = cfg.get("download_interval_hours", 24)
-    
-    if os.path.exists(OUTPUT_FILE):
-        with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
-            existing_ips = set(line.strip() for line in f if line.strip())
-        all_ips.update(existing_ips)
-    
     now = datetime.now()
     downloaded = False
     
     for url in cfg.get("sources", []):
-        should_download = True
-        
-        if url in history:
-            last_download = datetime.fromisoformat(history[url])
-            age = now - last_download
-            if age < timedelta(hours=download_interval_hours):
-                should_download = False
-                print(f"⏭️  {url} - {age.total_seconds()/3600:.1f}h پیش (نیاز نیست)")
-        
-        if should_download:
-            print(f"📥 {url}")
-            new_ips = fetch_source(url)
-            if new_ips:
-                count_before = len(all_ips)
-                all_ips.update(new_ips)
-                count_after = len(all_ips)
-                history[url] = now.isoformat()
-                downloaded = True
-                print(f"  ✅ {count_after - count_before} آیپی جدید (مجموع: {count_after})")
-            else:
-                print(f"  ⚠️  خطا یا خالی")
+        print(f"📥 {url}")
+        new_ips = fetch_source(url)
+        if new_ips:
+            count_before = len(all_ips)
+            all_ips.update(new_ips)
+            count_after = len(all_ips)
+            history[url] = now.isoformat()
+            downloaded = True
+            print(f"  ✅ {count_after - count_before} آیپی جدید (مجموع: {count_after})")
+        else:
+            print(f"  ⚠️  خطا یا خالی")
     
     if downloaded:
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             f.write("\n".join(sorted(all_ips)))
         print(f"\n💾 ذخیره شد: {len(all_ips)} آیپی")
     else:
-        print(f"\nℹ️  بدون تغییر - {len(all_ips)} آیپی موجود")
+        print(f"\nℹ️  بدون آیپی جدید")
     
     save_history(history)
     return downloaded
