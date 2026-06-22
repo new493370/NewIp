@@ -35,7 +35,6 @@ def fetch_source(url):
 
 def download_sources():
     cfg = load_config()
-    history = load_history()
     all_ips = set()
     
     now = datetime.now()
@@ -48,7 +47,6 @@ def download_sources():
             count_before = len(all_ips)
             all_ips.update(new_ips)
             count_after = len(all_ips)
-            history[url] = now.isoformat()
             downloaded = True
             print(f"  ✅ {count_after - count_before} آیپی جدید (مجموع: {count_after})")
         else:
@@ -61,7 +59,6 @@ def download_sources():
     else:
         print(f"\nℹ️  بدون آیپی جدید")
     
-    save_history(history)
     return downloaded
 
 def download_loop():
