@@ -346,6 +346,7 @@ jobs:
             output/geo_cache.json
             output/best_ips.txt
             output/domains.txt
+            output/live_bank.txt
           overwrite: true
           retention-days: 3
       - name: Commit Final Output
@@ -357,6 +358,7 @@ jobs:
           git add output/best_ips.txt output/scan_cursor.txt 2>/dev/null || true
           git add output/current_part.txt output/geo_cache.json 2>/dev/null || true
           git add output/domains.txt 2>/dev/null || true
+          git add output/live_bank.txt 2>/dev/null || true
 
           if [ -f output/live_bank.txt ] && [ -f output/ip_bank.txt ]; then
             cat output/live_bank.txt >> output/ip_bank.txt
