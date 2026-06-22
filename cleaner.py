@@ -10,8 +10,9 @@ TEMP_FILE = "output/clean_ips.tmp"
 HISTORY_FILE = "output/clean_history.json"
 SOURCE_INDEX_FILE = "output/source_index.txt"
 
-MAX_CIDR_EXPAND = 3000
-LARGE_CIDR_SAMPLE = 3000
+MAX_CIDR_EXPAND = 0
+LARGE_CIDR_SAMPLE = 0
+
 
 def load_config():
     try:
@@ -19,6 +20,7 @@ def load_config():
             return json.load(f)
     except:
         return {}
+
 
 def load_history():
     if os.path.exists(HISTORY_FILE):
@@ -29,13 +31,16 @@ def load_history():
             return {}
     return {}
 
+
 def save_history(history):
     with open(HISTORY_FILE, "w", encoding="utf-8") as f:
         json.dump(history, f, indent=2)
 
+
 def ensure_output():
     os.makedirs("output", exist_ok=True)
     os.makedirs(BANK_DIR, exist_ok=True)
+
 
 def load_source_index():
     if os.path.exists(SOURCE_INDEX_FILE):
@@ -46,8 +51,10 @@ def load_source_index():
             return 0
     return 0
 
+
 def get_bank_path(index):
     return os.path.join(BANK_DIR, f"source_{index}.txt")
+
 
 def load_bank(index):
     path = get_bank_path(index)
@@ -58,6 +65,7 @@ def load_bank(index):
         except:
             return []
     return []
+
 
 def load_all_banks():
     all_ips = []
@@ -71,51 +79,37 @@ def load_all_banks():
     
     return all_ips
 
-def sample_network(net, count):
-    hosts = int(net.num_addresses)
-    if hosts <= 2:
-        return []
-    usable = hosts - 2
-    count = min(count, usable)
-    picked = set()
-    while len(picked) < count:
-        idx = random.randint(1, usable)
-        picked.add(str(net.network_address + idx))
-    return picked
 
-def write_ip(fh, ip, seen):
+def write_ip(fh, ip, seen, count):
     ip = str(ip).strip()
     if not ip:
-        return 0
+        return count
     if ip in seen:
-        return 0
+        return count
     seen.add(ip)
     fh.write(ip + "\n")
-    return 1
+    count += 1
+    if count % 100000 == 0:
+        print(f"  PROCESSED {count} IPS")
+    return count
 
-def process_line(line, fh, seen):
+
+def process_line(line, fh, seen, count):
     line = line.strip()
     if not line:
-        return 0
+        return count
     try:
         if "/" in line:
             net = ipaddress.ip_network(line, strict=False)
-            if net.num_addresses <= MAX_CIDR_EXPAND:
-                count = 0
-                for ip in net.hosts():
-                    count += write_ip(fh, ip, seen)
-                return count
-            else:
-                sampled = sample_network(net, LARGE_CIDR_SAMPLE)
-                count = 0
-                for ip in sampled:
-                    count += write_ip(fh, ip, seen)
-                return count
+            for ip in net.hosts():
+                count = write_ip(fh, ip, seen, count)
+            return count
         else:
             ipaddress.ip_address(line)
-            return write_ip(fh, line, seen)
+            return write_ip(fh, line, seen, count)
     except:
-        return 0
+        return count
+
 
 def clean_ips():
     ensure_output()
@@ -139,12 +133,15 @@ def clean_ips():
     
     try:
         with open(TEMP_FILE, "w", encoding="utf-8") as dst:
+            count = 0
             for ip in all_ips:
                 processed += 1
-                total += process_line(ip, dst, seen)
-                if processed % 10000 == 0:
-                    print(f"LINES={processed} IPS={total}")
-    except:
+                count = process_line(ip, dst, seen, count)
+                if processed % 1000 == 0:
+                    print(f"LINES={processed} IPS={count}")
+            total = count
+    except Exception as e:
+        print(f"ERROR: {e}")
         return 0
     
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
@@ -166,6 +163,7 @@ def clean_ips():
     
     print(f"CLEAN IPS={total}")
     return total
+
 
 if __name__ == "__main__":
     clean_ips()
