@@ -50,23 +50,7 @@ def exists(path):
 
 
 def should_update_bank():
-    bank_file = "output/ip_bank.txt"
-    clean_file = "output/clean_ips.txt"
-
-    if not exists(bank_file) or not exists(clean_file):
-        return True
-
-    try:
-        mtime = os.path.getmtime(bank_file)
-        last_update = datetime.fromtimestamp(mtime)
-        age = datetime.now() - last_update
-        if age > timedelta(hours=24):
-            print(f"BANK AGE: {age.total_seconds()/3600:.1f} HOURS - UPDATING")
-            return True
-        print(f"BANK AGE: {age.total_seconds()/3600:.1f} HOURS - FRESH")
-        return False
-    except:
-        return True
+    return True
 
 
 def prepare_artifact():
@@ -100,13 +84,28 @@ def prepare():
     print("COMPACTING CACHE FILES")
     compact_cache_files()
 
-    if should_update_bank():
-        print("DOWNLOAD START")
-        download_sources()
-        print("CLEAN START")
-        clean_ips()
-        reset_cursor()
-        print("BANK UPDATED - CURSOR RESET")
+    cache_files = [
+        "output/scanned_cache.txt",
+        "output/tcp_live.txt",
+        "output/tls_live.txt",
+        "output/https_live.txt",
+        "output/fingerprint_results.txt",
+        "output/results.txt",
+        "output/live_bank.txt",
+        "output/domains_raw.txt",
+        "output/domains.txt"
+    ]
+    for f in cache_files:
+        if os.path.exists(f):
+            os.remove(f)
+            print(f"REMOVED CACHE: {f}")
+
+    print("DOWNLOAD START")
+    download_sources()
+    print("CLEAN START")
+    clean_ips()
+    reset_cursor()
+    print("BANK UPDATED - CURSOR RESET")
 
 
 def run_tcp():
