@@ -306,6 +306,11 @@ def main():
         action="store_true"
     )
 
+    parser.add_argument(
+        "--full",
+        action="store_true"
+    )
+
     args = parser.parse_args()
 
     load_config()
@@ -314,7 +319,15 @@ def main():
         "ARISTA START"
     )
 
-    if args.tcp:
+    if args.full:
+        run_tcp()
+        run_tls()
+        run_https()
+        run_fp()
+        run_geo()
+        run_finalize()
+
+    elif args.tcp:
         run_tcp()
 
     elif args.tls:
