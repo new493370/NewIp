@@ -332,7 +332,8 @@ def tcp_scan(
         if stage_live:
             stage_buffer.extend(stage_live)
 
-            if len(stage_buffer) >= TCP_BATCH_WRITE_LIMIT:
+        if len(stage_buffer) >= TCP_BATCH_WRITE_LIMIT:
+            if stage_buffer:
                 append_tcp_live(stage_buffer)
                 append_live(stage_buffer)
                 total_live += len(stage_buffer)
@@ -353,6 +354,9 @@ def tcp_scan(
         append_live(stage_buffer)
         total_live += len(stage_buffer)
         stage_buffer = []
+
+    if total_live == 0:
+        append_live([])
 
     print(
         f"TCP COMPLETE={total_live}"
@@ -458,13 +462,11 @@ def tls_scan():
     if buffer:
         tls_live.extend(buffer)
 
-    append_tls_live(
-        tls_live
-    )
-
-    append_live(
-        tls_live
-    )
+    if tls_live:
+        append_tls_live(tls_live)
+        append_live(tls_live)
+    else:
+        append_live([])
 
     print(
         f"TLS LIVE={len(tls_live)}"
@@ -559,6 +561,7 @@ def https_scan():
 
     if not tls_items:
         print("NO TLS ITEMS TO SCAN")
+        append_live([])
         return
 
     https_live = []
@@ -621,9 +624,10 @@ def https_scan():
     if buffer:
         https_live.extend(buffer)
 
-    append_https_live(
-        https_live
-    )
+    if https_live:
+        append_https_live(https_live)
+    else:
+        append_live([])
 
     print(
         f"HTTPS={len(https_live)}"
@@ -706,9 +710,10 @@ def fingerprint_scan():
     if buffer:
         fp_results.extend(buffer)
 
-    append_fp(
-        fp_results
-    )
+    if fp_results:
+        append_fp(fp_results)
+    else:
+        append_live([])
 
     print(
         f"FP DONE={len(fp_results)}"
