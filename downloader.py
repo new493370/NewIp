@@ -4,7 +4,7 @@ import os
 import time
 from datetime import datetime
 
-OUTPUT_FILE = "output/ip_bank.txt"
+BANK_DIR = "output/banks"
 SOURCE_INDEX_FILE = "output/source_index.txt"
 
 def load_config():
@@ -24,6 +24,33 @@ def save_source_index(index):
     with open(SOURCE_INDEX_FILE, "w", encoding="utf-8") as f:
         f.write(str(index))
 
+def ensure_bank_dir():
+    os.makedirs(BANK_DIR, exist_ok=True)
+
+def get_bank_path(index):
+    return os.path.join(BANK_DIR, f"source_{index}.txt")
+
+def load_bank(index):
+    path = get_bank_path(index)
+    if os.path.exists(path) and os.path.getsize(path) > 0:
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return [line.strip() for line in f if line.strip()]
+        except:
+            return []
+    return []
+
+def save_bank(index, ips):
+    ensure_bank_dir()
+    path = get_bank_path(index)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("\n".join(sorted(ips)))
+
+def clear_bank(index):
+    path = get_bank_path(index)
+    if os.path.exists(path):
+        os.remove(path)
+
 def fetch_source(url):
     try:
         r = requests.get(url, timeout=30)
@@ -41,6 +68,8 @@ def download_sources():
         print("❌ NO SOURCES FOUND")
         return False
     
+    ensure_bank_dir()
+    
     index = load_source_index()
     
     if index >= len(urls):
@@ -50,13 +79,22 @@ def download_sources():
     url = urls[index]
     print(f"📥 [{index + 1}/{len(urls)}] {url}")
     
+    existing_ips = load_bank(index)
+    
+    if existing_ips:
+        print(f"  ✅ {len(existing_ips)} آیپی از بانک موجود استفاده شد")
+        next_index = index + 1
+        if next_index >= len(urls):
+            next_index = 0
+        save_source_index(next_index)
+        print(f"  📌 NEXT SOURCE: {next_index + 1}/{len(urls)}")
+        return True
+    
     new_ips = fetch_source(url)
     
     if new_ips:
-        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-            f.write("\n".join(sorted(new_ips)))
-        print(f"  ✅ {len(new_ips)} آیپی دانلود شد")
-        
+        save_bank(index, new_ips)
+        print(f"  ✅ {len(new_ips)} آیپی دانلود و ذخیره شد")
         next_index = index + 1
         if next_index >= len(urls):
             next_index = 0
@@ -64,7 +102,8 @@ def download_sources():
         print(f"  📌 NEXT SOURCE: {next_index + 1}/{len(urls)}")
         return True
     else:
-        print(f"  ⚠️  خطا یا خالی")
+        print(f"  ⚠️  خطا یا خالی - بانک خالی شد")
+        clear_bank(index)
         next_index = index + 1
         if next_index >= len(urls):
             next_index = 0
