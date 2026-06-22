@@ -70,9 +70,7 @@ def prepare_artifact():
         "fingerprint_results.txt",
         "results.txt",
         "domains_raw.txt",
-        "domains.txt",
-        "live_bank.txt",
-        "scanned_cache.txt"
+        "domains.txt"
     ]
     for f in temp_files:
         if os.path.exists(f"output/{f}"):
@@ -93,7 +91,6 @@ def prepare_clean():
     compact_cache_files()
     
     cache_files = [
-        "output/scanned_cache.txt",
         "output/tcp_live.txt",
         "output/tls_live.txt",
         "output/https_live.txt",
