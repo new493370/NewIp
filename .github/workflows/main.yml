@@ -38,7 +38,7 @@ jobs:
     needs: check-and-run
     if: needs.check-and-run.outputs.should_run == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -62,8 +62,12 @@ jobs:
       - name: Prepare Bank
         run: |
           mkdir -p output
-          python downloader.py
-          python cleaner.py
+          if [ ! -s output/ip_bank.txt ]; then
+            python downloader.py
+          fi
+          if [ ! -s output/clean_ips.txt ]; then
+            python cleaner.py
+          fi
       - name: Compact Cache
         run: |
           python -c "from cache import compact_cache_files; compact_cache_files()"
