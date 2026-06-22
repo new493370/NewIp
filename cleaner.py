@@ -90,12 +90,18 @@ def clean_ips():
     processed = 0
     changed = False
     
-    if os.path.exists(OUTPUT_FILE):
+    if os.path.exists(OUTPUT_FILE) and os.path.getsize(OUTPUT_FILE) > 0:
         with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
             for line in f:
                 ip = line.strip()
                 if ip:
                     seen.add(ip)
+        print(f"✅ LOADED {len(seen)} EXISTING CLEAN IPS")
+        return len(seen)
+    
+    if not os.path.exists(INPUT_FILE) or os.path.getsize(INPUT_FILE) == 0:
+        print("❌ INPUT FILE EMPTY OR NOT FOUND")
+        return 0
     
     try:
         with open(INPUT_FILE, "r", encoding="utf-8") as src, open(TEMP_FILE, "w", encoding="utf-8") as dst:
@@ -105,7 +111,7 @@ def clean_ips():
                 if processed % 10000 == 0:
                     print(f"LINES={processed} IPS={total}")
     except:
-        return
+        return 0
     
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         for ip in sorted(seen):
