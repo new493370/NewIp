@@ -38,7 +38,7 @@ jobs:
     needs: check-and-run
     if: needs.check-and-run.outputs.should_run == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -62,8 +62,10 @@ jobs:
       - name: Prepare Bank
         run: |
           mkdir -p output
-          python downloader.py
-          if [ -s output/ip_bank.txt ]; then
+          if [ ! -s output/ip_bank.txt ]; then
+            python downloader.py
+          fi
+          if [ ! -s output/clean_ips.txt ]; then
             python cleaner.py
           fi
       - name: Compact Cache
@@ -74,7 +76,7 @@ jobs:
           rm -f output/tcp_live.txt output/tls_live.txt output/https_live.txt
           rm -f output/fingerprint_results.txt output/results.txt
           rm -f output/domains_raw.txt output/domains.txt output/live_bank.txt
-          # scanned_cache.txt حذف نمی‌شود!
+          rm -f output/scanned_cache.txt
       - name: Save Rolling State
         uses: actions/upload-artifact@v4
         with:
@@ -330,7 +332,7 @@ jobs:
           rm -f output/tcp_live.txt output/https_live.txt
           rm -f output/fingerprint_results.txt output/results.txt
           rm -f output/domains_raw.txt output/domains.txt output/live_bank.txt
-          # scanned_cache.txt حذف نمی‌شود!
+          rm -f output/scanned_cache.txt
       - name: Save Final State
         uses: actions/upload-artifact@v4
         with:
