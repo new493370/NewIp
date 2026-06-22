@@ -21,6 +21,7 @@ from validator import validate_domains
 from ranker import rank_results
 
 from cache import optimize_stage_files, compact_cache_files
+from livebank import dedupe_live_bank
 
 OUTPUT_DIR = "output"
 
@@ -266,6 +267,12 @@ def run_finalize():
     )
 
     rank_results()
+
+    print(
+        "LIVE BANK DEDUPE"
+    )
+
+    dedupe_live_bank()
 
     print(
         "FINAL DONE"
