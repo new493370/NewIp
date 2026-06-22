@@ -1,3 +1,4 @@
+# main.py
 import os
 import argparse
 import json
@@ -84,6 +85,13 @@ def prepare():
     print("COMPACTING CACHE FILES")
     compact_cache_files()
 
+
+def prepare_clean():
+    ensure_output()
+
+    print("COMPACTING CACHE FILES")
+    compact_cache_files()
+    
     cache_files = [
         "output/scanned_cache.txt",
         "output/tcp_live.txt",
@@ -311,6 +319,11 @@ def main():
         action="store_true"
     )
 
+    parser.add_argument(
+        "--clean",
+        action="store_true"
+    )
+
     args = parser.parse_args()
 
     load_config()
@@ -320,12 +333,16 @@ def main():
     )
 
     if args.full:
+        prepare_clean()
         run_tcp()
         run_tls()
         run_https()
         run_fp()
         run_geo()
         run_finalize()
+
+    elif args.clean:
+        prepare_clean()
 
     elif args.tcp:
         run_tcp()
