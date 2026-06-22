@@ -128,6 +128,36 @@ def load_https():
 
     return data
 
+def is_complete(item):
+    required_fields = ["ip", "port", "latency", "cdn", "country", "provider", "alpn"]
+    for field in required_fields:
+        if field not in item:
+            return False
+        if field in ["ip", "cdn", "country", "provider", "alpn"]:
+            if not item[field] or item[field] == "?" or item[field] == "unknown":
+                return False
+        if field == "port":
+            if item[field] is None or item[field] <= 0:
+                return False
+        if field == "latency":
+            if item[field] is None or item[field] >= 9999:
+                return False
+
+    if "https" not in item or not item["https"]:
+        return False
+
+    https = item["https"]
+    if "ttfb" not in https or https["ttfb"] is None or https["ttfb"] == "-" or https["ttfb"] < 0:
+        return False
+    if "proto" not in https or not https["proto"] or https["proto"] == "-":
+        return False
+    if "reliability" not in https or https["reliability"] is None or https["reliability"] == "-" or https["reliability"] <= 0:
+        return False
+    if "status" not in https or https["status"] is None:
+        return False
+
+    return True
+
 def parse_line(line, latency_map, alpn_map):
     line = line.strip()
     if not line:
@@ -156,10 +186,12 @@ def parse_line(line, latency_map, alpn_map):
     except (ValueError, IndexError):
         return None
 
-    if latency == 9999 or reliability == 0 or country == "?" or provider == "?" or ttfb == 9999:
-        return None
+    if country == "None" or not country:
+        country = "?"
+    if provider == "None" or not provider:
+        provider = "?"
 
-    return {
+    item = {
         "ip": ip,
         "port": port,
         "latency": latency,
@@ -176,6 +208,11 @@ def parse_line(line, latency_map, alpn_map):
             "ws": ws
         }
     }
+
+    if not is_complete(item):
+        return None
+
+    return item
 
 def latency_score(latency):
     if latency <= 150:
