@@ -35,6 +35,37 @@ STABLE_PORT_BONUS = 1
 
 MAX_OUTPUT_IPS = 4000
 
+def detect_cdn_from_provider(provider):
+    if not provider or provider == "?":
+        return "unknown"
+    
+    provider_lower = str(provider).lower()
+    
+    if "akamai" in provider_lower:
+        return "akamai"
+    if "cloudflare" in provider_lower:
+        return "cloudflare"
+    if "fastly" in provider_lower:
+        return "fastly"
+    if "vercel" in provider_lower:
+        return "vercel"
+    if "amazon" in provider_lower or "cloudfront" in provider_lower:
+        return "cloudfront"
+    if "microsoft" in provider_lower or "azure" in provider_lower:
+        return "azure"
+    if "bunny" in provider_lower:
+        return "bunny"
+    if "gcore" in provider_lower:
+        return "gcore"
+    if "digitalocean" in provider_lower:
+        return "digitalocean"
+    if "hetzner" in provider_lower:
+        return "hetzner"
+    if "cogent" in provider_lower:
+        return "cogent"
+    
+    return "unknown"
+
 def load_extra_data():
     latency_map = {}
     alpn_map = {}
@@ -179,6 +210,9 @@ def parse_line(line, latency_map, alpn_map):
 
     except (ValueError, IndexError):
         return None
+
+    if cdn == "unknown" and provider and provider != "?":
+        cdn = detect_cdn_from_provider(provider)
 
     return {
         "ip": ip,
