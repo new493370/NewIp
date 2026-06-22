@@ -51,6 +51,15 @@ def clear_bank(index):
     if os.path.exists(path):
         os.remove(path)
 
+def clear_all_banks():
+    if not os.path.exists(BANK_DIR):
+        return
+    for filename in os.listdir(BANK_DIR):
+        if filename.startswith("source_") and filename.endswith(".txt"):
+            path = os.path.join(BANK_DIR, filename)
+            os.remove(path)
+    print("🗑️  ALL BANKS CLEARED - NEW CYCLE STARTED")
+
 def fetch_source(url):
     try:
         r = requests.get(url, timeout=30)
@@ -75,6 +84,7 @@ def download_sources():
     if index >= len(urls):
         index = 0
         save_source_index(index)
+        clear_all_banks()
     
     url = urls[index]
     print(f"📥 [{index + 1}/{len(urls)}] {url}")
