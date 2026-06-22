@@ -4,7 +4,7 @@ import os
 import random
 from datetime import datetime
 
-INPUT_FILE = "output/ip_bank.txt"
+BANK_DIR = "output/banks"
 OUTPUT_FILE = "output/clean_ips.txt"
 TEMP_FILE = "output/clean_ips.tmp"
 HISTORY_FILE = "output/clean_history.json"
@@ -34,6 +34,20 @@ def save_history(history):
 
 def ensure_output():
     os.makedirs("output", exist_ok=True)
+    os.makedirs(BANK_DIR, exist_ok=True)
+
+def get_bank_path(index):
+    return os.path.join(BANK_DIR, f"source_{index}.txt")
+
+def load_bank(index):
+    path = get_bank_path(index)
+    if os.path.exists(path) and os.path.getsize(path) > 0:
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return [line.strip() for line in f if line.strip()]
+        except:
+            return []
+    return []
 
 def sample_network(net, count):
     hosts = int(net.num_addresses)
@@ -99,15 +113,29 @@ def clean_ips():
         print(f"✅ LOADED {len(seen)} EXISTING CLEAN IPS")
         return len(seen)
     
-    if not os.path.exists(INPUT_FILE) or os.path.getsize(INPUT_FILE) == 0:
-        print("❌ INPUT FILE EMPTY OR NOT FOUND")
+    cfg = load_config()
+    urls = cfg.get("sources", [])
+    
+    if not urls:
+        print("❌ NO SOURCES FOUND")
+        return 0
+    
+    all_ips = []
+    for index in range(len(urls)):
+        ips = load_bank(index)
+        if ips:
+            all_ips.extend(ips)
+            print(f"  📂 SOURCE {index + 1}: {len(ips)} آیپی")
+    
+    if not all_ips:
+        print("❌ NO IPS IN BANKS")
         return 0
     
     try:
-        with open(INPUT_FILE, "r", encoding="utf-8") as src, open(TEMP_FILE, "w", encoding="utf-8") as dst:
-            for line in src:
+        with open(TEMP_FILE, "w", encoding="utf-8") as dst:
+            for ip in all_ips:
                 processed += 1
-                total += process_line(line, dst, seen)
+                total += process_line(ip, dst, seen)
                 if processed % 10000 == 0:
                     print(f"LINES={processed} IPS={total}")
     except:
