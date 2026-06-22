@@ -79,16 +79,7 @@ def download_sources():
     url = urls[index]
     print(f"📥 [{index + 1}/{len(urls)}] {url}")
     
-    existing_ips = load_bank(index)
-    
-    if existing_ips:
-        print(f"  ✅ {len(existing_ips)} آیپی از بانک موجود استفاده شد")
-        next_index = index + 1
-        if next_index >= len(urls):
-            next_index = 0
-        save_source_index(next_index)
-        print(f"  📌 NEXT SOURCE: {next_index + 1}/{len(urls)}")
-        return True
+    clear_bank(index)
     
     new_ips = fetch_source(url)
     
@@ -103,7 +94,6 @@ def download_sources():
         return True
     else:
         print(f"  ⚠️  خطا یا خالی - بانک خالی شد")
-        clear_bank(index)
         next_index = index + 1
         if next_index >= len(urls):
             next_index = 0
