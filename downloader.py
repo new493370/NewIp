@@ -127,23 +127,8 @@ def download_loop():
         download_sources()
         return
     
-    print("🔄 چرخه دانلود فعال شد")
-    
-    while True:
-        print("\n" + "="*50)
-        print(f"📅 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-        print("🔄 شروع چرخه جدید دانلود")
-        print("="*50)
-        
-        download_sources()
-        
-        interval = cfg.get("download_interval_hours", 24)
-        if interval > 0:
-            print(f"\n⏳ انتظار {interval} ساعت تا چرخه بعدی...")
-            time.sleep(interval * 3600)
-        else:
-            print("\n⏳ انتظار 1 ساعت تا چرخه بعدی...")
-            time.sleep(3600)
+    print("🔄 چرخه دانلود فعال شد (یک بار اجرا در هر مرحله)")
+    download_sources()
 
 if __name__ == "__main__":
     download_loop()
