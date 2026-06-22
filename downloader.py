@@ -81,20 +81,30 @@ def download_sources():
     
     total_new = 0
     total_sources = len(urls)
+    current_index = load_source_index()
     
-    for idx, url in enumerate(urls):
-        print(f"📥 [{idx + 1}/{total_sources}] {url}")
-        new_ips = fetch_source(url)
-        
-        if new_ips:
-            save_bank(idx, new_ips)
-            print(f"  ✅ {len(new_ips)} آیپی دانلود و ذخیره شد")
-            total_new += len(new_ips)
-        else:
-            print(f"  ⚠️  خطا یا خالی")
+    if current_index >= total_sources:
+        current_index = 0
+        clear_all_banks()
     
-    print(f"📊 TOTAL {total_new} IPS DOWNLOADED FROM {total_sources} SOURCES")
-    save_source_index(0)
+    print(f"📥 DOWNLOADING SOURCE {current_index + 1}/{total_sources}")
+    url = urls[current_index]
+    new_ips = fetch_source(url)
+    
+    if new_ips:
+        save_bank(current_index, new_ips)
+        print(f"  ✅ {len(new_ips)} آیپی دانلود و ذخیره شد")
+        total_new = len(new_ips)
+    else:
+        print(f"  ⚠️  خطا یا خالی")
+    
+    next_index = current_index + 1
+    if next_index >= total_sources:
+        next_index = 0
+    
+    save_source_index(next_index)
+    print(f"📌 NEXT SOURCE: {next_index + 1}/{total_sources}")
+    
     return total_new > 0
 
 def download_loop():
