@@ -128,36 +128,26 @@ def load_https():
 
     return data
 
-def is_complete(item):
-    if item.get("latency", 9999) >= 9999:
+def is_valid_entry(item):
+    if not item:
         return False
 
-    if item.get("cdn", "") == "unknown":
+    country = item.get("country", "")
+    provider = item.get("provider", "")
+
+    if not country or country == "?" or country == "None" or not provider or provider == "?" or provider == "None":
         return False
 
-    if item.get("country", "") in ["?", "None", ""]:
+    https_info = item.get("https", {})
+    if not https_info:
         return False
 
-    if item.get("provider", "") in ["?", "None", ""]:
-        return False
+    status = https_info.get("status", -1)
+    ttfb = https_info.get("ttfb", -1)
+    proto = https_info.get("proto", "")
+    reliability = https_info.get("reliability", -1)
 
-    if item.get("alpn", "") == "":
-        return False
-
-    https = item.get("https", {})
-    if not https:
-        return False
-
-    if https.get("ttfb", -1) < 0 or https.get("ttfb") == "-":
-        return False
-
-    if https.get("proto", "") in ["", "-"]:
-        return False
-
-    if https.get("reliability", -1) <= 0 or https.get("reliability") == "-":
-        return False
-
-    if https.get("status") is None:
+    if status == -1 or ttfb == -1 or not proto or proto == "-" or reliability == -1:
         return False
 
     return True
@@ -175,9 +165,9 @@ def parse_line(line, latency_map, alpn_map):
         ip = parts[0]
         port = int(parts[1])
         status = int(parts[2]) if parts[2].isdigit() else 0
-        ttfb = int(parts[3]) if parts[3].isdigit() else -1
+        ttfb = int(parts[3]) if parts[3].isdigit() else 9999
         proto = parts[4]
-        reliability = float(parts[5]) if parts[5].replace('.', '').isdigit() else -1.0
+        reliability = float(parts[5]) if parts[5].replace('.', '').isdigit() else 0.0
         ws = parts[6] == "1" or parts[6].lower() == "true"
         cdn = parts[7]
         country = parts[8]
@@ -190,7 +180,7 @@ def parse_line(line, latency_map, alpn_map):
     except (ValueError, IndexError):
         return None
 
-    item = {
+    return {
         "ip": ip,
         "port": port,
         "latency": latency,
@@ -207,11 +197,6 @@ def parse_line(line, latency_map, alpn_map):
             "ws": ws
         }
     }
-
-    if not is_complete(item):
-        return None
-
-    return item
 
 def latency_score(latency):
     if latency <= 150:
@@ -295,6 +280,9 @@ def load_results():
             for line in f:
                 item = parse_line(line, latency_map, alpn_map)
                 if not item:
+                    continue
+
+                if not is_valid_entry(item):
                     continue
 
                 key = f'{item["ip"]}:{item["port"]}'
