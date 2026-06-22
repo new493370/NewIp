@@ -54,11 +54,11 @@
 102.129.145.6:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
 103.29.71.225:2083|S=17|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
 103.29.71.225:2096|S=17|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
-149.154.165.137:443|S=16|84ms|TTFB=423|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Netherlands|Telegram Messenger INC
-149.154.164.26:443|S=16|89ms|TTFB=417|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Netherlands|Telegram Messenger INC
-149.154.165.133:443|S=16|90ms|TTFB=410|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Netherlands|Telegram Messenger INC
-149.154.164.25:443|S=16|91ms|TTFB=409|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Netherlands|Telegram Messenger INC
-149.154.164.24:443|S=16|94ms|TTFB=423|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Netherlands|Telegram Messenger INC
+149.154.165.137:443|S=16|131ms|TTFB=467|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Netherlands|Telegram Messenger INC
+149.154.164.26:443|S=16|136ms|TTFB=463|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Netherlands|Telegram Messenger INC
+149.154.165.133:443|S=16|136ms|TTFB=467|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Netherlands|Telegram Messenger INC
+149.154.164.24:443|S=16|139ms|TTFB=460|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Netherlands|Telegram Messenger INC
+149.154.164.25:443|S=16|139ms|TTFB=462|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Netherlands|Telegram Messenger INC
 103.3.61.107:443|S=16|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
 103.3.62.202:2083|S=16|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
 103.3.60.72:2096|S=15|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
@@ -76,6 +76,6 @@
 103.3.63.61:2083|S=15|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
 103.3.60.72:2087|S=15|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
 103.3.62.202:2087|S=15|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
-149.154.170.100:443|S=14|232ms|TTFB=718|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Singapore|Telegram Messenger INC
-149.154.170.96:443|S=14|234ms|TTFB=801|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Singapore|Telegram Messenger INC
-149.154.170.200:443|S=14|238ms|TTFB=861|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Singapore|Telegram Messenger INC
+149.154.170.100:443|S=14|229ms|TTFB=823|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Singapore|Telegram Messenger INC
+149.154.170.200:443|S=14|246ms|TTFB=808|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Singapore|Telegram Messenger INC
+149.154.170.96:443|S=14|251ms|TTFB=831|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Singapore|Telegram Messenger INC
