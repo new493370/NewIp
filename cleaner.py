@@ -9,8 +9,8 @@ OUTPUT_FILE = "output/clean_ips.txt"
 TEMP_FILE = "output/clean_ips.tmp"
 HISTORY_FILE = "output/clean_history.json"
 
-MAX_CIDR_EXPAND = 4096
-LARGE_CIDR_SAMPLE = 1024
+MAX_CIDR_EXPAND = 3000
+LARGE_CIDR_SAMPLE = 3000
 
 def load_config():
     try:
