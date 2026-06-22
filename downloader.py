@@ -2,63 +2,27 @@ import json
 import requests
 import os
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 
-BANK_DIR = "output/banks"
-SOURCE_INDEX_FILE = "output/source_index.txt"
+OUTPUT_FILE = "output/ip_bank.txt"
+HISTORY_FILE = "output/download_history.json"
 
 def load_config():
     with open("config.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
-def load_source_index():
-    if os.path.exists(SOURCE_INDEX_FILE):
+def load_history():
+    if os.path.exists(HISTORY_FILE):
         try:
-            with open(SOURCE_INDEX_FILE, "r", encoding="utf-8") as f:
-                return int(f.read().strip())
+            with open(HISTORY_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
         except:
-            return 0
-    return 0
+            return {}
+    return {}
 
-def save_source_index(index):
-    with open(SOURCE_INDEX_FILE, "w", encoding="utf-8") as f:
-        f.write(str(index))
-
-def ensure_bank_dir():
-    os.makedirs(BANK_DIR, exist_ok=True)
-
-def get_bank_path(index):
-    return os.path.join(BANK_DIR, f"source_{index}.txt")
-
-def load_bank(index):
-    path = get_bank_path(index)
-    if os.path.exists(path) and os.path.getsize(path) > 0:
-        try:
-            with open(path, "r", encoding="utf-8") as f:
-                return [line.strip() for line in f if line.strip()]
-        except:
-            return []
-    return []
-
-def save_bank(index, ips):
-    ensure_bank_dir()
-    path = get_bank_path(index)
-    with open(path, "w", encoding="utf-8") as f:
-        f.write("\n".join(sorted(ips)))
-
-def clear_bank(index):
-    path = get_bank_path(index)
-    if os.path.exists(path):
-        os.remove(path)
-
-def clear_all_banks():
-    if not os.path.exists(BANK_DIR):
-        return
-    for filename in os.listdir(BANK_DIR):
-        if filename.startswith("source_") and filename.endswith(".txt"):
-            path = os.path.join(BANK_DIR, filename)
-            os.remove(path)
-    print("🗑️  ALL BANKS CLEARED - NEW CYCLE STARTED")
+def save_history(history):
+    with open(HISTORY_FILE, "w", encoding="utf-8") as f:
+        json.dump(history, f, indent=2)
 
 def fetch_source(url):
     try:
@@ -71,41 +35,34 @@ def fetch_source(url):
 
 def download_sources():
     cfg = load_config()
-    urls = cfg.get("sources", [])
+    history = load_history()
+    all_ips = set()
     
-    if not urls:
-        print("❌ NO SOURCES FOUND")
-        return False
+    now = datetime.now()
+    downloaded = False
     
-    ensure_bank_dir()
+    for url in cfg.get("sources", []):
+        print(f"📥 {url}")
+        new_ips = fetch_source(url)
+        if new_ips:
+            count_before = len(all_ips)
+            all_ips.update(new_ips)
+            count_after = len(all_ips)
+            history[url] = now.isoformat()
+            downloaded = True
+            print(f"  ✅ {count_after - count_before} آیپی جدید (مجموع: {count_after})")
+        else:
+            print(f"  ⚠️  خطا یا خالی")
     
-    total_new = 0
-    total_sources = len(urls)
-    current_index = load_source_index()
-    
-    if current_index >= total_sources:
-        current_index = 0
-        clear_all_banks()
-    
-    print(f"📥 DOWNLOADING SOURCE {current_index + 1}/{total_sources}")
-    url = urls[current_index]
-    new_ips = fetch_source(url)
-    
-    if new_ips:
-        save_bank(current_index, new_ips)
-        print(f"  ✅ {len(new_ips)} آیپی دانلود و ذخیره شد")
-        total_new = len(new_ips)
+    if downloaded:
+        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+            f.write("\n".join(sorted(all_ips)))
+        print(f"\n💾 ذخیره شد: {len(all_ips)} آیپی")
     else:
-        print(f"  ⚠️  خطا یا خالی")
+        print(f"\nℹ️  بدون آیپی جدید")
     
-    next_index = current_index + 1
-    if next_index >= total_sources:
-        next_index = 0
-    
-    save_source_index(next_index)
-    print(f"📌 NEXT SOURCE: {next_index + 1}/{total_sources}")
-    
-    return total_new > 0
+    save_history(history)
+    return downloaded
 
 def download_loop():
     cfg = load_config()
@@ -115,8 +72,19 @@ def download_loop():
         download_sources()
         return
     
-    print("🔄 چرخه دانلود فعال شد (یک بار اجرا در هر مرحله)")
-    download_sources()
+    print("🔄 چرخه دانلود فعال شد")
+    
+    while True:
+        print("\n" + "="*50)
+        print(f"📅 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        print("🔄 شروع چرخه جدید دانلود")
+        print("="*50)
+        
+        download_sources()
+        
+        interval = cfg.get("download_interval_hours", 24)
+        print(f"\n⏳ انتظار {interval} ساعت تا چرخه بعدی...")
+        time.sleep(interval * 3600)
 
 if __name__ == "__main__":
     download_loop()
