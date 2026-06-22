@@ -25,7 +25,7 @@
     ],
     "ports": [80, 443, 8080, 8443, 2052, 2053, 2083, 2087, 2095, 2096],
     "threads": 300,
-    "batch_size": 60000,
+    "batch_size": 20000,
     "retries": 2,
     "timeout": 3,
     "latency_limit_ms": 500,
@@ -35,5 +35,6 @@
         "www.cloudflare.com",
         "cdn.cloudflare.net"
     ],
-    "ips_per_source": 5000
+    "download_interval_hours": 24,
+    "loop_download": false
 }
