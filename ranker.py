@@ -156,7 +156,7 @@ def parse_line(line, latency_map, alpn_map):
     except (ValueError, IndexError):
         return None
 
-    if latency >= 9999 or reliability <= 0 or country == "?" or provider == "?" or cdn == "unknown" or ttfb >= 9999:
+    if latency == 9999 or reliability == 0 or country == "?" or provider == "?" or ttfb == 9999:
         return None
 
     return {
