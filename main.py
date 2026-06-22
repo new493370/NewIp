@@ -54,6 +54,14 @@ def should_update_bank():
 
 
 def prepare_artifact():
+    essential_files = [
+        "ip_bank.txt",
+        "clean_ips.txt",
+        "scan_cursor.txt",
+        "current_part.txt",
+        "best_ips.txt",
+        "geo_cache.json"
+    ]
     temp_files = [
         "tcp_live.txt",
         "tls_live.txt",
@@ -106,12 +114,6 @@ def prepare_clean():
 
 def run_tcp():
     prepare()
-    
-    print("DOWNLOAD START")
-    download_sources()
-    print("CLEAN START")
-    clean_ips()
-    
     prepare_artifact()
 
     print(
