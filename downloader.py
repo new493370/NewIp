@@ -2,72 +2,74 @@ import json
 import requests
 import os
 import time
-import concurrent.futures
-from datetime import datetime, timedelta
+from datetime import datetime
 
 OUTPUT_FILE = "output/ip_bank.txt"
-HISTORY_FILE = "output/download_history.json"
+SOURCE_INDEX_FILE = "output/source_index.txt"
 
 def load_config():
     with open("config.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
-def load_history():
-    if os.path.exists(HISTORY_FILE):
+def load_source_index():
+    if os.path.exists(SOURCE_INDEX_FILE):
         try:
-            with open(HISTORY_FILE, "r", encoding="utf-8") as f:
-                return json.load(f)
+            with open(SOURCE_INDEX_FILE, "r", encoding="utf-8") as f:
+                return int(f.read().strip())
         except:
-            return {}
-    return {}
+            return 0
+    return 0
 
-def save_history(history):
-    with open(HISTORY_FILE, "w", encoding="utf-8") as f:
-        json.dump(history, f, indent=2)
+def save_source_index(index):
+    with open(SOURCE_INDEX_FILE, "w", encoding="utf-8") as f:
+        f.write(str(index))
 
 def fetch_source(url):
     try:
         r = requests.get(url, timeout=30)
         if r.ok:
-            return url, r.text.splitlines()
+            return r.text.splitlines()
     except:
         pass
-    return url, []
+    return []
 
 def download_sources():
     cfg = load_config()
-    all_ips = set()
-    
-    now = datetime.now()
-    downloaded = False
-    
     urls = cfg.get("sources", [])
     
-    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-        future_to_url = {executor.submit(fetch_source, url): url for url in urls}
-        
-        for future in concurrent.futures.as_completed(future_to_url):
-            url = future_to_url[future]
-            print(f"📥 {url}")
-            new_ips = future.result()[1]
-            
-            if new_ips:
-                count_before = len(all_ips)
-                all_ips.update(new_ips)
-                count_after = len(all_ips)
-                downloaded = True
-                print(f"  ✅ {count_after - count_before} آیپی جدید (مجموع: {count_after})")
-            else:
-                print(f"  ⚠️  خطا یا خالی")
+    if not urls:
+        print("❌ NO SOURCES FOUND")
+        return False
     
-    if downloaded:
+    index = load_source_index()
+    
+    if index >= len(urls):
+        index = 0
+        save_source_index(index)
+    
+    url = urls[index]
+    print(f"📥 [{index + 1}/{len(urls)}] {url}")
+    
+    new_ips = fetch_source(url)
+    
+    if new_ips:
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-            f.write("\n".join(sorted(all_ips)))
-        print(f"\n💾 ذخیره شد: {len(all_ips)} آیپی")
+            f.write("\n".join(sorted(new_ips)))
+        print(f"  ✅ {len(new_ips)} آیپی دانلود شد")
+        
+        next_index = index + 1
+        if next_index >= len(urls):
+            next_index = 0
+        save_source_index(next_index)
+        print(f"  📌 NEXT SOURCE: {next_index + 1}/{len(urls)}")
+        return True
     else:
-        print(f"\nℹ️  بدون آیپی جدید")
-    
-    return downloaded
+        print(f"  ⚠️  خطا یا خالی")
+        next_index = index + 1
+        if next_index >= len(urls):
+            next_index = 0
+        save_source_index(next_index)
+        return False
 
 def download_loop():
     cfg = load_config()
