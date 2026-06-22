@@ -1,3 +1,4 @@
+import aiohttp
 import json
 import socket
 import time
@@ -625,6 +626,10 @@ def https_scan():
         https_live
     )
 
+    append_live(
+        https_live
+    )
+
     print(
         f"HTTPS={len(https_live)}"
     )
@@ -707,6 +712,10 @@ def fingerprint_scan():
         fp_results.extend(buffer)
 
     append_fp(
+        fp_results
+    )
+
+    append_live(
         fp_results
     )
 
@@ -855,6 +864,10 @@ def geo_scan():
         f.write(
             "\n".join(final)
         )
+
+    append_live(
+        final
+    )
 
     print(
         f"GEO DONE={len(final)}"
