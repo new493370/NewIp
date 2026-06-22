@@ -46,6 +46,9 @@ def download_sources():
     if index >= len(urls):
         index = 0
         save_source_index(index)
+        if os.path.exists(OUTPUT_FILE):
+            os.remove(OUTPUT_FILE)
+            print("🔄 NEW CYCLE STARTED - CLEARED IP BANK")
     
     url = urls[index]
     print(f"📥 [{index + 1}/{len(urls)}] {url}")
