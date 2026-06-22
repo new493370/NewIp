@@ -128,36 +128,35 @@ def load_https():
 
     return data
 
-def is_complete(item):
-    if item.get("latency", 9999) >= 9999:
+def is_complete_item(item):
+    required_fields = ["ip", "port", "latency", "cdn", "country", "provider", "alpn"]
+    for field in required_fields:
+        if field not in item:
+            return False
+        if field in ["ip", "cdn", "country", "provider", "alpn"]:
+            if not item[field] or item[field] == "?" or item[field] == "None":
+                return False
+        if field == "port":
+            if item[field] is None or item[field] == 0:
+                return False
+        if field == "latency":
+            if item[field] is None or item[field] == 9999 or item[field] == 0:
+                return False
+
+    if "https" not in item or not item["https"]:
         return False
 
-    if item.get("cdn", "") == "unknown":
+    https = item["https"]
+    if "ttfb" not in https or "proto" not in https or "reliability" not in https:
         return False
 
-    if item.get("country", "") in ["?", "None", ""]:
+    if https["ttfb"] is None or https["ttfb"] == 9999 or https["ttfb"] == 0:
         return False
 
-    if item.get("provider", "") in ["?", "None", ""]:
+    if not https["proto"] or https["proto"] == "-" or https["proto"] == "unknown":
         return False
 
-    if item.get("alpn", "") == "":
-        return False
-
-    https = item.get("https", {})
-    if not https:
-        return False
-
-    if https.get("ttfb", -1) < 0 or https.get("ttfb") == "-":
-        return False
-
-    if https.get("proto", "") in ["", "-"]:
-        return False
-
-    if https.get("reliability", -1) <= 0 or https.get("reliability") == "-":
-        return False
-
-    if https.get("status") is None:
+    if https["reliability"] is None or https["reliability"] == 0:
         return False
 
     return True
@@ -175,9 +174,9 @@ def parse_line(line, latency_map, alpn_map):
         ip = parts[0]
         port = int(parts[1])
         status = int(parts[2]) if parts[2].isdigit() else 0
-        ttfb = int(parts[3]) if parts[3].isdigit() else -1
+        ttfb = int(parts[3]) if parts[3].isdigit() else 9999
         proto = parts[4]
-        reliability = float(parts[5]) if parts[5].replace('.', '').isdigit() else -1.0
+        reliability = float(parts[5]) if parts[5].replace('.', '').isdigit() else 0.0
         ws = parts[6] == "1" or parts[6].lower() == "true"
         cdn = parts[7]
         country = parts[8]
@@ -208,7 +207,7 @@ def parse_line(line, latency_map, alpn_map):
         }
     }
 
-    if not is_complete(item):
+    if not is_complete_item(item):
         return None
 
     return item
