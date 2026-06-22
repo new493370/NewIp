@@ -658,7 +658,7 @@ def fp_worker(
     )
 
     cdn = detect_cdn(
-        headers
+        headers=headers
     )
 
     return (
@@ -754,6 +754,11 @@ def geo_worker(
         "?"
     )
 
+    if cdn == "unknown" and provider and provider != "?":
+        cdn = detect_cdn(
+            provider=provider
+        )
+
     return (
         f"{ip}|{port}|"
         f"{status}|{ttfb}|"
@@ -804,11 +809,14 @@ def geo_scan():
                 geo = geo_cache.get(ip, {})
                 country = geo.get("country", "?")
                 provider = geo.get("provider", "?")
+                cdn = parts[7]
+                if cdn == "unknown" and provider and provider != "?":
+                    cdn = detect_cdn(provider=provider)
                 final.append(
                     f"{parts[0]}|{parts[1]}|"
                     f"{parts[2]}|{parts[3]}|"
                     f"{parts[4]}|{parts[5]}|"
-                    f"{parts[6]}|{parts[7]}|"
+                    f"{parts[6]}|{cdn}|"
                     f"{country}|{provider}"
                 )
             except:
