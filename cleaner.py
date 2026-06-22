@@ -129,33 +129,17 @@ def clean_ips():
     if os.path.exists(OUTPUT_FILE):
         os.remove(OUTPUT_FILE)
     
-    index = load_source_index()
-    cfg = load_config()
-    urls = cfg.get("sources", [])
+    all_ips = load_all_banks()
     
-    if not urls:
-        print("❌ NO SOURCES FOUND")
+    if not all_ips:
+        print("❌ NO IPS FOUND IN ANY BANK")
         return 0
     
-    current_index = index - 1
-    if current_index < 0:
-        current_index = len(urls) - 1
-    
-    ips = load_bank(current_index)
-    
-    if not ips:
-        print(f"❌ NO IPS IN BANK {current_index + 1}")
-        ips = load_all_banks()
-        if ips:
-            print(f"✅ FOUND {len(ips)} IPS FROM ALL BANKS")
-        else:
-            return 0
-    
-    print(f"📂 SOURCE {current_index + 1}: {len(ips)} آیپی")
+    print(f"📂 TOTAL IPS FROM ALL BANKS: {len(all_ips)}")
     
     try:
         with open(TEMP_FILE, "w", encoding="utf-8") as dst:
-            for ip in ips:
+            for ip in all_ips:
                 processed += 1
                 total += process_line(ip, dst, seen)
                 if processed % 10000 == 0:
