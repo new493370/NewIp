@@ -46,9 +46,6 @@ def download_sources():
     if index >= len(urls):
         index = 0
         save_source_index(index)
-        if os.path.exists(OUTPUT_FILE):
-            os.remove(OUTPUT_FILE)
-            print("🔄 NEW CYCLE STARTED - CLEARED IP BANK")
     
     url = urls[index]
     print(f"📥 [{index + 1}/{len(urls)}] {url}")
@@ -56,12 +53,8 @@ def download_sources():
     new_ips = fetch_source(url)
     
     if new_ips:
-        mode = "a" if os.path.exists(OUTPUT_FILE) else "w"
-        with open(OUTPUT_FILE, mode, encoding="utf-8") as f:
-            if mode == "w":
-                f.write("\n".join(sorted(new_ips)))
-            else:
-                f.write("\n" + "\n".join(sorted(new_ips)))
+        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+            f.write("\n".join(sorted(new_ips)))
         print(f"  ✅ {len(new_ips)} آیپی دانلود شد")
         
         next_index = index + 1
