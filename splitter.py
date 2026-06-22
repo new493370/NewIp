@@ -138,14 +138,16 @@ def read_chunk(
     return chunk
 
 
-def should_reset_cursor(total, old_total):
-    if old_total is None:
+def should_reset_cursor(total):
+    if not os.path.exists(LAST_TOTAL_FILE):
         return True
-    if total > old_total:
+    
+    try:
+        with open(LAST_TOTAL_FILE, "r") as f:
+            last_total = int(f.read().strip())
+            return total != last_total
+    except:
         return True
-    if total < old_total:
-        return True
-    return False
 
 
 def load_split_history():
@@ -191,22 +193,13 @@ def split_file(
         
         return OUTPUT_FILE
     
-    old_total = None
-    if os.path.exists(LAST_TOTAL_FILE):
-        try:
-            with open(LAST_TOTAL_FILE, "r") as f:
-                old_total = int(f.read().strip())
-        except:
-            pass
-    
-    if should_reset_cursor(total, old_total):
+    if should_reset_cursor(total):
         reset_cursor()
         with open(LAST_TOTAL_FILE, "w") as f:
             f.write(str(total))
         print(
             f"RESET CURSOR - "
-            f"NEW TOTAL: {total} "
-            f"(OLD: {old_total})"
+            f"NEW TOTAL: {total}"
         )
     
     cursor = load_cursor()
