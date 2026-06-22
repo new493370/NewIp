@@ -13,8 +13,6 @@ OUTPUT_FILE = "output/current_part.txt"
 COUNT_CACHE = "output/line_count_cache.txt"
 LAST_TOTAL_FILE = "output/last_total.txt"
 SPLIT_HISTORY_FILE = "output/split_history.json"
-SOURCE_INDEX_FILE = "output/source_index.txt"
-BANK_DIR = "output/banks"
 
 _CONFIG_CACHE = None
 _CONFIG_MTIME = None
@@ -44,22 +42,6 @@ def load_config():
             return _CONFIG_CACHE
     except:
         return {}
-
-
-def load_source_index():
-    if os.path.exists(SOURCE_INDEX_FILE):
-        try:
-            with open(SOURCE_INDEX_FILE, "r", encoding="utf-8") as f:
-                return int(f.read().strip())
-        except:
-            return 0
-    return 0
-
-
-def clear_bank(index):
-    path = os.path.join(BANK_DIR, f"source_{index}.txt")
-    if os.path.exists(path):
-        os.remove(path)
 
 
 def get_cached_count(path):
@@ -250,15 +232,6 @@ def split_file(
         next_cursor = 0
         save_cursor(0)
         print("SCAN CYCLE COMPLETE - RESETTING")
-        
-        current_index = load_source_index() - 1
-        if current_index < 0:
-            cfg = load_config()
-            urls = cfg.get("sources", [])
-            current_index = len(urls) - 1
-        
-        clear_bank(current_index)
-        print(f"🗑️  CLEARED BANK FOR SOURCE {current_index + 1}")
     else:
         save_cursor(next_cursor)
     
