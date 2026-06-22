@@ -74,7 +74,7 @@ jobs:
           rm -f output/tcp_live.txt output/tls_live.txt output/https_live.txt
           rm -f output/fingerprint_results.txt output/results.txt
           rm -f output/domains_raw.txt output/domains.txt output/live_bank.txt
-          rm -f output/scanned_cache.txt
+          # scanned_cache.txt حذف نمی‌شود!
       - name: Save Rolling State
         uses: actions/upload-artifact@v4
         with:
@@ -330,7 +330,7 @@ jobs:
           rm -f output/tcp_live.txt output/https_live.txt
           rm -f output/fingerprint_results.txt output/results.txt
           rm -f output/domains_raw.txt output/domains.txt output/live_bank.txt
-          rm -f output/scanned_cache.txt
+          # scanned_cache.txt حذف نمی‌شود!
       - name: Save Final State
         uses: actions/upload-artifact@v4
         with:
