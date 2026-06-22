@@ -1,73 +1,81 @@
-102.129.235.66:443|S=20|21ms|TTFB=223|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.235.34:443|S=20|23ms|TTFB=224|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.234.97:443|S=20|25ms|TTFB=155|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.153.2:443|S=20|37ms|TTFB=231|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.152.2:443|S=20|37ms|TTFB=229|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.153.3:443|S=20|37ms|TTFB=217|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.153.9:443|S=20|37ms|TTFB=225|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.152.4:443|S=20|37ms|TTFB=233|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.153.5:443|S=20|38ms|TTFB=220|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.153.8:443|S=20|38ms|TTFB=220|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.153.7:443|S=20|38ms|TTFB=226|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.153.6:443|S=20|38ms|TTFB=226|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.152.9:443|S=20|38ms|TTFB=223|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.152.7:443|S=20|39ms|TTFB=227|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.152.3:443|S=20|39ms|TTFB=222|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.152.6:443|S=20|39ms|TTFB=218|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.152.8:443|S=20|40ms|TTFB=219|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.232.3:443|S=20|48ms|TTFB=22|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.232.189:443|S=20|49ms|TTFB=27|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.232.51:443|S=20|49ms|TTFB=24|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.232.97:443|S=20|49ms|TTFB=22|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.232.221:443|S=20|49ms|TTFB=32|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.232.143:443|S=20|49ms|TTFB=33|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.145.2:443|S=20|52ms|TTFB=70|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.145.6:443|S=20|52ms|TTFB=61|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.145.5:443|S=20|52ms|TTFB=59|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.145.4:443|S=20|53ms|TTFB=53|PROTO=http/1.1|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.235.34:8080|S=19|21ms|TTFB=141|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.235.66:8080|S=19|22ms|TTFB=138|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.234.97:8080|S=19|26ms|TTFB=84|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.153.5:8080|S=19|37ms|TTFB=134|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.153.2:8080|S=19|37ms|TTFB=135|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.153.8:8080|S=19|37ms|TTFB=141|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.153.3:8080|S=19|37ms|TTFB=135|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.152.3:8080|S=19|37ms|TTFB=138|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.152.2:8080|S=19|38ms|TTFB=135|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.153.7:8080|S=19|38ms|TTFB=134|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.152.7:8080|S=19|38ms|TTFB=133|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.153.9:8080|S=19|38ms|TTFB=149|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.153.6:8080|S=19|38ms|TTFB=135|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.152.4:8080|S=19|38ms|TTFB=134|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.152.9:8080|S=19|38ms|TTFB=149|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.152.6:8080|S=19|38ms|TTFB=134|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.152.8:8080|S=19|39ms|TTFB=140|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.232.189:8080|S=19|48ms|TTFB=3|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.232.97:8080|S=19|48ms|TTFB=3|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.232.3:8080|S=19|48ms|TTFB=11|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.232.221:8080|S=19|49ms|TTFB=9|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.232.143:8080|S=19|49ms|TTFB=9|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.232.51:8080|S=19|50ms|TTFB=3|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.145.2:8080|S=19|52ms|TTFB=47|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.145.5:8080|S=19|53ms|TTFB=31|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.145.4:8080|S=19|54ms|TTFB=22|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-102.129.145.6:8080|S=19|57ms|TTFB=24|PROTO=http|REL=1.0|CDN=cogent|ALPN=http/1.1|United States|Cogent Communications, LLC
-103.29.71.225:2083|S=17|144ms|TTFB=449|PROTO=http/1.1|REL=1.0|CDN=akamai|ALPN=|Japan|Akamai Technologies, Inc.
-103.29.71.225:2096|S=17|144ms|TTFB=447|PROTO=http/1.1|REL=1.0|CDN=akamai|ALPN=|Japan|Akamai Technologies, Inc.
-103.3.61.107:443|S=16|208ms|TTFB=1136|PROTO=http/1.1|REL=1.0|CDN=akamai|ALPN=http/1.1|Singapore|Akamai Technologies, Inc.
-103.3.62.202:2083|S=16|209ms|TTFB=700|PROTO=http/1.1|REL=1.0|CDN=akamai|ALPN=|Singapore|Akamai Technologies, Inc.
-103.3.60.72:2096|S=15|207ms|TTFB=877|PROTO=http/1.1|REL=1.0|CDN=akamai|ALPN=|Singapore|Akamai Technologies, Inc.
-103.3.61.107:2083|S=15|207ms|TTFB=801|PROTO=http/1.1|REL=1.0|CDN=akamai|ALPN=|Singapore|Akamai Technologies, Inc.
-103.3.63.143:2087|S=15|207ms|TTFB=870|PROTO=http/1.1|REL=1.0|CDN=akamai|ALPN=|Singapore|Akamai Technologies, Inc.
-103.3.60.72:2083|S=15|208ms|TTFB=879|PROTO=http/1.1|REL=1.0|CDN=akamai|ALPN=|Singapore|Akamai Technologies, Inc.
-103.3.62.202:2096|S=15|208ms|TTFB=705|PROTO=http/1.1|REL=1.0|CDN=akamai|ALPN=|Singapore|Akamai Technologies, Inc.
-103.3.63.61:2087|S=15|208ms|TTFB=852|PROTO=http/1.1|REL=1.0|CDN=akamai|ALPN=|Singapore|Akamai Technologies, Inc.
-103.3.61.107:2096|S=15|209ms|TTFB=827|PROTO=http/1.1|REL=1.0|CDN=akamai|ALPN=|Singapore|Akamai Technologies, Inc.
-103.3.61.129:2083|S=15|209ms|TTFB=723|PROTO=http/1.1|REL=1.0|CDN=akamai|ALPN=|Singapore|Akamai Technologies, Inc.
-103.3.63.143:2083|S=15|209ms|TTFB=868|PROTO=http/1.1|REL=1.0|CDN=akamai|ALPN=|Singapore|Akamai Technologies, Inc.
-103.3.63.143:2096|S=15|209ms|TTFB=865|PROTO=http/1.1|REL=1.0|CDN=akamai|ALPN=|Singapore|Akamai Technologies, Inc.
-103.3.63.61:2096|S=15|209ms|TTFB=858|PROTO=http/1.1|REL=1.0|CDN=akamai|ALPN=|Singapore|Akamai Technologies, Inc.
-103.3.60.65:2083|S=15|210ms|TTFB=879|PROTO=http/1.1|REL=1.0|CDN=akamai|ALPN=|Singapore|Akamai Technologies, Inc.
-103.3.63.61:2083|S=15|211ms|TTFB=865|PROTO=http/1.1|REL=1.0|CDN=akamai|ALPN=|Singapore|Akamai Technologies, Inc.
-103.3.60.72:2087|S=15|212ms|TTFB=887|PROTO=http/1.1|REL=1.0|CDN=akamai|ALPN=|Singapore|Akamai Technologies, Inc.
-103.3.62.202:2087|S=15|213ms|TTFB=706|PROTO=http/1.1|REL=1.0|CDN=akamai|ALPN=|Singapore|Akamai Technologies, Inc.
+102.129.235.66:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.235.34:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.234.97:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.153.2:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.152.2:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.153.3:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.153.9:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.152.4:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.153.5:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.153.8:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.153.7:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.153.6:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.152.9:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.152.7:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.152.3:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.152.6:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.152.8:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.232.3:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.232.189:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.232.51:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.232.97:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.232.221:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.232.143:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.145.2:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.145.6:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.145.5:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.145.4:443|S=20|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.235.34:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.235.66:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.234.97:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.153.5:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.153.2:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.153.8:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.153.3:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.152.3:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.152.2:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.153.7:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.152.7:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.153.9:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.153.6:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.152.4:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.152.9:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.152.6:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.152.8:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.232.189:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.232.97:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.232.3:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.232.221:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.232.143:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.232.51:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.145.2:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.145.5:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.145.4:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+102.129.145.6:8080|S=19|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+103.29.71.225:2083|S=17|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+103.29.71.225:2096|S=17|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+149.154.165.137:443|S=16|84ms|TTFB=423|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Netherlands|Telegram Messenger INC
+149.154.164.26:443|S=16|89ms|TTFB=417|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Netherlands|Telegram Messenger INC
+149.154.165.133:443|S=16|90ms|TTFB=410|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Netherlands|Telegram Messenger INC
+149.154.164.25:443|S=16|91ms|TTFB=409|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Netherlands|Telegram Messenger INC
+149.154.164.24:443|S=16|94ms|TTFB=423|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Netherlands|Telegram Messenger INC
+103.3.61.107:443|S=16|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+103.3.62.202:2083|S=16|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+103.3.60.72:2096|S=15|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+103.3.61.107:2083|S=15|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+103.3.63.143:2087|S=15|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+103.3.60.72:2083|S=15|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+103.3.62.202:2096|S=15|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+103.3.63.61:2087|S=15|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+103.3.61.107:2096|S=15|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+103.3.61.129:2083|S=15|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+103.3.63.143:2083|S=15|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+103.3.63.143:2096|S=15|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+103.3.63.61:2096|S=15|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+103.3.60.65:2083|S=15|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+103.3.63.61:2083|S=15|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+103.3.60.72:2087|S=15|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+103.3.62.202:2087|S=15|9999ms|TTFB=-|PROTO=-|REL=-|CDN=unknown|ALPN=|?|?
+149.154.170.100:443|S=14|232ms|TTFB=718|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Singapore|Telegram Messenger INC
+149.154.170.96:443|S=14|234ms|TTFB=801|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Singapore|Telegram Messenger INC
+149.154.170.200:443|S=14|238ms|TTFB=861|PROTO=http/1.1|REL=1.0|CDN=unknown|ALPN=http/1.1|Singapore|Telegram Messenger INC
