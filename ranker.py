@@ -4,6 +4,8 @@ RESULT_FILE = "output/results.txt"
 HTTPS_FILE = "output/https_live.txt"
 BEST_FILE = "output/best_ips.txt"
 DOMAINS_RAW_FILE = "output/domains_raw.txt"
+TLS_FILE = "output/tls_live.txt"
+TCP_FILE = "output/tcp_live.txt"
 
 TLS_BONUS = 2
 KNOWN_CDN_BONUS = 2
@@ -32,6 +34,48 @@ STABLE_PORTS = {
 STABLE_PORT_BONUS = 1
 
 MAX_OUTPUT_IPS = 4000
+
+
+def load_extra_data():
+    latency_map = {}
+    alpn_map = {}
+
+    try:
+        with open(TCP_FILE, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                parts = line.split(":")
+                if len(parts) >= 3:
+                    ip = parts[0]
+                    port = parts[1]
+                    latency = parts[2]
+                    key = f"{ip}:{port}"
+                    try:
+                        latency_map[key] = int(latency)
+                    except:
+                        pass
+    except:
+        pass
+    
+    try:
+        with open(TLS_FILE, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                parts = line.split(":")
+                if len(parts) >= 5:
+                    ip = parts[0]
+                    port = parts[1]
+                    alpn = parts[3] if len(parts) > 3 else ""
+                    key = f"{ip}:{port}"
+                    alpn_map[key] = alpn
+    except:
+        pass
+    
+    return latency_map, alpn_map
 
 
 def load_https():
@@ -105,7 +149,7 @@ def load_https():
     return data
 
 
-def parse_line(line):
+def parse_line(line, latency_map, alpn_map):
     line = line.strip()
 
     if not line:
@@ -113,30 +157,45 @@ def parse_line(line):
 
     parts = line.split("|")
 
-    if len(parts) < 8:
+    if len(parts) < 10:
         return None
 
     try:
-        latency = int(parts[2])
-    except:
-        latency = 9999
-
-    try:
+        ip = parts[0]
         port = int(parts[1])
-    except:
+        status = int(parts[2]) if parts[2].isdigit() else 0
+        ttfb = int(parts[3]) if parts[3].isdigit() else 9999
+        proto = parts[4]
+        reliability = float(parts[5]) if parts[5].replace('.', '').isdigit() else 0.0
+        ws = parts[6] == "1" or parts[6].lower() == "true"
+        cdn = parts[7]
+        country = parts[8]
+        provider = parts[9]
+        
+        # Get latency and ALPN from maps
+        key = f"{ip}:{port}"
+        latency = latency_map.get(key, 9999)
+        alpn = alpn_map.get(key, "")
+        
+    except (ValueError, IndexError):
         return None
-
-    tls = parts[3] == "True"
 
     return {
-        "ip": parts[0],
+        "ip": ip,
         "port": port,
         "latency": latency,
-        "tls": tls,
-        "cdn": parts[4],
-        "country": parts[5],
-        "provider": parts[6],
-        "alpn": parts[7]
+        "tls": True,  # All items here have TLS (they came from TLS scan)
+        "cdn": cdn,
+        "country": country,
+        "provider": provider,
+        "alpn": alpn,
+        "https": {
+            "status": status,
+            "ttfb": ttfb,
+            "proto": proto,
+            "reliability": reliability,
+            "ws": ws
+        }
     }
 
 
@@ -280,6 +339,9 @@ def score(
 def load_results():
     data = []
     seen = set()
+    
+    # Load extra data first
+    latency_map, alpn_map = load_extra_data()
 
     try:
         with open(
@@ -289,7 +351,7 @@ def load_results():
         ) as f:
 
             for line in f:
-                item = parse_line(line)
+                item = parse_line(line, latency_map, alpn_map)
 
                 if not item:
                     continue
@@ -299,9 +361,7 @@ def load_results():
                     f'{item["port"]}'
                 )
 
-                old = seen
-
-                if key in old:
+                if key in seen:
                     continue
 
                 seen.add(key)
@@ -423,6 +483,9 @@ def rank_results():
     for item in data:
         key = f'{item["ip"]}:{item["port"]}'
         https_info = https_map.get(key)
+
+        if https_info is None:
+            https_info = item.get("https", {})
         item["https"] = https_info
         item["score"] = score(item, https_info)
         new_scored_items.append(item)
