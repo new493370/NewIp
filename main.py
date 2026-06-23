@@ -87,7 +87,6 @@ def prepare_artifact():
         "results.txt",
         "domains_raw.txt",
         "domains.txt",
-        "live_bank.txt",
         "scanned_cache.txt"
     ]
     for f in temp_files:
