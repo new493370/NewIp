@@ -1,5 +1,5 @@
 import os
-from cursor import load_cursor, reset_cursor
+from cursor import load_cursor
 
 INPUT_FILE = "output/clean_ips.txt"
 
@@ -19,13 +19,9 @@ def current_cursor():
 def scan_completed():
     total = total_ips()
     if total == 0:
-        reset_cursor()
-        return True
+        return False
     cursor = current_cursor()
-    if cursor >= total:
-        reset_cursor()
-        return True
-    return False
+    return cursor >= total
 
 def progress():
     total = total_ips()
