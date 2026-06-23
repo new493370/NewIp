@@ -138,6 +138,7 @@ def split_file(
         batch_size
     )
 
+    # wrap-around
     if not chunk:
 
         cursor = 0
