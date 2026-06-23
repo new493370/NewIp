@@ -129,15 +129,20 @@ def parse_line(line):
 
     tls = parts[3] == "True"
 
+    cdn = parts[7] if len(parts) > 7 and parts[7] and parts[7] != "None" else "unknown"
+    country = parts[8] if len(parts) > 8 and parts[8] and parts[8] != "None" else "Unknown"
+    provider = parts[9] if len(parts) > 9 and parts[9] and parts[9] != "None" else "Unknown"
+    alpn = parts[4] if len(parts) > 4 else ""
+
     return {
         "ip": parts[0],
         "port": port,
         "latency": latency,
         "tls": tls,
-        "cdn": parts[7],
-        "country": parts[8],
-        "provider": parts[9],
-        "alpn": parts[4]
+        "cdn": cdn,
+        "country": country,
+        "provider": provider,
+        "alpn": alpn
     }
 
 
@@ -412,8 +417,11 @@ def print_partition(title, items, start_idx, end_idx):
         else:
             alpn_colored = f"{Fore.CYAN}{item['alpn']}"
 
-        country_colored = f"{Fore.BLUE}{Style.BRIGHT}{item['country']}"
-        provider_colored = f"{Fore.WHITE}{item['provider']}"
+        country_display = item['country'] if item['country'] and item['country'] != "None" else "Unknown"
+        provider_display = item['provider'] if item['provider'] and item['provider'] != "None" else "Unknown"
+
+        country_colored = f"{Fore.BLUE}{Style.BRIGHT}{country_display}"
+        provider_colored = f"{Fore.WHITE}{provider_display}"
 
         print(f"{Fore.WHITE}{ip_port:<20} "
               f"{score_colored:<6} "
@@ -501,6 +509,11 @@ def rank_results():
                 "-"
             )
 
+            cdn_display = item["cdn"] if item["cdn"] and item["cdn"] != "None" else "unknown"
+            country_display = item["country"] if item["country"] and item["country"] != "None" else "Unknown"
+            provider_display = item["provider"] if item["provider"] and item["provider"] != "None" else "Unknown"
+            alpn_display = item["alpn"] if item["alpn"] and item["alpn"] != "None" else ""
+
             f.write(
                 f'{item["ip"]}:{item["port"]} '
                 f'S={item["score"]} '
@@ -508,10 +521,10 @@ def rank_results():
                 f'TTFB={ttfb} '
                 f'PROTO={proto} '
                 f'REL={rel} '
-                f'CDN={item["cdn"]} '
-                f'ALPN={item["alpn"]} '
-                f'{item["country"]} '
-                f'{item["provider"]}\n'
+                f'CDN={cdn_display} '
+                f'ALPN={alpn_display} '
+                f'{country_display} '
+                f'{provider_display}\n'
             )
 
     total = len(ranked)
