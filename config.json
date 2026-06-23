@@ -34,7 +34,5 @@
         "cloudflare.com",
         "www.cloudflare.com",
         "cdn.cloudflare.net"
-    ],
-    "download_interval_hours": 12,
-    "loop_download": false
+    ]
 }
