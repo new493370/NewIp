@@ -4,8 +4,6 @@ RESULT_FILE = "output/results.txt"
 HTTPS_FILE = "output/https_live.txt"
 BEST_FILE = "output/best_ips.txt"
 DOMAINS_RAW_FILE = "output/domains_raw.txt"
-TLS_FILE = "output/tls_live.txt"
-TCP_FILE = "output/tcp_live.txt"
 
 TLS_BONUS = 2
 KNOWN_CDN_BONUS = 2
@@ -33,94 +31,25 @@ STABLE_PORTS = {
 
 STABLE_PORT_BONUS = 1
 
-MAX_OUTPUT_IPS = 4000
-
-def detect_cdn_from_provider(provider):
-    if not provider or provider == "?":
-        return "unknown"
-    
-    provider_lower = str(provider).lower()
-    
-    if "akamai" in provider_lower:
-        return "akamai"
-    if "cloudflare" in provider_lower:
-        return "cloudflare"
-    if "fastly" in provider_lower:
-        return "fastly"
-    if "vercel" in provider_lower:
-        return "vercel"
-    if "amazon" in provider_lower or "cloudfront" in provider_lower:
-        return "cloudfront"
-    if "microsoft" in provider_lower or "azure" in provider_lower:
-        return "azure"
-    if "bunny" in provider_lower:
-        return "bunny"
-    if "gcore" in provider_lower:
-        return "gcore"
-    if "digitalocean" in provider_lower:
-        return "digitalocean"
-    if "hetzner" in provider_lower:
-        return "hetzner"
-    if "cogent" in provider_lower:
-        return "cogent"
-    
-    return "unknown"
-
-def load_extra_data():
-    latency_map = {}
-    alpn_map = {}
-
-    try:
-        with open(TLS_FILE, "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if not line:
-                    continue
-                parts = line.split(":")
-                if len(parts) >= 5:
-                    ip = parts[0]
-                    port = parts[1]
-                    key = f"{ip}:{port}"
-                    try:
-                        latency_map[key] = int(parts[2])
-                    except:
-                        latency_map[key] = 9999
-                    alpn_map[key] = parts[3] if len(parts) > 3 else ""
-    except:
-        pass
-
-    if not latency_map:
-        try:
-            with open(TCP_FILE, "r", encoding="utf-8") as f:
-                for line in f:
-                    line = line.strip()
-                    if not line:
-                        continue
-                    parts = line.split(":")
-                    if len(parts) >= 3:
-                        ip = parts[0]
-                        port = parts[1]
-                        key = f"{ip}:{port}"
-                        try:
-                            latency_map[key] = int(parts[2])
-                        except:
-                            latency_map[key] = 9999
-        except:
-            pass
-
-    return latency_map, alpn_map
 
 def load_https():
     data = {}
 
     try:
-        with open(HTTPS_FILE, "r", encoding="utf-8") as f:
+        with open(
+            HTTPS_FILE,
+            "r",
+            encoding="utf-8"
+        ) as f:
+
             for line in f:
                 line = line.strip()
+
                 if not line:
                     continue
 
                 parts = line.split("|")
+
                 if len(parts) < 6:
                     continue
 
@@ -135,6 +64,7 @@ def load_https():
                     continue
 
                 key = f"{ip}:{port}"
+
                 current = data.get(key)
 
                 candidate = {
@@ -148,10 +78,23 @@ def load_https():
                     data[key] = candidate
                     continue
 
-                old_rel = current.get("reliability", 0)
-                old_ttfb = current.get("ttfb", 9999)
+                old_rel = current.get(
+                    "reliability",
+                    0
+                )
 
-                if reliability > old_rel or (reliability == old_rel and ttfb < old_ttfb):
+                old_ttfb = current.get(
+                    "ttfb",
+                    9999
+                )
+
+                if (
+                    reliability > old_rel
+                    or (
+                        reliability == old_rel
+                        and ttfb < old_ttfb
+                    )
+                ):
                     data[key] = candidate
 
     except:
@@ -159,316 +102,337 @@ def load_https():
 
     return data
 
-def is_valid_entry(item):
-    if not item:
-        return False
 
-    country = item.get("country", "")
-    provider = item.get("provider", "")
-
-    if not country or country == "?" or country == "None" or not provider or provider == "?" or provider == "None":
-        return False
-
-    https_info = item.get("https", {})
-    if not https_info:
-        return False
-
-    status = https_info.get("status", -1)
-    ttfb = https_info.get("ttfb", -1)
-    proto = https_info.get("proto", "")
-    reliability = https_info.get("reliability", -1)
-
-    if status == -1 or ttfb == -1 or not proto or proto == "-" or reliability == -1:
-        return False
-
-    return True
-
-def parse_line(line, latency_map, alpn_map):
+def parse_line(line):
     line = line.strip()
+
     if not line:
         return None
 
     parts = line.split("|")
-    if len(parts) < 10:
+
+    if len(parts) < 8:
         return None
 
     try:
-        ip = parts[0]
+        latency = int(parts[2])
+    except:
+        latency = 9999
+
+    try:
         port = int(parts[1])
-        status = int(parts[2]) if parts[2].isdigit() else 0
-        ttfb = int(parts[3]) if parts[3].isdigit() else 9999
-        proto = parts[4]
-        reliability = float(parts[5]) if parts[5].replace('.', '').isdigit() else 0.0
-        ws = parts[6] == "1" or parts[6].lower() == "true"
-        cdn = parts[7]
-        country = parts[8]
-        provider = parts[9]
-
-        key = f"{ip}:{port}"
-        latency = latency_map.get(key, 9999)
-        alpn = alpn_map.get(key, "")
-
-    except (ValueError, IndexError):
+    except:
         return None
 
-    if cdn == "unknown" and provider and provider != "?":
-        cdn = detect_cdn_from_provider(provider)
+    tls = parts[3] == "True"
 
     return {
-        "ip": ip,
+        "ip": parts[0],
         "port": port,
         "latency": latency,
-        "tls": True,
-        "cdn": cdn,
-        "country": country,
-        "provider": provider,
-        "alpn": alpn,
-        "https": {
-            "status": status,
-            "ttfb": ttfb,
-            "proto": proto,
-            "reliability": reliability,
-            "ws": ws
-        }
+        "tls": tls,
+        "cdn": parts[4],
+        "country": parts[5],
+        "provider": parts[6],
+        "alpn": parts[7]
     }
+
 
 def latency_score(latency):
     if latency <= 150:
         return FAST_LATENCY_BONUS
+
     if latency <= 300:
         return MID_LATENCY_BONUS
+
     if latency <= 500:
         return SLOW_LATENCY_BONUS
+
     return 0
+
 
 def ttfb_score(ttfb):
     if ttfb <= 300:
         return FAST_TTFB_BONUS
+
     if ttfb <= 700:
         return MID_TTFB_BONUS
+
     if ttfb <= 1200:
         return SLOW_TTFB_BONUS
+
     return 0
+
 
 def cdn_score(cdn):
     if not cdn:
         return 0
+
     cdn = str(cdn).strip().lower()
+
     if cdn == "unknown":
         return 0
+
     return KNOWN_CDN_BONUS
+
 
 def alpn_score(alpn):
     if not alpn:
         return 0
+
     alpn = str(alpn).strip().lower()
+
     score = ALPN_BONUS
+
     if alpn == "h2":
         score += H2_BONUS
+
     return score
+
 
 def port_score(port):
     if port in STABLE_PORTS:
         return STABLE_PORT_BONUS
+
     return 0
+
 
 def https_score(info):
     if not info:
         return 0
 
     score = HTTPS_BONUS
-    score += ttfb_score(info.get("ttfb", 9999))
 
-    reliability = info.get("reliability", 0)
+    score += ttfb_score(
+        info.get(
+            "ttfb",
+            9999
+        )
+    )
+
+    reliability = info.get(
+        "reliability",
+        0
+    )
+
     if reliability >= 0.9:
         score += RELIABILITY_BONUS
 
-    proto = str(info.get("proto", "")).lower()
+    proto = str(
+        info.get(
+            "proto",
+            ""
+        )
+    ).lower()
+
     if "h2" in proto:
         score += H2_BONUS
 
     return score
 
-def score(item, https_info):
+
+def score(
+    item,
+    https_info
+):
     total = 0
 
     if item.get("tls"):
         total += TLS_BONUS
 
-    total += latency_score(item.get("latency", 9999))
-    total += cdn_score(item.get("cdn", ""))
-    total += alpn_score(item.get("alpn", ""))
-    total += port_score(item.get("port", 0))
-    total += https_score(https_info)
+    total += latency_score(
+        item.get(
+            "latency",
+            9999
+        )
+    )
+
+    total += cdn_score(
+        item.get(
+            "cdn",
+            ""
+        )
+    )
+
+    total += alpn_score(
+        item.get(
+            "alpn",
+            ""
+        )
+    )
+
+    total += port_score(
+        item.get(
+            "port",
+            0
+        )
+    )
+
+    total += https_score(
+        https_info
+    )
 
     return total
+
 
 def load_results():
     data = []
     seen = set()
 
-    latency_map, alpn_map = load_extra_data()
-
     try:
-        with open(RESULT_FILE, "r", encoding="utf-8") as f:
+        with open(
+            RESULT_FILE,
+            "r",
+            encoding="utf-8"
+        ) as f:
+
             for line in f:
-                item = parse_line(line, latency_map, alpn_map)
+                item = parse_line(line)
+
                 if not item:
                     continue
 
-                if not is_valid_entry(item):
-                    continue
+                key = (
+                    f'{item["ip"]}:'
+                    f'{item["port"]}'
+                )
 
-                key = f'{item["ip"]}:{item["port"]}'
-                if key in seen:
+                old = seen
+
+                if key in old:
                     continue
 
                 seen.add(key)
                 data.append(item)
+
     except:
         pass
 
     return data
 
+
 def load_domains_raw():
     domains = set()
 
-    if not os.path.exists(DOMAINS_RAW_FILE):
+    if not os.path.exists(
+        DOMAINS_RAW_FILE
+    ):
         return domains
 
     try:
-        with open(DOMAINS_RAW_FILE, "r", encoding="utf-8") as f:
+        with open(
+            DOMAINS_RAW_FILE,
+            "r",
+            encoding="utf-8"
+        ) as f:
+
             for line in f:
                 line = line.strip()
+
                 if line:
-                    domains.add(line.lower())
+                    domains.add(
+                        line.lower()
+                    )
+
     except:
         pass
 
     return domains
 
-def load_previous_best_ips():
-    if not os.path.exists(BEST_FILE):
-        return []
-
-    previous = []
-
-    try:
-        with open(BEST_FILE, "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if not line:
-                    continue
-                parts = line.split("|")
-                if len(parts) < 10:
-                    continue
-                ip_port = parts[0]
-                try:
-                    score_val = int(parts[1].replace("S=", ""))
-                except:
-                    score_val = 0
-                if ":" in ip_port:
-                    previous.append({
-                        "ip": ip_port.split(":")[0],
-                        "port": int(ip_port.split(":")[1]),
-                        "score": score_val,
-                        "is_new": False
-                    })
-    except:
-        pass
-
-    return previous
-
-def merge_and_limit(new_items, previous_items):
-    combined = []
-
-    for item in new_items:
-        combined.append({
-            "ip": item["ip"],
-            "port": item["port"],
-            "score": item["score"],
-            "is_new": True,
-            "latency": item.get("latency", 9999),
-            "cdn": item.get("cdn", "unknown"),
-            "country": item.get("country", "?"),
-            "provider": item.get("provider", "?"),
-            "alpn": item.get("alpn", ""),
-            "https": item.get("https", {})
-        })
-
-    for old in previous_items:
-        combined.append(old)
-
-    combined.sort(key=lambda x: (-x["score"], 0 if x["is_new"] else 1, x.get("latency", 9999)))
-
-    seen_keys = set()
-    limited = []
-
-    for item in combined:
-        key = f"{item['ip']}:{item['port']}"
-        if key in seen_keys:
-            continue
-        seen_keys.add(key)
-        limited.append(item)
-        if len(limited) >= MAX_OUTPUT_IPS:
-            break
-
-    return limited
 
 def rank_results():
     data = load_results()
     https_map = load_https()
     domains = load_domains_raw()
-    previous_best = load_previous_best_ips()
 
-    new_scored_items = []
+    ranked = []
 
     for item in data:
-        key = f'{item["ip"]}:{item["port"]}'
-        https_info = https_map.get(key)
 
-        if https_info is None:
-            https_info = item.get("https", {})
+        key = (
+            f'{item["ip"]}:'
+            f'{item["port"]}'
+        )
+
+        https_info = https_map.get(
+            key
+        )
+
         item["https"] = https_info
-        item["score"] = score(item, https_info)
-        new_scored_items.append(item)
+        item["score"] = score(
+            item,
+            https_info
+        )
 
-    merged_items = merge_and_limit(new_scored_items, previous_best)
+        ranked.append(
+            item
+        )
 
-    os.makedirs("output", exist_ok=True)
+    ranked.sort(
+        key=lambda x: (
+            -x["score"],
+            x.get(
+                "latency",
+                9999
+            ),
+            x.get(
+                "port",
+                65535
+            )
+        )
+    )
 
-    with open(BEST_FILE, "w", encoding="utf-8") as f:
-        for item in merged_items:
-            https_info = item.get("https") or {}
-            ttfb = https_info.get("ttfb", "-")
-            proto = https_info.get("proto", "-")
-            rel = https_info.get("reliability", "-")
-            latency = item.get("latency", 9999)
-            cdn = item.get("cdn", "unknown")
-            alpn = item.get("alpn", "")
-            country = item.get("country", "?")
-            provider = item.get("provider", "?")
+    os.makedirs(
+        "output",
+        exist_ok=True
+    )
+
+    with open(
+        BEST_FILE,
+        "w",
+        encoding="utf-8"
+    ) as f:
+
+        for item in ranked:
+
+            https_info = item.get(
+                "https"
+            ) or {}
+
+            ttfb = https_info.get(
+                "ttfb",
+                "-"
+            )
+
+            proto = https_info.get(
+                "proto",
+                "-"
+            )
+
+            rel = https_info.get(
+                "reliability",
+                "-"
+            )
 
             f.write(
-                f'{item["ip"]}:{item["port"]}|'
-                f'S={item["score"]}|'
-                f'{latency}ms|'
-                f'TTFB={ttfb}|'
-                f'PROTO={proto}|'
-                f'REL={rel}|'
-                f'CDN={cdn}|'
-                f'ALPN={alpn}|'
-                f'{country}|'
-                f'{provider}\n'
+                f'{item["ip"]}:{item["port"]} '
+                f'S={item["score"]} '
+                f'{item["latency"]}ms '
+                f'TTFB={ttfb} '
+                f'PROTO={proto} '
+                f'REL={rel} '
+                f'CDN={item["cdn"]} '
+                f'ALPN={item["alpn"]} '
+                f'{item["country"]} '
+                f'{item["provider"]}\n'
             )
 
     print(
-        f"RANKED={len(data)} "
+        f"RANKED={len(ranked)} "
         f"HTTPS={len(https_map)} "
-        f"DOMAINS={len(domains)} "
-        f"BEST_IPS={len(merged_items)} "
-        f"MAX_LIMIT={MAX_OUTPUT_IPS}"
+        f"DOMAINS={len(domains)}"
     )
+
 
 if __name__ == "__main__":
     rank_results()
