@@ -3,7 +3,7 @@ name: ARISTA MATRIX PIPELINE
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 */2 * * *"
 
 permissions:
   contents: write
@@ -17,47 +17,57 @@ env:
   PYTHONUNBUFFERED: 1
 
 jobs:
+  check-and-run:
+    runs-on: ubuntu-latest
+    outputs:
+      should_run: ${{ steps.check.outputs.should_run }}
+    steps:
+      - name: Check if already running
+        id: check
+        run: |
+          RUNNING=false
+          if curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+             "https://api.github.com/repos/${{ github.repository }}/actions/runs?status=in_progress&branch=${{ github.ref_name }}" \
+             | grep -q "\"id\":"; then
+            RUNNING=true
+          fi
+          echo "should_run=$([ "$RUNNING" = false ] && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
+          echo "Running check: $RUNNING"
 
   prepare:
+    needs: check-and-run
+    if: needs.check-and-run.outputs.should_run == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 15
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
-
       - name: Install
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-
       - name: Restore Rolling State
         uses: actions/download-artifact@v4
         with:
           name: arista-output
           path: output
         continue-on-error: true
-
       - name: Prepare Bank
         run: |
           mkdir -p output
-
           if [ ! -s output/ip_bank.txt ]; then
             python downloader.py
           fi
-
           if [ ! -s output/clean_ips.txt ]; then
             python cleaner.py
           fi
-
       - name: Save Rolling State
         uses: actions/upload-artifact@v4
         with:
@@ -70,30 +80,24 @@ jobs:
     needs: prepare
     runs-on: ubuntu-latest
     timeout-minutes: 55
-
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
-
       - run: pip install -r requirements.txt
-
       - name: Restore State
         uses: actions/download-artifact@v4
         with:
           name: arista-output
           path: output
         continue-on-error: true
-
       - name: TCP Scan
         run: |
           python main.py --tcp
-
       - name: Save State
         uses: actions/upload-artifact@v4
         with:
@@ -106,30 +110,24 @@ jobs:
     needs: tcp
     runs-on: ubuntu-latest
     timeout-minutes: 45
-
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
-
       - run: pip install -r requirements.txt
-
       - name: Restore State
         uses: actions/download-artifact@v4
         with:
           name: arista-output
           path: output
         continue-on-error: true
-
       - name: TLS Scan
         run: |
           python main.py --tls
-
       - name: Save State
         uses: actions/upload-artifact@v4
         with:
@@ -142,30 +140,24 @@ jobs:
     needs: tls
     runs-on: ubuntu-latest
     timeout-minutes: 35
-
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
-
       - run: pip install -r requirements.txt
-
       - name: Restore State
         uses: actions/download-artifact@v4
         with:
           name: arista-output
           path: output
         continue-on-error: true
-
       - name: HTTPS Validation
         run: |
           python main.py --https
-
       - name: Save State
         uses: actions/upload-artifact@v4
         with:
@@ -178,30 +170,24 @@ jobs:
     needs: https
     runs-on: ubuntu-latest
     timeout-minutes: 35
-
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
-
       - run: pip install -r requirements.txt
-
       - name: Restore State
         uses: actions/download-artifact@v4
         with:
           name: arista-output
           path: output
         continue-on-error: true
-
       - name: Fingerprint
         run: |
           python main.py --fp
-
       - name: Save State
         uses: actions/upload-artifact@v4
         with:
@@ -214,30 +200,24 @@ jobs:
     needs: fingerprint
     runs-on: ubuntu-latest
     timeout-minutes: 25
-
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
-
       - run: pip install -r requirements.txt
-
       - name: Restore State
         uses: actions/download-artifact@v4
         with:
           name: arista-output
           path: output
         continue-on-error: true
-
       - name: GEO
         run: |
           python main.py --geo
-
       - name: Save State
         uses: actions/upload-artifact@v4
         with:
@@ -250,30 +230,24 @@ jobs:
     needs: geo
     runs-on: ubuntu-latest
     timeout-minutes: 35
-
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
-
       - run: pip install -r requirements.txt
-
       - name: Restore State
         uses: actions/download-artifact@v4
         with:
           name: arista-output
           path: output
         continue-on-error: true
-
       - name: Finalize
         run: |
           python main.py --finalize
-
       - name: Save Final State
         uses: actions/upload-artifact@v4
         with:
@@ -281,20 +255,16 @@ jobs:
           path: output
           overwrite: true
           retention-days: 3
-
       - name: Commit Final Output
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
           mkdir -p output
-
           [ -f output/best_ips.txt ] && git add output/best_ips.txt
           [ -f output/domains.txt ] && git add output/domains.txt
           [ -f output/results.txt ] && git add output/results.txt
           [ -f output/scan_cursor.txt ] && git add output/scan_cursor.txt
           [ -f output/current_part.txt ] && git add output/current_part.txt
-
           [ -f output/tcp_live.txt ] && git add output/tcp_live.txt
           [ -f output/tls_live.txt ] && git add output/tls_live.txt
           [ -f output/https_live.txt ] && git add output/https_live.txt
@@ -302,7 +272,6 @@ jobs:
           [ -f output/scanned_cache.txt ] && git add output/scanned_cache.txt
           [ -f output/geo_cache.json ] && git add output/geo_cache.json
           [ -f output/live_bank.txt ] && git add output/live_bank.txt
-
           git diff --cached --quiet || (
             git commit -m "ARISTA $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
             git push
