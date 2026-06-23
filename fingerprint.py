@@ -141,7 +141,9 @@ def detect_cdn_by_hostname(ip):
 
 def detect_cdn(ip=None, port=None, headers=None):
     if headers is not None:
-        return detect_cdn_from_headers(headers)
+        result = detect_cdn_from_headers(headers)
+        if result != "unknown":
+            return result
 
     if ip is None or port is None:
         return "unknown"
@@ -160,17 +162,17 @@ def detect_cdn(ip=None, port=None, headers=None):
             allow_redirects=True
         )
 
-        cdn = detect_cdn_from_headers(r.headers)
+        result = detect_cdn_from_headers(r.headers)
         
-        if cdn != "unknown":
-            return cdn
+        if result != "unknown":
+            return result
 
     except:
         pass
 
-    cdn = detect_cdn_by_hostname(ip)
+    result = detect_cdn_by_hostname(ip)
     
-    if cdn != "unknown":
-        return cdn
+    if result != "unknown":
+        return result
 
     return "unknown"
