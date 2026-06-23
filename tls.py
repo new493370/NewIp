@@ -28,7 +28,7 @@ def cert_meta(cert_bin, cert):
         "sha256": sha256
     }
 
-def tls_check(ip, port, timeout=3):
+def tls_check(ip, port, timeout=5):
     cfg = load_config()
     sni_hosts = cfg.get("sni_hosts", [])
     ctx = ssl.create_default_context()
