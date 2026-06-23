@@ -39,7 +39,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Restore live_bank from Cache
+      - name: Restore scan_cursor
+        uses: actions/cache@v3
+        with:
+          path: output/scan_cursor.txt
+          key: scan-cursor
+          restore-keys: |
+            scan-cursor-
+
+      - name: Restore live_bank
         uses: actions/cache@v3
         with:
           path: output/live_bank.txt
@@ -53,7 +61,7 @@ jobs:
           python downloader.py
           python cleaner.py
 
-      - name: Cache clean_ips for TCP
+      - name: Cache clean_ips
         uses: actions/cache@v3
         with:
           path: output/clean_ips.txt
@@ -61,11 +69,17 @@ jobs:
           restore-keys: |
             clean-ips-
 
-      - name: Save live_bank to Cache
+      - name: Save live_bank
         uses: actions/cache@v3
         with:
           path: output/live_bank.txt
           key: live-bank-${{ github.run_id }}
+
+      - name: Save scan_cursor
+        uses: actions/cache@v3
+        with:
+          path: output/scan_cursor.txt
+          key: scan-cursor
 
       - name: Cleanup heavy files
         run: |
@@ -89,7 +103,15 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Restore live_bank from Cache
+      - name: Restore scan_cursor
+        uses: actions/cache@v3
+        with:
+          path: output/scan_cursor.txt
+          key: scan-cursor
+          restore-keys: |
+            scan-cursor-
+
+      - name: Restore live_bank
         uses: actions/cache@v3
         with:
           path: output/live_bank.txt
@@ -97,7 +119,7 @@ jobs:
           restore-keys: |
             live-bank-
 
-      - name: Restore clean_ips from Cache
+      - name: Restore clean_ips
         uses: actions/cache@v3
         with:
           path: output/clean_ips.txt
@@ -118,11 +140,17 @@ jobs:
           restore-keys: |
             tcp-live-
 
-      - name: Save live_bank to Cache
+      - name: Save live_bank
         uses: actions/cache@v3
         with:
           path: output/live_bank.txt
           key: live-bank-${{ github.run_id }}
+
+      - name: Save scan_cursor
+        uses: actions/cache@v3
+        with:
+          path: output/scan_cursor.txt
+          key: scan-cursor
 
       - name: Cleanup temporary files
         run: |
@@ -148,7 +176,15 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Restore live_bank from Cache
+      - name: Restore scan_cursor
+        uses: actions/cache@v3
+        with:
+          path: output/scan_cursor.txt
+          key: scan-cursor
+          restore-keys: |
+            scan-cursor-
+
+      - name: Restore live_bank
         uses: actions/cache@v3
         with:
           path: output/live_bank.txt
@@ -156,7 +192,7 @@ jobs:
           restore-keys: |
             live-bank-
 
-      - name: Restore TCP results from Cache
+      - name: Restore TCP results
         uses: actions/cache@v3
         with:
           path: output/tcp_live.txt
@@ -177,11 +213,17 @@ jobs:
           restore-keys: |
             tls-live-
 
-      - name: Save live_bank to Cache
+      - name: Save live_bank
         uses: actions/cache@v3
         with:
           path: output/live_bank.txt
           key: live-bank-${{ github.run_id }}
+
+      - name: Save scan_cursor
+        uses: actions/cache@v3
+        with:
+          path: output/scan_cursor.txt
+          key: scan-cursor
 
       - name: Cleanup temporary files
         run: |
@@ -206,7 +248,15 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Restore live_bank from Cache
+      - name: Restore scan_cursor
+        uses: actions/cache@v3
+        with:
+          path: output/scan_cursor.txt
+          key: scan-cursor
+          restore-keys: |
+            scan-cursor-
+
+      - name: Restore live_bank
         uses: actions/cache@v3
         with:
           path: output/live_bank.txt
@@ -214,7 +264,7 @@ jobs:
           restore-keys: |
             live-bank-
 
-      - name: Restore TLS results from Cache
+      - name: Restore TLS results
         uses: actions/cache@v3
         with:
           path: output/tls_live.txt
@@ -235,11 +285,17 @@ jobs:
           restore-keys: |
             https-live-
 
-      - name: Save live_bank to Cache
+      - name: Save live_bank
         uses: actions/cache@v3
         with:
           path: output/live_bank.txt
           key: live-bank-${{ github.run_id }}
+
+      - name: Save scan_cursor
+        uses: actions/cache@v3
+        with:
+          path: output/scan_cursor.txt
+          key: scan-cursor
 
       - name: Cleanup temporary files
         run: |
@@ -264,7 +320,15 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Restore live_bank from Cache
+      - name: Restore scan_cursor
+        uses: actions/cache@v3
+        with:
+          path: output/scan_cursor.txt
+          key: scan-cursor
+          restore-keys: |
+            scan-cursor-
+
+      - name: Restore live_bank
         uses: actions/cache@v3
         with:
           path: output/live_bank.txt
@@ -272,7 +336,7 @@ jobs:
           restore-keys: |
             live-bank-
 
-      - name: Restore HTTPS results from Cache
+      - name: Restore HTTPS results
         uses: actions/cache@v3
         with:
           path: output/https_live.txt
@@ -293,11 +357,17 @@ jobs:
           restore-keys: |
             fp-results-
 
-      - name: Save live_bank to Cache
+      - name: Save live_bank
         uses: actions/cache@v3
         with:
           path: output/live_bank.txt
           key: live-bank-${{ github.run_id }}
+
+      - name: Save scan_cursor
+        uses: actions/cache@v3
+        with:
+          path: output/scan_cursor.txt
+          key: scan-cursor
 
       - name: Cleanup temporary files
         run: |
@@ -322,7 +392,15 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Restore live_bank from Cache
+      - name: Restore scan_cursor
+        uses: actions/cache@v3
+        with:
+          path: output/scan_cursor.txt
+          key: scan-cursor
+          restore-keys: |
+            scan-cursor-
+
+      - name: Restore live_bank
         uses: actions/cache@v3
         with:
           path: output/live_bank.txt
@@ -330,7 +408,7 @@ jobs:
           restore-keys: |
             live-bank-
 
-      - name: Restore Fingerprint results from Cache
+      - name: Restore Fingerprint results
         uses: actions/cache@v3
         with:
           path: output/fingerprint_results.txt
@@ -351,11 +429,17 @@ jobs:
           restore-keys: |
             results-
 
-      - name: Save live_bank to Cache
+      - name: Save live_bank
         uses: actions/cache@v3
         with:
           path: output/live_bank.txt
           key: live-bank-${{ github.run_id }}
+
+      - name: Save scan_cursor
+        uses: actions/cache@v3
+        with:
+          path: output/scan_cursor.txt
+          key: scan-cursor
 
       - name: Cleanup temporary files
         run: |
@@ -380,7 +464,15 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Restore live_bank from Cache
+      - name: Restore scan_cursor
+        uses: actions/cache@v3
+        with:
+          path: output/scan_cursor.txt
+          key: scan-cursor
+          restore-keys: |
+            scan-cursor-
+
+      - name: Restore live_bank
         uses: actions/cache@v3
         with:
           path: output/live_bank.txt
@@ -388,7 +480,7 @@ jobs:
           restore-keys: |
             live-bank-
 
-      - name: Restore results from Cache
+      - name: Restore results
         uses: actions/cache@v3
         with:
           path: output/results.txt
@@ -409,11 +501,17 @@ jobs:
           mkdir -p output
           python main.py --finalize
 
-      - name: Save live_bank to Cache
+      - name: Save live_bank
         uses: actions/cache@v3
         with:
           path: output/live_bank.txt
           key: live-bank-${{ github.run_id }}
+
+      - name: Save scan_cursor
+        uses: actions/cache@v3
+        with:
+          path: output/scan_cursor.txt
+          key: scan-cursor
 
       - name: Commit Final Output
         run: |
