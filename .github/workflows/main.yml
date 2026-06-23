@@ -75,7 +75,7 @@ jobs:
         run: |
           rm -f output/tls_live.txt output/https_live.txt
           rm -f output/fingerprint_results.txt output/results.txt
-          rm -f output/domains_raw.txt output/domains.txt output/live_bank.txt
+          rm -f output/domains_raw.txt output/domains.txt
       - name: Save Rolling State
         uses: actions/upload-artifact@v4
         with:
@@ -116,7 +116,7 @@ jobs:
       - name: Clean TCP Files
         run: |
           rm -f output/fingerprint_results.txt output/results.txt
-          rm -f output/domains_raw.txt output/domains.txt output/live_bank.txt
+          rm -f output/domains_raw.txt output/domains.txt
       - name: Save TCP State
         uses: actions/upload-artifact@v4
         with:
@@ -158,7 +158,7 @@ jobs:
         run: |
           rm -f output/tcp_live.txt
           rm -f output/fingerprint_results.txt output/results.txt
-          rm -f output/domains_raw.txt output/domains.txt output/live_bank.txt
+          rm -f output/domains_raw.txt output/domains.txt
       - name: Save TLS State
         uses: actions/upload-artifact@v4
         with:
@@ -200,7 +200,7 @@ jobs:
         run: |
           rm -f output/tcp_live.txt
           rm -f output/fingerprint_results.txt output/results.txt
-          rm -f output/domains_raw.txt output/domains.txt output/live_bank.txt
+          rm -f output/domains_raw.txt output/domains.txt
       - name: Save HTTPS State
         uses: actions/upload-artifact@v4
         with:
@@ -244,7 +244,7 @@ jobs:
         run: |
           rm -f output/tcp_live.txt output/https_live.txt
           rm -f output/results.txt
-          rm -f output/domains_raw.txt output/domains.txt output/live_bank.txt
+          rm -f output/domains_raw.txt output/domains.txt
       - name: Save Fingerprint State
         uses: actions/upload-artifact@v4
         with:
@@ -288,7 +288,7 @@ jobs:
         run: |
           rm -f output/tcp_live.txt output/https_live.txt
           rm -f output/fingerprint_results.txt
-          rm -f output/domains_raw.txt output/domains.txt output/live_bank.txt
+          rm -f output/domains_raw.txt output/domains.txt
       - name: Save GEO State
         uses: actions/upload-artifact@v4
         with:
