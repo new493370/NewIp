@@ -77,7 +77,8 @@ def prepare_artifact():
         "scan_cursor.txt",
         "current_part.txt",
         "best_ips.txt",
-        "geo_cache.json"
+        "geo_cache.json",
+        "live_bank.txt"
     ]
     temp_files = [
         "tcp_live.txt",
