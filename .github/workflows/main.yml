@@ -89,6 +89,7 @@ jobs:
             output/best_ips.txt
             output/tcp_live.txt
             output/scanned_cache.txt
+            output/live_bank.txt
           overwrite: true
           retention-days: 3
 
@@ -130,6 +131,7 @@ jobs:
             output/scanned_cache.txt
             output/geo_cache.json
             output/best_ips.txt
+            output/live_bank.txt
           overwrite: true
           retention-days: 3
 
@@ -172,6 +174,7 @@ jobs:
             output/scanned_cache.txt
             output/geo_cache.json
             output/best_ips.txt
+            output/live_bank.txt
           overwrite: true
           retention-days: 3
 
@@ -216,6 +219,7 @@ jobs:
             output/scanned_cache.txt
             output/geo_cache.json
             output/best_ips.txt
+            output/live_bank.txt
           overwrite: true
           retention-days: 3
 
@@ -260,6 +264,7 @@ jobs:
             output/scanned_cache.txt
             output/geo_cache.json
             output/best_ips.txt
+            output/live_bank.txt
           overwrite: true
           retention-days: 3
 
@@ -304,6 +309,7 @@ jobs:
             output/scanned_cache.txt
             output/geo_cache.json
             output/best_ips.txt
+            output/live_bank.txt
           overwrite: true
           retention-days: 3
 
