@@ -1,5 +1,4 @@
 accounts.google.com
-b.pro
 b.prototype.to
 core.telegram.org
 date.now
