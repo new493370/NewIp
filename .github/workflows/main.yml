@@ -128,7 +128,6 @@ jobs:
         run: |
           rm -f output/clean_ips.txt
           rm -f output/current_part.txt
-          rm -f output/scan_cursor.txt
           rm -f output/scanned_cache.txt
           rm -f output/*.tmp
 
@@ -188,7 +187,6 @@ jobs:
         run: |
           rm -f output/tcp_live.txt
           rm -f output/current_part.txt
-          rm -f output/scan_cursor.txt
           rm -f output/*.tmp
 
   https:
@@ -247,7 +245,6 @@ jobs:
         run: |
           rm -f output/tls_live.txt
           rm -f output/current_part.txt
-          rm -f output/scan_cursor.txt
           rm -f output/*.tmp
 
   fingerprint:
@@ -306,7 +303,6 @@ jobs:
         run: |
           rm -f output/https_live.txt
           rm -f output/current_part.txt
-          rm -f output/scan_cursor.txt
           rm -f output/*.tmp
 
   geo:
@@ -365,7 +361,6 @@ jobs:
         run: |
           rm -f output/fingerprint_results.txt
           rm -f output/current_part.txt
-          rm -f output/scan_cursor.txt
           rm -f output/*.tmp
 
   finalize:
@@ -432,6 +427,7 @@ jobs:
           [ -f output/results.txt ] && git add output/results.txt
           [ -f output/geo_cache.json ] && git add output/geo_cache.json
           [ -f output/https_meta.json ] && git add output/https_meta.json
+          [ -f output/scan_cursor.txt ] && git add output/scan_cursor.txt
 
           if ! git diff --cached --quiet; then
             git commit -m "ARISTA $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
@@ -452,7 +448,6 @@ jobs:
           rm -f output/ip_bank.txt
           rm -f output/clean_ips.txt
           rm -f output/current_part.txt
-          rm -f output/scan_cursor.txt
           rm -f output/tcp_live.txt
           rm -f output/tls_live.txt
           rm -f output/https_live.txt
