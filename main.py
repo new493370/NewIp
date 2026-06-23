@@ -81,7 +81,6 @@ def prepare_artifact():
         "live_bank.txt"
     ]
     temp_files = [
-        "tcp_live.txt",
         "tls_live.txt",
         "https_live.txt",
         "fingerprint_results.txt",
@@ -112,7 +111,6 @@ def prepare():
 
 def run_tcp():
     prepare()
-    prepare_artifact()
 
     print(
         "ROLLING SPLIT"
