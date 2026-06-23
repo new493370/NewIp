@@ -514,15 +514,71 @@ def rank_results():
             provider_display = item["provider"] if item["provider"] and item["provider"] != "None" else "Unknown"
             alpn_display = item["alpn"] if item["alpn"] and item["alpn"] != "None" else ""
 
+            score_str = str(item["score"])
+            if item["score"] >= 18:
+                score_colored = f"\033[92m{score_str}\033[0m"
+            elif item["score"] >= 15:
+                score_colored = f"\033[93m{score_str}\033[0m"
+            elif item["score"] >= 12:
+                score_colored = f"\033[96m{score_str}\033[0m"
+            else:
+                score_colored = f"\033[91m{score_str}\033[0m"
+
+            latency_str = f"{item['latency']}ms"
+            if item["latency"] <= 200:
+                latency_colored = f"\033[92m{latency_str}\033[0m"
+            elif item["latency"] <= 400:
+                latency_colored = f"\033[93m{latency_str}\033[0m"
+            else:
+                latency_colored = f"\033[91m{latency_str}\033[0m"
+
+            ttfb_str = f"{ttfb}ms"
+            if ttfb != "-":
+                if ttfb <= 300:
+                    ttfb_colored = f"\033[92m{ttfb_str}\033[0m"
+                elif ttfb <= 700:
+                    ttfb_colored = f"\033[93m{ttfb_str}\033[0m"
+                else:
+                    ttfb_colored = f"\033[91m{ttfb_str}\033[0m"
+            else:
+                ttfb_colored = "-"
+
+            if proto != "-":
+                if proto == "h2":
+                    proto_colored = f"\033[92m{proto}\033[0m"
+                else:
+                    proto_colored = f"\033[96m{proto}\033[0m"
+            else:
+                proto_colored = "-"
+
+            rel_str = str(rel)
+            if rel != "-":
+                if float(rel) >= 0.9:
+                    rel_colored = f"\033[92m{rel_str}\033[0m"
+                else:
+                    rel_colored = f"\033[93m{rel_str}\033[0m"
+            else:
+                rel_colored = "-"
+
+            if cdn_display and cdn_display.lower() != "unknown":
+                cdn_colored = f"\033[95m{cdn_display}\033[0m"
+            else:
+                cdn_colored = cdn_display
+
+            if alpn_display == "h2":
+                alpn_colored = f"\033[92m{alpn_display}\033[0m"
+            else:
+                alpn_colored = alpn_display
+
             f.write(
                 f'{item["ip"]}:{item["port"]} '
-                f'S={item["score"]} '
-                f'{item["latency"]}ms '
-                f'TTFB={ttfb} '
-                f'PROTO={proto} '
-                f'REL={rel} '
-                f'CDN={cdn_display} '
-                f'ALPN={alpn_display} '
+                f'S={score_colored} '
+                f'{latency_colored} '
+                f'TTFB={ttfb_colored} '
+                f'PROTO={proto_colored} '
+                f'REL={rel_colored} '
+                f'CDN={cdn_colored} '
+                f'ALPN={alpn_colored} '
                 f'{country_display} '
                 f'{provider_display}\n'
             )
