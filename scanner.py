@@ -334,6 +334,7 @@ def tcp_scan(
             stage_buffer.extend(stage_live)
 
             if len(stage_buffer) >= TCP_BATCH_WRITE_LIMIT:
+                print(f"TCP WRITING {len(stage_buffer)} RESULTS TO LIVE_BANK")
                 append_tcp_live(stage_buffer)
                 append_live(stage_buffer)
                 total_live += len(stage_buffer)
@@ -350,6 +351,7 @@ def tcp_scan(
         )
 
     if stage_buffer:
+        print(f"TCP WRITING FINAL {len(stage_buffer)} RESULTS TO LIVE_BANK")
         append_tcp_live(stage_buffer)
         append_live(stage_buffer)
         total_live += len(stage_buffer)
