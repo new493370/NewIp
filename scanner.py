@@ -379,7 +379,7 @@ def tls_worker(
     except:
         return None
 
-    timeout = 1.5
+    timeout = 3.0
 
     tls_ok, tls_data = tls_check(
         ip,
@@ -496,7 +496,7 @@ async def https_worker_async(
             "timeout",
             3
         ),
-        2
+        3
     )
 
     ok, data = await https_check(
@@ -504,7 +504,7 @@ async def https_worker_async(
         ip,
         port,
         timeout=timeout,
-        retries=2
+        retries=3
     )
 
     if not ok:
@@ -566,7 +566,7 @@ def https_scan():
     async def run_https_scan():
         nonlocal https_live
         
-        batch_size = 100
+        batch_size = 50
         batches = [
             tls_items[i:i + batch_size]
             for i in range(0, len(tls_items), batch_size)
@@ -575,14 +575,15 @@ def https_scan():
         import aiohttp
 
         timeout_cfg = aiohttp.ClientTimeout(
-            total=cfg.get("timeout", 3)
+            total=cfg.get("timeout", 3) + 2
         )
 
         connector = aiohttp.TCPConnector(
             limit=threads * 2,
             limit_per_host=0,
             ssl=False,
-            enable_cleanup_closed=True
+            enable_cleanup_closed=True,
+            ttl_dns_cache=300
         )
 
         async with aiohttp.ClientSession(
@@ -599,9 +600,9 @@ def https_scan():
                     )
                     for item in batch
                 ]
-                results = await asyncio.gather(*tasks)
+                results = await asyncio.gather(*tasks, return_exceptions=True)
                 for res in results:
-                    if res:
+                    if res and not isinstance(res, Exception):
                         https_live.append(res)
 
     asyncio.run(run_https_scan())
@@ -643,7 +644,9 @@ def fp_worker(
     )
 
     cdn = detect_cdn(
-        headers
+        ip=ip,
+        port=port,
+        headers=headers
     )
 
     return (
