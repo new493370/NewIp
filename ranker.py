@@ -111,7 +111,7 @@ def parse_line(line):
 
     parts = line.split("|")
 
-    if len(parts) < 8:
+    if len(parts) < 10:
         return None
 
     try:
@@ -131,10 +131,10 @@ def parse_line(line):
         "port": port,
         "latency": latency,
         "tls": tls,
-        "cdn": parts[4],
-        "country": parts[5],
-        "provider": parts[6],
-        "alpn": parts[7]
+        "cdn": parts[7],
+        "country": parts[8],
+        "provider": parts[9],
+        "alpn": parts[4]
     }
 
 
@@ -297,9 +297,7 @@ def load_results():
                     f'{item["port"]}'
                 )
 
-                old = seen
-
-                if key in old:
+                if key in seen:
                     continue
 
                 seen.add(key)
