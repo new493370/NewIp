@@ -6,46 +6,30 @@ CDN_HEADERS = {
     "cloudflare": [
         "cf-ray",
         "cf-cache-status",
-        "cf-worker",
-        "cf-polished",
-        "cf-request-id"
+        "cf-worker"
     ],
     "fastly": [
         "x-served-by",
-        "fastly-debug",
-        "x-cache",
-        "x-cache-hits",
-        "fastly-"
+        "fastly-debug"
     ],
     "akamai": [
         "akamai",
-        "x-akamai",
-        "x-akamai-transformed",
-        "x-akamai-request-id",
-        "x-akamaitech"
+        "x-akamai"
     ],
     "azure": [
-        "x-azure-ref",
-        "azure-cdn",
-        "x-azurecdn"
+        "x-azure-ref"
     ],
     "bunny": [
-        "bunnycdn",
-        "x-bunny-",
-        "bunny"
+        "bunnycdn"
     ],
     "gcore": [
-        "gcdn",
-        "x-gcdn-"
+        "gcdn"
     ],
     "vercel": [
-        "x-vercel-id",
-        "x-vercel-cache",
-        "vercel"
+        "x-vercel-id"
     ],
     "cloudfront": [
-        "x-amz-cf-id",
-        "x-amz-cf-pop"
+        "x-amz-cf-id"
     ]
 }
 
@@ -108,7 +92,7 @@ def detect_cdn_from_headers(headers):
     if "fastly" in server:
         return "fastly"
 
-    if "akamai" in server or "akamaitech" in server:
+    if "akamai" in server:
         return "akamai"
 
     if "bunny" in server:
@@ -120,62 +104,18 @@ def detect_cdn_from_headers(headers):
     if "vercel" in server:
         return "vercel"
 
-    if "cloudfront" in server or "amazon" in server:
+    if "cloudfront" in server:
         return "cloudfront"
-
-    if "azure" in server or "microsoft" in server:
-        return "azure"
 
     return "unknown"
 
 
-def detect_cdn_from_provider(provider):
-    if not provider or provider == "?":
-        return "unknown"
-    
-    provider_lower = str(provider).lower()
-    
-    if "akamai" in provider_lower:
-        return "akamai"
-    if "cloudflare" in provider_lower:
-        return "cloudflare"
-    if "fastly" in provider_lower:
-        return "fastly"
-    if "vercel" in provider_lower:
-        return "vercel"
-    if "amazon" in provider_lower or "cloudfront" in provider_lower:
-        return "cloudfront"
-    if "microsoft" in provider_lower or "azure" in provider_lower:
-        return "azure"
-    if "bunny" in provider_lower:
-        return "bunny"
-    if "gcore" in provider_lower:
-        return "gcore"
-    if "digitalocean" in provider_lower:
-        return "digitalocean"
-    if "hetzner" in provider_lower:
-        return "hetzner"
-    if "cogent" in provider_lower:
-        return "cogent"
-    
-    return "unknown"
-
-
-def detect_cdn(ip=None, port=None, headers=None, provider=None):
-    result = "unknown"
-    
+def detect_cdn(ip=None, port=None, headers=None):
     if headers is not None:
-        result = detect_cdn_from_headers(headers)
-        if result != "unknown":
-            return result
-    
-    if provider is not None and result == "unknown":
-        result = detect_cdn_from_provider(provider)
-        if result != "unknown":
-            return result
+        return detect_cdn_from_headers(headers)
 
     if ip is None or port is None:
-        return result
+        return "unknown"
 
     scheme = (
         "https"
@@ -184,20 +124,16 @@ def detect_cdn(ip=None, port=None, headers=None, provider=None):
     )
 
     try:
-        with requests.Session() as session:
-            r = session.get(
-                f"{scheme}://{ip}:{port}",
-                timeout=4,
-                verify=False,
-                allow_redirects=True,
-                headers={"User-Agent": "ARISTA"}
-            )
+        r = requests.get(
+            f"{scheme}://{ip}",
+            timeout=4,
+            verify=False,
+            allow_redirects=True
+        )
 
-            result = detect_cdn_from_headers(r.headers)
-            if result != "unknown":
-                return result
+        return detect_cdn_from_headers(r.headers)
 
     except:
         pass
 
-    return result
+    return "unknown"
