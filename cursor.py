@@ -14,8 +14,7 @@ def load_cursor():
             value = f.read().strip()
             if not value:
                 return 0
-            val = int(value)
-            return 0 if val < 0 else val
+            return int(value)
     except:
         return 0
 
