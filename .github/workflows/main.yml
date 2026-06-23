@@ -367,12 +367,6 @@ jobs:
           git add output/domains.txt 2>/dev/null || true
           git add output/live_bank.txt 2>/dev/null || true
 
-          if [ -f output/live_bank.txt ] && [ -f output/ip_bank.txt ]; then
-            cat output/live_bank.txt >> output/ip_bank.txt
-            sort -u -o output/ip_bank.txt output/ip_bank.txt
-            git add output/ip_bank.txt
-          fi
-
           if ! git diff --cached --quiet; then
             git commit -m "ARISTA $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
             git push origin HEAD:main
