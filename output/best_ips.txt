@@ -6,3 +6,11 @@
 149.154.170.200:443 S=[96m12[0m [91m403ms[0m TTFB=[93m700ms[0m PROTO=[96mhttp/1.1[0m REL=[92m1.0[0m CDN=unknown ALPN=http/1.1 Singapore Telegram Messenger INC
 149.154.170.100:443 S=[91m11[0m [91m403ms[0m TTFB=[91m809ms[0m PROTO=[96mhttp/1.1[0m REL=[92m1.0[0m CDN=unknown ALPN=http/1.1 Singapore Telegram Messenger INC
 149.154.170.96:443 S=[91m11[0m [91m403ms[0m TTFB=[91m814ms[0m PROTO=[96mhttp/1.1[0m REL=[92m1.0[0m CDN=unknown ALPN=http/1.1 Singapore Telegram Messenger INC
+31.13.93.23:443 S=[91m3[0m [93m400ms[0m TTFB=- PROTO=- REL=- CDN=unknown ALPN=http/1.1 United States Facebook, Inc.
+31.13.78.26:443 S=[91m3[0m [93m400ms[0m TTFB=- PROTO=- REL=- CDN=unknown ALPN=http/1.1 New Zealand Facebook, Inc.
+31.13.95.26:443 S=[91m3[0m [93m400ms[0m TTFB=- PROTO=- REL=- CDN=unknown ALPN=http/1.1 Indonesia Facebook, Inc.
+57.144.182.135:443 S=[91m3[0m [93m400ms[0m TTFB=- PROTO=- REL=- CDN=unknown ALPN=http/1.1 Philippines Facebook, Inc.
+31.13.73.41:443 S=[91m3[0m [91m407ms[0m TTFB=- PROTO=- REL=- CDN=unknown ALPN=http/1.1 Ireland Facebook, Inc.
+31.13.71.41:443 S=[91m3[0m [91m407ms[0m TTFB=- PROTO=- REL=- CDN=unknown ALPN=http/1.1 United States Facebook, Inc.
+31.13.73.41:8443 S=[91m3[0m [91m407ms[0m TTFB=- PROTO=- REL=- CDN=unknown ALPN=http/1.1 Ireland Facebook, Inc.
+31.13.71.41:8443 S=[91m3[0m [91m407ms[0m TTFB=- PROTO=- REL=- CDN=unknown ALPN=http/1.1 United States Facebook, Inc.

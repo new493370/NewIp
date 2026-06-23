@@ -6,3 +6,35 @@
 149.154.170.100|443|403|809|http/1.1|1.0|0|unknown|Singapore|Telegram Messenger INC
 149.154.170.96|443|403|814|http/1.1|1.0|0|unknown|Singapore|Telegram Messenger INC
 149.154.170.200|443|403|700|http/1.1|1.0|0|unknown|Singapore|Telegram Messenger INC
+149.154.164.24|443|302|419|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.25|443|302|421|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.26|443|302|414|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.133|443|302|418|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.137|443|302|414|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.170.100|443|403|809|http/1.1|1.0|0|unknown|Singapore|Telegram Messenger INC
+149.154.170.96|443|403|814|http/1.1|1.0|0|unknown|Singapore|Telegram Messenger INC
+149.154.170.200|443|403|700|http/1.1|1.0|0|unknown|Singapore|Telegram Messenger INC
+149.154.164.24|443|302|479|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.25|443|302|472|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.26|443|302|463|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.133|443|302|458|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.137|443|302|475|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.170.100|443|403|805|http/1.1|1.0|0|unknown|Singapore|Telegram Messenger INC
+149.154.170.96|443|403|686|http/1.1|1.0|0|unknown|Singapore|Telegram Messenger INC
+149.154.170.200|443|403|991|http/1.1|1.0|0|unknown|Singapore|Telegram Messenger INC
+149.154.164.24|443|302|469|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.25|443|302|461|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.26|443|302|452|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.133|443|302|447|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.137|443|302|440|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.170.100|443|403|841|http/1.1|1.0|0|unknown|Singapore|Telegram Messenger INC
+149.154.170.96|443|403|975|http/1.1|1.0|0|unknown|Singapore|Telegram Messenger INC
+149.154.170.200|443|403|808|http/1.1|1.0|0|unknown|Singapore|Telegram Messenger INC
+31.13.73.41|443|407|414|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.73.41|8443|407|416|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.71.41|443|407|223|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.71.41|8443|407|223|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.93.23|443|400|130|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.78.26|443|400|400|http/1.1|1.0|0|unknown|New Zealand|Facebook, Inc.
+31.13.95.26|443|400|539|http/1.1|1.0|0|unknown|Indonesia|Facebook, Inc.
+57.144.182.135|443|400|519|http/1.1|1.0|0|unknown|Philippines|Facebook, Inc.
