@@ -379,7 +379,7 @@ def tls_worker(
     except:
         return None
 
-    timeout = 3.0
+    timeout = 1.5
 
     tls_ok, tls_data = tls_check(
         ip,
@@ -496,7 +496,7 @@ async def https_worker_async(
             "timeout",
             3
         ),
-        3
+        2
     )
 
     ok, data = await https_check(
@@ -504,7 +504,7 @@ async def https_worker_async(
         ip,
         port,
         timeout=timeout,
-        retries=3
+        retries=2
     )
 
     if not ok:
@@ -561,37 +561,39 @@ def https_scan():
         f"THREADS={threads}"
     )
 
+    if not tls_items:
+        print("NO TLS ITEMS TO SCAN")
+        return
+
     https_live = []
 
     async def run_https_scan():
         nonlocal https_live
         
         batch_size = 50
-        batches = [
-            tls_items[i:i + batch_size]
-            for i in range(0, len(tls_items), batch_size)
-        ]
-
-        import aiohttp
-
+        
         timeout_cfg = aiohttp.ClientTimeout(
-            total=cfg.get("timeout", 3) + 2
+            total=cfg.get("timeout", 3),
+            connect=2,
+            sock_read=2
         )
 
         connector = aiohttp.TCPConnector(
-            limit=threads * 2,
-            limit_per_host=0,
+            limit=threads,
+            limit_per_host=threads // 4,
             ssl=False,
             enable_cleanup_closed=True,
-            ttl_dns_cache=300
+            force_close=True
         )
 
         async with aiohttp.ClientSession(
             connector=connector,
             timeout=timeout_cfg
         ) as session:
-
-            for batch in batches:
+            
+            for i in range(0, len(tls_items), batch_size):
+                batch = tls_items[i:i + batch_size]
+                
                 tasks = [
                     https_worker_async(
                         item,
@@ -600,12 +602,22 @@ def https_scan():
                     )
                     for item in batch
                 ]
+                
                 results = await asyncio.gather(*tasks, return_exceptions=True)
+                
                 for res in results:
                     if res and not isinstance(res, Exception):
                         https_live.append(res)
-
-    asyncio.run(run_https_scan())
+                
+                print(f"HTTPS PROGRESS: {min(i + batch_size, len(tls_items))}/{len(tls_items)}")
+    
+    import aiohttp
+    
+    try:
+        asyncio.run(run_https_scan())
+    except Exception as e:
+        print(f"HTTPS SCAN ERROR: {e}")
+        https_live = []
 
     append_https_live(
         https_live
@@ -644,9 +656,7 @@ def fp_worker(
     )
 
     cdn = detect_cdn(
-        ip=ip,
-        port=port,
-        headers=headers
+        headers
     )
 
     return (
