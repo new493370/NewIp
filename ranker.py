@@ -1,4 +1,7 @@
 import os
+from colorama import init, Fore, Back, Style
+
+init(autoreset=True)
 
 RESULT_FILE = "output/results.txt"
 HTTPS_FILE = "output/https_live.txt"
@@ -338,6 +341,92 @@ def load_domains_raw():
     return domains
 
 
+def color_text(text, color):
+    return f"{color}{text}{Style.RESET_ALL}"
+
+
+def print_partition(title, items, start_idx, end_idx):
+    print(f"\n{Fore.CYAN}{Style.BRIGHT}{'='*130}")
+    print(f"{Fore.YELLOW}{Style.BRIGHT}{title} ({start_idx+1}-{end_idx})")
+    print(f"{Fore.CYAN}{Style.BRIGHT}{'='*130}")
+    print(f"{Fore.WHITE}{'IP:PORT':<20} {Fore.YELLOW}{'SCORE':<6} {Fore.WHITE}{'LATENCY':<10} {Fore.WHITE}{'TTFB':<10} {Fore.WHITE}{'PROTO':<8} {Fore.WHITE}{'REL':<6} {Fore.WHITE}{'CDN':<15} {Fore.WHITE}{'ALPN':<8} {Fore.WHITE}{'COUNTRY':<20} {Fore.WHITE}{'PROVIDER'}")
+    print(f"{Fore.CYAN}{'-'*130}")
+
+    for item in items:
+        https_info = item.get("https") or {}
+        ttfb = https_info.get("ttfb", "-")
+        proto = https_info.get("proto", "-")
+        rel = https_info.get("reliability", "-")
+
+        ip_port = f'{item["ip"]}:{item["port"]}'
+
+        if item["score"] >= 18:
+            score_colored = f"{Fore.GREEN}{Style.BRIGHT}{item['score']}"
+        elif item["score"] >= 15:
+            score_colored = f"{Fore.YELLOW}{Style.BRIGHT}{item['score']}"
+        elif item["score"] >= 12:
+            score_colored = f"{Fore.CYAN}{item['score']}"
+        else:
+            score_colored = f"{Fore.RED}{item['score']}"
+
+        if item["latency"] <= 200:
+            latency_colored = f"{Fore.GREEN}{item['latency']}ms"
+        elif item["latency"] <= 400:
+            latency_colored = f"{Fore.YELLOW}{item['latency']}ms"
+        else:
+            latency_colored = f"{Fore.RED}{item['latency']}ms"
+
+        if ttfb != "-":
+            if ttfb <= 300:
+                ttfb_colored = f"{Fore.GREEN}{ttfb}ms"
+            elif ttfb <= 700:
+                ttfb_colored = f"{Fore.YELLOW}{ttfb}ms"
+            else:
+                ttfb_colored = f"{Fore.RED}{ttfb}ms"
+        else:
+            ttfb_colored = "-"
+
+        if proto != "-":
+            if proto == "h2":
+                proto_colored = f"{Fore.GREEN}{Style.BRIGHT}{proto}"
+            else:
+                proto_colored = f"{Fore.CYAN}{proto}"
+        else:
+            proto_colored = "-"
+
+        if rel != "-":
+            if float(rel) >= 0.9:
+                rel_colored = f"{Fore.GREEN}{rel}"
+            else:
+                rel_colored = f"{Fore.YELLOW}{rel}"
+        else:
+            rel_colored = "-"
+
+        if item["cdn"] and item["cdn"].lower() != "unknown":
+            cdn_colored = f"{Fore.MAGENTA}{Style.BRIGHT}{item['cdn']}"
+        else:
+            cdn_colored = f"{Fore.WHITE}{item['cdn']}"
+
+        if item["alpn"] == "h2":
+            alpn_colored = f"{Fore.GREEN}{Style.BRIGHT}{item['alpn']}"
+        else:
+            alpn_colored = f"{Fore.CYAN}{item['alpn']}"
+
+        country_colored = f"{Fore.BLUE}{Style.BRIGHT}{item['country']}"
+        provider_colored = f"{Fore.WHITE}{item['provider']}"
+
+        print(f"{Fore.WHITE}{ip_port:<20} "
+              f"{score_colored:<6} "
+              f"{latency_colored:<10} "
+              f"{ttfb_colored:<10} "
+              f"{proto_colored:<8} "
+              f"{rel_colored:<6} "
+              f"{cdn_colored:<15} "
+              f"{alpn_colored:<8} "
+              f"{country_colored:<20} "
+              f"{provider_colored}")
+
+
 def rank_results():
     data = load_results()
     https_map = load_https()
@@ -425,11 +514,42 @@ def rank_results():
                 f'{item["provider"]}\n'
             )
 
-    print(
-        f"RANKED={len(ranked)} "
-        f"HTTPS={len(https_map)} "
-        f"DOMAINS={len(domains)}"
-    )
+    total = len(ranked)
+    partitions = 4
+    part_size = max(1, total // partitions)
+
+    if total > 0:
+        for i in range(partitions):
+            start = i * part_size
+            end = start + part_size if i < partitions - 1 else total
+            if start < total:
+                part_items = ranked[start:end]
+                if part_items:
+                    avg_score = sum(x["score"] for x in part_items) / len(part_items)
+                    if avg_score >= 17:
+                        quality = "PREMIUM"
+                        quality_color = Fore.GREEN
+                    elif avg_score >= 14:
+                        quality = "HIGH"
+                        quality_color = Fore.YELLOW
+                    elif avg_score >= 11:
+                        quality = "MEDIUM"
+                        quality_color = Fore.CYAN
+                    else:
+                        quality = "LOW"
+                        quality_color = Fore.RED
+
+                    print_partition(
+                        f"{quality_color}{quality} QUALITY IPS - PARTITION {i+1}/{partitions}",
+                        part_items,
+                        start,
+                        end
+                    )
+
+    print(f"\n{Fore.CYAN}{Style.BRIGHT}{'='*130}")
+    print(f"{Fore.GREEN}Total Ranked: {total} | HTTPS: {len(https_map)} | Domains: {len(domains)}")
+    print(f"{Fore.CYAN}Output saved to: {BEST_FILE}")
+    print(f"{Fore.CYAN}{Style.BRIGHT}{'='*130}\n")
 
 
 if __name__ == "__main__":
