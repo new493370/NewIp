@@ -1,7 +1,11 @@
 import requests
+import time
 from cache import load_geo_cache, save_geo_cache
 
-API_TIMEOUT = 8
+API_TIMEOUT = 12
+MAX_RETRIES = 3
+RETRY_DELAY = 1
+
 
 def geo_lookup(ip):
     cache = load_geo_cache()
@@ -13,6 +17,7 @@ def geo_lookup(ip):
 
     sources = [
         {
+            "name": "ip-api.com",
             "url": f"http://ip-api.com/json/{ip}?fields=status,message,country,regionName,city,isp,org,as,mobile,proxy,hosting",
             "parser": lambda d: {
                 "country": d.get("country"),
@@ -23,6 +28,7 @@ def geo_lookup(ip):
             } if d.get("status") == "success" else None
         },
         {
+            "name": "ipwho.is",
             "url": f"https://ipwho.is/{ip}",
             "parser": lambda d: {
                 "country": d.get("country"),
@@ -33,6 +39,7 @@ def geo_lookup(ip):
             } if d.get("success") is not False else None
         },
         {
+            "name": "ipapi.co",
             "url": f"https://ipapi.co/{ip}/json/",
             "parser": lambda d: {
                 "country": d.get("country_name"),
@@ -43,6 +50,7 @@ def geo_lookup(ip):
             } if d.get("country_name") else None
         },
         {
+            "name": "freeipapi.com",
             "url": f"https://freeipapi.com/api/json/{ip}",
             "parser": lambda d: {
                 "country": d.get("countryName"),
@@ -51,20 +59,98 @@ def geo_lookup(ip):
                 "provider": None,
                 "asn": None
             } if d.get("countryName") else None
+        },
+        {
+            "name": "ipinfo.io",
+            "url": f"https://ipinfo.io/{ip}/json",
+            "parser": lambda d: {
+                "country": d.get("country"),
+                "region": d.get("region"),
+                "city": d.get("city"),
+                "provider": d.get("org"),
+                "asn": d.get("asn")
+            } if d.get("country") else None
+        },
+        {
+            "name": "ipgeolocation.io",
+            "url": f"https://api.ipgeolocation.io/ipgeo?ip={ip}",
+            "parser": lambda d: {
+                "country": d.get("country_name"),
+                "region": d.get("state_prov"),
+                "city": d.get("city"),
+                "provider": d.get("isp"),
+                "asn": d.get("asn")
+            } if d.get("country_name") else None
+        },
+        {
+            "name": "jsonip.com",
+            "url": f"https://jsonip.com/{ip}?callback=",
+            "parser": lambda d: {
+                "country": d.get("country"),
+                "region": d.get("region"),
+                "city": d.get("city"),
+                "provider": d.get("org"),
+                "asn": d.get("asn")
+            } if d.get("country") else None
+        },
+        {
+            "name": "ipvigilante.com",
+            "url": f"https://ipvigilante.com/json/{ip}",
+            "parser": lambda d: {
+                "country": d.get("data", {}).get("country_name"),
+                "region": d.get("data", {}).get("region"),
+                "city": d.get("data", {}).get("city"),
+                "provider": d.get("data", {}).get("isp"),
+                "asn": d.get("data", {}).get("asn")
+            } if d.get("status") == "success" else None
+        },
+        {
+            "name": "ipapi.com",
+            "url": f"https://ipapi.com/ip_api.php?ip={ip}",
+            "parser": lambda d: {
+                "country": d.get("country_name"),
+                "region": d.get("region_name"),
+                "city": d.get("city"),
+                "provider": d.get("isp"),
+                "asn": d.get("asn")
+            } if d.get("country_name") else None
+        },
+        {
+            "name": "ip2location.io",
+            "url": f"https://api.ip2location.io/?ip={ip}",
+            "parser": lambda d: {
+                "country": d.get("country_name"),
+                "region": d.get("region_name"),
+                "city": d.get("city_name"),
+                "provider": d.get("isp"),
+                "asn": d.get("asn")
+            } if d.get("country_name") else None
         }
     ]
 
     for source in sources:
-        try:
-            r = requests.get(source["url"], timeout=API_TIMEOUT, headers={"User-Agent": "Mozilla/5.0"})
-            if r.status_code == 200:
-                data = r.json()
-                parsed = source["parser"](data)
-                if parsed and parsed.get("country"):
-                    result = parsed
-                    break
-        except:
-            continue
+        for attempt in range(MAX_RETRIES):
+            try:
+                r = requests.get(
+                    source["url"],
+                    timeout=API_TIMEOUT,
+                    headers={
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+                    }
+                )
+                if r.status_code == 200:
+                    data = r.json()
+                    parsed = source["parser"](data)
+                    if parsed and parsed.get("country") and parsed.get("country") != "Unknown":
+                        result = parsed
+                        print(f"GEO: {ip} -> {source['name']} -> {parsed.get('country')}")
+                        break
+            except:
+                time.sleep(RETRY_DELAY)
+                continue
+        
+        if result:
+            break
 
     if result is None:
         result = {
