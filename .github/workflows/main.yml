@@ -405,15 +405,7 @@ jobs:
 
       - name: Finalize
         run: |
-          echo "::group::📊 Final Results"
           python main.py --finalize
-          echo "::endgroup::"
-
-      - name: Show Best IPs
-        run: |
-          echo "::group::🏆 Best IPs"
-          echo -e "$(cat output/best_ips.txt 2>/dev/null || echo 'No best_ips.txt found')"
-          echo "::endgroup::"
 
       - name: Save Final State
         uses: actions/upload-artifact@v4
