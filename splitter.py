@@ -1,12 +1,14 @@
 import json
 import os
+import glob
 
 from cursor import (
     load_cursor,
-    save_cursor
+    save_cursor,
+    reset_cursor
 )
 
-from cache import load_cache, already_scanned
+from cache import load_cache, already_scanned, save_cache
 
 INPUT_FILE = "output/clean_ips.txt"
 OUTPUT_FILE = "output/current_part.txt"
@@ -98,6 +100,26 @@ def read_chunk(
     return chunk
 
 
+def clean_output_files():
+    files_to_clean = [
+        "output/tcp_live.txt",
+        "output/tls_live.txt",
+        "output/https_live.txt",
+        "output/fingerprint_results.txt",
+        "output/results.txt",
+        "output/best_ips.txt",
+        "output/domains_raw.txt",
+        "output/domains.txt",
+        "output/live_bank.txt",
+        "output/https_meta.json",
+        "output/geo_cache.json"
+    ]
+    for f in files_to_clean:
+        if os.path.exists(f):
+            os.remove(f)
+            print(f"REMOVED: {f}")
+
+
 def split_file(
     infile=INPUT_FILE
 ):
@@ -129,15 +151,33 @@ def split_file(
         return OUTPUT_FILE
 
     scanned_cache = load_cache()
+    cursor = load_cursor()
+
+    if cursor >= total:
+        print("=" * 60)
+        print("ALL IPS COMPLETED - RESTARTING FROM BEGINNING")
+        print("=" * 60)
+        
+        clean_output_files()
+        
+        reset_cursor()
+        cursor = 0
+        scanned_cache = {}
+        save_cache(scanned_cache)
 
     available_ips = []
     line_idx = 0
+    skip_count = 0
 
     try:
         with open(infile, "r", encoding="utf-8") as f:
             for line in f:
                 ip = line.strip()
                 if not ip:
+                    continue
+
+                if skip_count < cursor:
+                    skip_count += 1
                     continue
 
                 if any(already_scanned(scanned_cache, ip, port) for port in ports):
@@ -153,12 +193,15 @@ def split_file(
         pass
 
     if not available_ips:
+        if cursor >= total:
+            print("RESTARTING SCAN CYCLE")
+            reset_cursor()
+            save_cache({})
+            return split_file(infile)
         print("NO NEW IPS AVAILABLE")
         write_lines(OUTPUT_FILE, [])
-        save_cursor(total)
         return OUTPUT_FILE
 
-    cursor = load_cursor()
     next_cursor = cursor + len(available_ips)
     if next_cursor > total:
         next_cursor = total
