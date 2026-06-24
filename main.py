@@ -15,7 +15,7 @@ from scanner import (
     geo_scan
 )
 
-from domains import extract_domains
+from domains import extract_domains, extract_domains_from_results
 from validator import validate_domains
 from ranker import rank_results
 
@@ -235,12 +235,12 @@ def run_finalize():
     optimize_stage_files()
 
     if exists(
-        "output/tls_live.txt"
+        "output/results.txt"
     ):
         print(
             "DOMAIN EXTRACT"
         )
-        extract_domains()
+        extract_domains_from_results()
 
     if exists(
         "output/domains_raw.txt"
