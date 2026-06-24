@@ -624,9 +624,61 @@ def fp_worker(
     except:
         return None
 
+    meta = https_meta_get(
+        ip,
+        port
+    ) or {}
+
+    headers = meta.get(
+        "headers",
+        {}
+    )
+
+    tls_info = {}
+
+    try:
+        with open(
+            "output/tls_live.txt",
+            "r",
+            encoding="utf-8"
+        ) as f:
+
+            for line in f:
+
+                if line.startswith(
+                    f"{ip}:{port}"
+                ):
+
+                    tls_parts = line.strip().split(
+                        ":"
+                    )
+
+                    if len(tls_parts) >= 6:
+
+                        tls_info = {
+                            "alpn": tls_parts[3],
+                            "sni": tls_parts[4],
+                            "issuer": tls_parts[5]
+                        }
+
+                    break
+
+    except:
+        pass
+
     cdn = detect_cdn(
         ip=ip,
-        port=port
+        port=port,
+        headers=headers,
+        issuer=tls_info.get(
+            "issuer"
+        ),
+        sni=tls_info.get(
+            "sni"
+        ),
+        alpn=tls_info.get(
+            "alpn"
+        )
     )
 
     return (
