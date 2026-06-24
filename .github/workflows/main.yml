@@ -39,26 +39,32 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Restore Cache
-        uses: actions/cache@v4
+      - name: Restore Rolling State
+        uses: actions/download-artifact@v4
         with:
+          name: arista-output
           path: output
-          key: arista-output-${{ github.run_id }}
-          restore-keys: |
-            arista-output-
-            arista-output
+        continue-on-error: true
 
       - name: Prepare Bank
         run: |
           mkdir -p output
-          python downloader.py
-          python cleaner.py
 
-      - name: Save Cache
-        uses: actions/cache/save@v4
+          if [ ! -s output/ip_bank.txt ]; then
+            python downloader.py
+          fi
+
+          if [ ! -s output/clean_ips.txt ]; then
+            python cleaner.py
+          fi
+
+      - name: Save Rolling State
+        uses: actions/upload-artifact@v4
         with:
+          name: arista-output
           path: output
-          key: arista-output-${{ github.run_id }}
+          overwrite: true
+          retention-days: 3
 
   tcp:
     needs: prepare
@@ -77,24 +83,24 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Restore Cache
-        uses: actions/cache@v4
+      - name: Restore State
+        uses: actions/download-artifact@v4
         with:
+          name: arista-output
           path: output
-          key: arista-output-${{ github.run_id }}
-          restore-keys: |
-            arista-output-
-            arista-output
+        continue-on-error: true
 
       - name: TCP Scan
         run: |
           python main.py --tcp
 
-      - name: Save Cache
-        uses: actions/cache/save@v4
+      - name: Save State
+        uses: actions/upload-artifact@v4
         with:
+          name: arista-output
           path: output
-          key: arista-output-${{ github.run_id }}
+          overwrite: true
+          retention-days: 3
 
   tls:
     needs: tcp
@@ -113,24 +119,24 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Restore Cache
-        uses: actions/cache@v4
+      - name: Restore State
+        uses: actions/download-artifact@v4
         with:
+          name: arista-output
           path: output
-          key: arista-output-${{ github.run_id }}
-          restore-keys: |
-            arista-output-
-            arista-output
+        continue-on-error: true
 
       - name: TLS Scan
         run: |
           python main.py --tls
 
-      - name: Save Cache
-        uses: actions/cache/save@v4
+      - name: Save State
+        uses: actions/upload-artifact@v4
         with:
+          name: arista-output
           path: output
-          key: arista-output-${{ github.run_id }}
+          overwrite: true
+          retention-days: 3
 
   https:
     needs: tls
@@ -149,24 +155,24 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Restore Cache
-        uses: actions/cache@v4
+      - name: Restore State
+        uses: actions/download-artifact@v4
         with:
+          name: arista-output
           path: output
-          key: arista-output-${{ github.run_id }}
-          restore-keys: |
-            arista-output-
-            arista-output
+        continue-on-error: true
 
       - name: HTTPS Validation
         run: |
           python main.py --https
 
-      - name: Save Cache
-        uses: actions/cache/save@v4
+      - name: Save State
+        uses: actions/upload-artifact@v4
         with:
+          name: arista-output
           path: output
-          key: arista-output-${{ github.run_id }}
+          overwrite: true
+          retention-days: 3
 
   fingerprint:
     needs: https
@@ -185,24 +191,24 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Restore Cache
-        uses: actions/cache@v4
+      - name: Restore State
+        uses: actions/download-artifact@v4
         with:
+          name: arista-output
           path: output
-          key: arista-output-${{ github.run_id }}
-          restore-keys: |
-            arista-output-
-            arista-output
+        continue-on-error: true
 
       - name: Fingerprint
         run: |
           python main.py --fp
 
-      - name: Save Cache
-        uses: actions/cache/save@v4
+      - name: Save State
+        uses: actions/upload-artifact@v4
         with:
+          name: arista-output
           path: output
-          key: arista-output-${{ github.run_id }}
+          overwrite: true
+          retention-days: 3
 
   geo:
     needs: fingerprint
@@ -221,24 +227,24 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Restore Cache
-        uses: actions/cache@v4
+      - name: Restore State
+        uses: actions/download-artifact@v4
         with:
+          name: arista-output
           path: output
-          key: arista-output-${{ github.run_id }}
-          restore-keys: |
-            arista-output-
-            arista-output
+        continue-on-error: true
 
       - name: GEO
         run: |
           python main.py --geo
 
-      - name: Save Cache
-        uses: actions/cache/save@v4
+      - name: Save State
+        uses: actions/upload-artifact@v4
         with:
+          name: arista-output
           path: output
-          key: arista-output-${{ github.run_id }}
+          overwrite: true
+          retention-days: 3
 
   finalize:
     needs: geo
@@ -257,24 +263,24 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Restore Cache
-        uses: actions/cache@v4
+      - name: Restore State
+        uses: actions/download-artifact@v4
         with:
+          name: arista-output
           path: output
-          key: arista-output-${{ github.run_id }}
-          restore-keys: |
-            arista-output-
-            arista-output
+        continue-on-error: true
 
       - name: Finalize
         run: |
           python main.py --finalize
 
-      - name: Save Final Cache
-        uses: actions/cache/save@v4
+      - name: Save Final State
+        uses: actions/upload-artifact@v4
         with:
+          name: arista-output
           path: output
-          key: arista-output-${{ github.run_id }}
+          overwrite: true
+          retention-days: 3
 
       - name: Commit Final Output
         run: |
