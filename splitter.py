@@ -106,7 +106,8 @@ def clean_stage_files():
         "output/tls_live.txt",
         "output/https_live.txt",
         "output/fingerprint_results.txt",
-        "output/https_meta.json"
+        "output/https_meta.json",
+        "output/current_part.txt"
     ]
     for f in files_to_clean:
         if os.path.exists(f):
