@@ -573,6 +573,10 @@ def https_scan():
         200
     )
 
+    if os.path.exists("output/tls_live.txt"):
+        os.remove("output/tls_live.txt")
+        print("REMOVED: output/tls_live.txt")
+
     tls_items = read_tls_live()
 
     tls_count = len(tls_items)
@@ -581,10 +585,6 @@ def https_scan():
         f"TLS INPUT={tls_count} "
         f"THREADS={threads}"
     )
-
-    if os.path.exists("output/tls_live.txt"):
-        os.remove("output/tls_live.txt")
-        print("REMOVED: output/tls_live.txt")
 
     https_live = []
 
@@ -711,6 +711,10 @@ def fingerprint_scan():
         200
     )
 
+    if os.path.exists("output/https_live.txt"):
+        os.remove("output/https_live.txt")
+        print("REMOVED: output/https_live.txt")
+
     https_items = read_https_live()
 
     https_count = len(https_items)
@@ -719,10 +723,6 @@ def fingerprint_scan():
         f"HTTPS INPUT={https_count} "
         f"THREADS={threads}"
     )
-
-    if os.path.exists("output/https_live.txt"):
-        os.remove("output/https_live.txt")
-        print("REMOVED: output/https_live.txt")
 
     fp_results = []
 
