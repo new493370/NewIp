@@ -624,18 +624,9 @@ def fp_worker(
     except:
         return None
 
-    meta = https_meta_get(
-        ip,
-        port
-    ) or {}
-
-    headers = meta.get(
-        "headers",
-        {}
-    )
-
     cdn = detect_cdn(
-        headers
+        ip=ip,
+        port=port
     )
 
     return (
