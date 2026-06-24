@@ -8,7 +8,7 @@ from cursor import (
     reset_cursor
 )
 
-from cache import load_cache, already_scanned, save_cache
+from cache import load_cache, already_scanned, save_cache, clear_cache
 
 INPUT_FILE = "output/clean_ips.txt"
 OUTPUT_FILE = "output/current_part.txt"
@@ -150,8 +150,11 @@ def split_file(
 
         return OUTPUT_FILE
 
-    scanned_cache = load_cache()
     cursor = load_cursor()
+
+    clear_cache()
+
+    scanned_cache = {}
 
     if cursor >= total:
         print("=" * 60)
@@ -162,8 +165,6 @@ def split_file(
         
         reset_cursor()
         cursor = 0
-        scanned_cache = {}
-        save_cache(scanned_cache)
 
     available_ips = []
     line_idx = 0
@@ -180,10 +181,6 @@ def split_file(
                     skip_count += 1
                     continue
 
-                if any(already_scanned(scanned_cache, ip, port) for port in ports):
-                    line_idx += 1
-                    continue
-
                 available_ips.append(ip)
                 line_idx += 1
 
@@ -196,7 +193,6 @@ def split_file(
         if cursor >= total:
             print("RESTARTING SCAN CYCLE")
             reset_cursor()
-            save_cache({})
             return split_file(infile)
         print("NO NEW IPS AVAILABLE")
         write_lines(OUTPUT_FILE, [])
