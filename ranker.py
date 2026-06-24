@@ -170,6 +170,19 @@ def rank_results():
 
     with open(BEST_FILE, "w", encoding="utf-8") as f:
         for item in ranked:
+            country = item.get("country", "-")
+            provider = item.get("provider", "-")
+            
+            if provider and provider != "-" and provider != "Unknown":
+                if country and country != "-" and country != "Unknown":
+                    location = f"{country} | {provider}"
+                else:
+                    location = provider
+            elif country and country != "-" and country != "Unknown":
+                location = country
+            else:
+                location = "-"
+            
             f.write(
                 f'{item["ip"]}:{item["port"]} '
                 f'S={item["score"]} '
@@ -177,8 +190,7 @@ def rank_results():
                 f'PROTO={item.get("proto", "-")} '
                 f'REL={item.get("reliability", "-")} '
                 f'CDN={item.get("cdn", "-")} '
-                f'{item.get("country", "-")} '
-                f'{item.get("provider", "-")}\n'
+                f'{location}\n'
             )
 
     print(f"RANKED={len(ranked)} DOMAINS={len(domains)}")
