@@ -3,11 +3,11 @@ import socket
 import time
 import os
 import asyncio
-from concurrent.futures import (
-    ThreadPoolExecutor,
-    wait,
-    FIRST_COMPLETED
-)
+import select
+from concurrent.futures import ThreadPoolExecutor, wait, FIRST_COMPLETED
+from functools import lru_cache
+from io import StringIO
+import mmap
 
 from tls import tls_check
 from fingerprint import detect_cdn
@@ -187,6 +187,38 @@ def tcp_check(
     )
 
 
+def tcp_check_optimized(
+    ip,
+    port,
+    retries,
+    timeout
+):
+    for _ in range(retries):
+        start = time.time()
+        try:
+            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            sock.setblocking(False)
+            
+            try:
+                sock.connect((ip, port))
+            except BlockingIOError:
+                pass
+            
+            _, writable, _ = select.select([], [sock], [], timeout)
+            
+            if writable:
+                sock.close()
+                latency = int((time.time() - start) * 1000)
+                return ("success", latency)
+            
+            sock.close()
+            return ("timeout", None)
+            
+        except:
+            continue
+    return ("failed", None)
+
+
 def tcp_worker(
     ip,
     ports,
@@ -215,7 +247,7 @@ def tcp_worker(
             port
         )
 
-        status, latency = tcp_check(
+        status, latency = tcp_check_optimized(
             ip,
             port,
             retries,
@@ -255,12 +287,12 @@ def tcp_scan(
 
     threads = adaptive_threads(
         cfg,
-        300
+        500
     )
 
     batch_size = cfg.get(
         "batch_size",
-        20000
+        50000
     )
 
     retries = cfg.get(
@@ -564,7 +596,7 @@ def https_scan():
 
     threads = adaptive_threads(
         cfg,
-        200
+        500
     )
 
     tls_items = read_tls_live()
@@ -577,16 +609,19 @@ def https_scan():
     https_live = []
 
     async def run_batch(batch):
+        sem = asyncio.Semaphore(threads)
+        
+        async def limited_worker(item):
+            async with sem:
+                return await https_worker_async(item, cfg)
+        
         tasks = [
-            https_worker_async(
-                item,
-                cfg
-            )
+            limited_worker(item)
             for item in batch
         ]
         return await asyncio.gather(*tasks)
 
-    batch_size = 100
+    batch_size = 200
     batches = [
         tls_items[i:i + batch_size]
         for i in range(0, len(tls_items), batch_size)
@@ -730,6 +765,11 @@ def fingerprint_scan():
     )
 
 
+@lru_cache(maxsize=10000)
+def geo_lookup_cached(ip):
+    return geo_lookup(ip)
+
+
 def geo_worker(
     item,
     geo_cache
@@ -749,14 +789,10 @@ def geo_worker(
     except:
         return None
 
-    geo = geo_cache.get(
-        ip
-    )
-
-    if geo is None:
-        geo = geo_lookup(
-            ip
-        )
+    if ip in geo_cache:
+        geo = geo_cache[ip]
+    else:
+        geo = geo_lookup_cached(ip)
         geo_cache[ip] = geo
 
     country = geo.get(
