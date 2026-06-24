@@ -193,6 +193,7 @@ def split_file(
         if cursor >= total:
             print("RESTARTING SCAN CYCLE")
             reset_cursor()
+            clean_output_files()
             return split_file(infile)
         print("NO NEW IPS AVAILABLE")
         write_lines(OUTPUT_FILE, [])
