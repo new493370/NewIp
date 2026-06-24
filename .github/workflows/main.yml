@@ -39,13 +39,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Restore scan_cursor
-        uses: actions/cache@v3
-        with:
-          path: output/scan_cursor.txt
-          key: scan-cursor
-          restore-keys: |
-            scan-cursor-
+      - name: Reset scan_cursor
+        run: |
+          mkdir -p output
+          echo "0" > output/scan_cursor.txt
 
       - name: Restore live_bank
         uses: actions/cache@v3
@@ -58,6 +55,8 @@ jobs:
       - name: Prepare Bank
         run: |
           mkdir -p output
+          rm -f output/ip_bank.txt
+          rm -f output/clean_ips.txt
           python downloader.py
           python cleaner.py
 
@@ -66,8 +65,6 @@ jobs:
         with:
           path: output/clean_ips.txt
           key: clean-ips-${{ github.run_id }}
-          restore-keys: |
-            clean-ips-
 
       - name: Save live_bank
         uses: actions/cache@v3
@@ -79,7 +76,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: output/scan_cursor.txt
-          key: scan-cursor
+          key: scan-cursor-${{ github.run_id }}
 
       - name: Cleanup heavy files
         run: |
@@ -107,7 +104,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: output/scan_cursor.txt
-          key: scan-cursor
+          key: scan-cursor-${{ github.run_id }}
           restore-keys: |
             scan-cursor-
 
@@ -137,8 +134,6 @@ jobs:
         with:
           path: output/tcp_live.txt
           key: tcp-live-${{ github.run_id }}
-          restore-keys: |
-            tcp-live-
 
       - name: Save live_bank
         uses: actions/cache@v3
@@ -150,7 +145,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: output/scan_cursor.txt
-          key: scan-cursor
+          key: scan-cursor-${{ github.run_id }}
 
       - name: Cleanup temporary files
         run: |
@@ -180,7 +175,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: output/scan_cursor.txt
-          key: scan-cursor
+          key: scan-cursor-${{ github.run_id }}
           restore-keys: |
             scan-cursor-
 
@@ -210,8 +205,6 @@ jobs:
         with:
           path: output/tls_live.txt
           key: tls-live-${{ github.run_id }}
-          restore-keys: |
-            tls-live-
 
       - name: Save live_bank
         uses: actions/cache@v3
@@ -223,7 +216,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: output/scan_cursor.txt
-          key: scan-cursor
+          key: scan-cursor-${{ github.run_id }}
 
       - name: Cleanup temporary files
         run: |
@@ -252,7 +245,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: output/scan_cursor.txt
-          key: scan-cursor
+          key: scan-cursor-${{ github.run_id }}
           restore-keys: |
             scan-cursor-
 
@@ -282,8 +275,6 @@ jobs:
         with:
           path: output/https_live.txt
           key: https-live-${{ github.run_id }}
-          restore-keys: |
-            https-live-
 
       - name: Save live_bank
         uses: actions/cache@v3
@@ -295,7 +286,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: output/scan_cursor.txt
-          key: scan-cursor
+          key: scan-cursor-${{ github.run_id }}
 
       - name: Cleanup temporary files
         run: |
@@ -324,7 +315,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: output/scan_cursor.txt
-          key: scan-cursor
+          key: scan-cursor-${{ github.run_id }}
           restore-keys: |
             scan-cursor-
 
@@ -354,8 +345,6 @@ jobs:
         with:
           path: output/fingerprint_results.txt
           key: fp-results-${{ github.run_id }}
-          restore-keys: |
-            fp-results-
 
       - name: Save live_bank
         uses: actions/cache@v3
@@ -367,7 +356,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: output/scan_cursor.txt
-          key: scan-cursor
+          key: scan-cursor-${{ github.run_id }}
 
       - name: Cleanup temporary files
         run: |
@@ -396,7 +385,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: output/scan_cursor.txt
-          key: scan-cursor
+          key: scan-cursor-${{ github.run_id }}
           restore-keys: |
             scan-cursor-
 
@@ -426,8 +415,6 @@ jobs:
         with:
           path: output/results.txt
           key: results-${{ github.run_id }}
-          restore-keys: |
-            results-
 
       - name: Save live_bank
         uses: actions/cache@v3
@@ -439,7 +426,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: output/scan_cursor.txt
-          key: scan-cursor
+          key: scan-cursor-${{ github.run_id }}
 
       - name: Cleanup temporary files
         run: |
@@ -468,7 +455,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: output/scan_cursor.txt
-          key: scan-cursor
+          key: scan-cursor-${{ github.run_id }}
           restore-keys: |
             scan-cursor-
 
@@ -511,7 +498,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: output/scan_cursor.txt
-          key: scan-cursor
+          key: scan-cursor-${{ github.run_id }}
 
       - name: Commit Final Output
         run: |
