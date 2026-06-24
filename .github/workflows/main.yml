@@ -39,6 +39,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Cache IP Bank
+        uses: actions/cache@v4
+        id: ip-bank-cache
+        with:
+          path: .cache
+          key: ip-bank-${{ hashFiles('config.json') }}
+          restore-keys: |
+            ip-bank-
+
       - name: Restore Rolling State
         uses: actions/download-artifact@v4
         with:
@@ -49,12 +58,10 @@ jobs:
       - name: Prepare Bank
         run: |
           mkdir -p output
-
-          if [ ! -s output/ip_bank.txt ]; then
-            python downloader.py
-          fi
+          mkdir -p .cache
 
           if [ ! -s output/clean_ips.txt ]; then
+            python downloader.py
             python cleaner.py
           fi
 
@@ -62,7 +69,20 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: arista-output
-          path: output
+          path: |
+            output/tcp_live.txt
+            output/tls_live.txt
+            output/https_live.txt
+            output/fingerprint_results.txt
+            output/scanned_cache.txt
+            output/geo_cache.json
+            output/live_bank.txt
+            output/scan_cursor.txt
+            output/current_part.txt
+            output/domains_raw.txt
+            output/domains.txt
+            output/results.txt
+            output/best_ips.txt
           overwrite: true
           retention-days: 3
 
@@ -83,6 +103,14 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      - name: Cache IP Bank
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: ip-bank-${{ hashFiles('config.json') }}
+          restore-keys: |
+            ip-bank-
+
       - name: Restore State
         uses: actions/download-artifact@v4
         with:
@@ -98,7 +126,20 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: arista-output
-          path: output
+          path: |
+            output/tcp_live.txt
+            output/tls_live.txt
+            output/https_live.txt
+            output/fingerprint_results.txt
+            output/scanned_cache.txt
+            output/geo_cache.json
+            output/live_bank.txt
+            output/scan_cursor.txt
+            output/current_part.txt
+            output/domains_raw.txt
+            output/domains.txt
+            output/results.txt
+            output/best_ips.txt
           overwrite: true
           retention-days: 3
 
@@ -119,6 +160,14 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      - name: Cache IP Bank
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: ip-bank-${{ hashFiles('config.json') }}
+          restore-keys: |
+            ip-bank-
+
       - name: Restore State
         uses: actions/download-artifact@v4
         with:
@@ -134,7 +183,20 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: arista-output
-          path: output
+          path: |
+            output/tcp_live.txt
+            output/tls_live.txt
+            output/https_live.txt
+            output/fingerprint_results.txt
+            output/scanned_cache.txt
+            output/geo_cache.json
+            output/live_bank.txt
+            output/scan_cursor.txt
+            output/current_part.txt
+            output/domains_raw.txt
+            output/domains.txt
+            output/results.txt
+            output/best_ips.txt
           overwrite: true
           retention-days: 3
 
@@ -155,6 +217,14 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      - name: Cache IP Bank
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: ip-bank-${{ hashFiles('config.json') }}
+          restore-keys: |
+            ip-bank-
+
       - name: Restore State
         uses: actions/download-artifact@v4
         with:
@@ -170,7 +240,20 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: arista-output
-          path: output
+          path: |
+            output/tcp_live.txt
+            output/tls_live.txt
+            output/https_live.txt
+            output/fingerprint_results.txt
+            output/scanned_cache.txt
+            output/geo_cache.json
+            output/live_bank.txt
+            output/scan_cursor.txt
+            output/current_part.txt
+            output/domains_raw.txt
+            output/domains.txt
+            output/results.txt
+            output/best_ips.txt
           overwrite: true
           retention-days: 3
 
@@ -191,6 +274,14 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      - name: Cache IP Bank
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: ip-bank-${{ hashFiles('config.json') }}
+          restore-keys: |
+            ip-bank-
+
       - name: Restore State
         uses: actions/download-artifact@v4
         with:
@@ -206,7 +297,20 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: arista-output
-          path: output
+          path: |
+            output/tcp_live.txt
+            output/tls_live.txt
+            output/https_live.txt
+            output/fingerprint_results.txt
+            output/scanned_cache.txt
+            output/geo_cache.json
+            output/live_bank.txt
+            output/scan_cursor.txt
+            output/current_part.txt
+            output/domains_raw.txt
+            output/domains.txt
+            output/results.txt
+            output/best_ips.txt
           overwrite: true
           retention-days: 3
 
@@ -227,6 +331,14 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      - name: Cache IP Bank
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: ip-bank-${{ hashFiles('config.json') }}
+          restore-keys: |
+            ip-bank-
+
       - name: Restore State
         uses: actions/download-artifact@v4
         with:
@@ -242,7 +354,20 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: arista-output
-          path: output
+          path: |
+            output/tcp_live.txt
+            output/tls_live.txt
+            output/https_live.txt
+            output/fingerprint_results.txt
+            output/scanned_cache.txt
+            output/geo_cache.json
+            output/live_bank.txt
+            output/scan_cursor.txt
+            output/current_part.txt
+            output/domains_raw.txt
+            output/domains.txt
+            output/results.txt
+            output/best_ips.txt
           overwrite: true
           retention-days: 3
 
@@ -263,6 +388,14 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      - name: Cache IP Bank
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: ip-bank-${{ hashFiles('config.json') }}
+          restore-keys: |
+            ip-bank-
+
       - name: Restore State
         uses: actions/download-artifact@v4
         with:
@@ -278,7 +411,20 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: arista-output
-          path: output
+          path: |
+            output/tcp_live.txt
+            output/tls_live.txt
+            output/https_live.txt
+            output/fingerprint_results.txt
+            output/scanned_cache.txt
+            output/geo_cache.json
+            output/live_bank.txt
+            output/scan_cursor.txt
+            output/current_part.txt
+            output/domains_raw.txt
+            output/domains.txt
+            output/results.txt
+            output/best_ips.txt
           overwrite: true
           retention-days: 3
 
