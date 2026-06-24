@@ -1,6 +1,7 @@
 import os
 import argparse
 import json
+import gc
 
 from downloader import download_sources
 from cleaner import clean_ips
@@ -67,6 +68,10 @@ def prepare():
         clean_ips()
 
 
+def cleanup_memory():
+    gc.collect()
+
+
 def run_tcp():
     prepare()
 
@@ -96,6 +101,8 @@ def run_tcp():
         "TCP DONE"
     )
 
+    cleanup_memory()
+
 
 def run_tls():
     prepare()
@@ -117,6 +124,8 @@ def run_tls():
     print(
         "TLS DONE"
     )
+
+    cleanup_memory()
 
 
 def run_https():
@@ -140,6 +149,8 @@ def run_https():
         "HTTPS DONE"
     )
 
+    cleanup_memory()
+
 
 def run_fp():
     prepare()
@@ -162,6 +173,8 @@ def run_fp():
         "FP DONE"
     )
 
+    cleanup_memory()
+
 
 def run_geo():
     prepare()
@@ -183,6 +196,8 @@ def run_geo():
     print(
         "GEO DONE"
     )
+
+    cleanup_memory()
 
 
 def run_finalize():
@@ -227,6 +242,8 @@ def run_finalize():
     print(
         "FINAL DONE"
     )
+
+    cleanup_memory()
 
 
 def main():
