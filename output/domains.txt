@@ -9,6 +9,7 @@
 1win777.cl
 2fcal.getklar.org
 2fgradmap.8wsuksz5de-yjr3o8n1z41m.p.temp-site.link
+2fpub-7ebc96feac7249be8060d1f1b2ac0764.r2.dev
 2fpub-c4535843d73f4ef69ccd5d1adcddc1e1.r2.dev
 2fres.cloudinary.com
 2fwww.erdmennekes.nl
@@ -77,7 +78,6 @@ aia.senexic.io
 aiasport.env.entrii.no
 aiassociates.com.np
 aibox.realmove.com
-aikidotravel.com
 aioseo.com
 aj-24.de
 ajax.cloudflare.com
@@ -209,10 +209,12 @@ atendetotal.com.br
 athina1s.taxifast.gr
 atis.sim.edu.az
 atlas.webclub.ca
-atlaspro-iptv.net
 atools.ioix.net
+attorneyservice.com
+attorneyservices.com
 atvbox.eu
 audience.nrich.ai
+audioheaven.store
 audreyerrard.bsky.social
 auktionen.silberquelle.de
 aulasvirtuales.unimet.edu.ve
@@ -228,8 +230,6 @@ aventurico.com
 ax01.africsp.com
 azuracast.com
 b.l-m-f.net
-b.pro
-b.prototype.to
 b00bs.vip
 b24.to
 backend-2.luftfix.de
@@ -300,6 +300,7 @@ botario.com
 boutiquelifeshop.com
 box.eylet.net
 box.itpro-mg.net
+box26ngb7.iinfra.net
 bpmint.com
 brander.ua
 brandifysocks.com
@@ -324,6 +325,7 @@ button.is
 buttondown.com
 buy.stripe.com
 buy.usedofficefurniture.nyc
+buyduncan.com
 c.zeetacargo.com
 c4y.ua
 c6745d-1a.myshopify.com
@@ -417,6 +419,7 @@ chat.odesa.ua
 chat.pl.ua
 chat.reachline.io
 chat.rv.ua
+chat.store
 chat.sumy.ua
 chat.te.ua
 chat.uz.ua
@@ -592,6 +595,7 @@ crm.jdv.ae
 crm.schmidtlein.org
 cruechone.com
 cruiser.harborstreetventures.com
+cs1021.vserv.cloud
 cs20.com-sit.com
 cs621.fc-server.com
 csibvpn.hu
@@ -715,6 +719,7 @@ discuss.fiteyes.com
 divorceonlineutah.com
 dj1an.de
 dlxaudio.com
+dmarc.vilion.net
 dmca.com
 dmoutreach.com
 dns1.dnsseguro.net
@@ -773,9 +778,9 @@ dohproxy-shv-02-hbe1.facebook.com
 dohproxy-shv-02-mrs2.facebook.com
 dohproxy-shv-02-sin6.facebook.com
 doi.org
-doitong.com
 doku.iserv.de
 dokuwiki.org
+domain.com
 domainmarkt.de
 domains.fi
 dominandoeltrading.com
@@ -1677,32 +1682,25 @@ edge-z-p4-shv-02-maa3.facebook.com
 edge-z-p4-shv-02-mrs2.facebook.com
 edge-z-p4-shv-02-sin6.facebook.com
 edge-z-p4-shv-03-maa3.facebook.com
+edge.et
 editmonk.com
 edm-api-shv-01-akl1.facebook.com
 edm-api-shv-01-arn2.facebook.com
 edm-api-shv-01-ber1.facebook.com
 edm-api-shv-01-bru2.facebook.com
-edm-api-shv-01-cdg4.facebook.com
-edm-api-shv-01-cgk1.facebook.com
 edm-api-shv-01-cpt1.facebook.com
 edm-api-shv-01-doh1.facebook.com
 edm-api-shv-01-gua1.facebook.com
 edm-api-shv-01-hbe1.facebook.com
 edm-api-shv-01-jnb2.facebook.com
-edm-api-shv-01-lax3.facebook.com
 edm-api-shv-01-mct1.facebook.com
 edm-api-shv-01-mia5.facebook.com
 edm-api-shv-01-mxp2.facebook.com
-edm-api-shv-01-ord5.facebook.com
-edm-api-shv-01-otp1.facebook.com
 edm-api-shv-01-sea1.facebook.com
 edm-api-shv-01-sjc3.facebook.com
-edm-api-shv-01-sof1.facebook.com
-edm-api-shv-01-tpe1.facebook.com
 edm-api-shv-02-dfw5.facebook.com
 edm-api-shv-02-gig4.facebook.com
 edm-api-shv-02-hbe1.facebook.com
-edm-api-shv-02-sof1.facebook.com
 ednannia.ua
 elated-babbage.5-75-171-105.plesk.page
 elbprod-glb-drain-test-shv-01-arn2.facebook.com
@@ -1739,6 +1737,7 @@ email.com
 email.cz
 embed.diagrams.net
 embed.helpcrunch.com
+embed.tawk.to
 en.clubcooee.com
 en.cppreference.com
 en.wikipedia.org
@@ -1753,7 +1752,16 @@ epilepsie-tagung.de
 equipos.grupocastro.org
 erep.pro
 erp.aero
+erp.neumaticosimperio.com
 erp.sowasound.com
+error.name
+es.clubcooee.com
+ess3.betalike.com.br
+essauditor.com.br
+eu1.dustlabs.io
+eu5.exprodo.com
+euob.seseasky.com
+europiantours.com
 event.error.name
 evocreate.com.br
 ex5.edev.at
@@ -1761,7 +1769,6 @@ example.com
 example.org
 exchange.pubnation.com
 exthem.es
-extremismuspraevention.oead.at
 eyzi.net
 f-droid.org
 fa.myvivofinanz.de
@@ -2198,6 +2205,7 @@ googletagmanager.com
 goplay.tools
 gorules-segarante-u19381.vm.elestio.app
 gotomarketagents.ai
+gozoogs.online
 gracechatzikou.com
 gracechatzikou.gr
 gradmap.8wsuksz5de-yjr3o8n1z41m.p.temp-site.link
@@ -2270,6 +2278,7 @@ hostedmax.comm100.com
 hosting.cuisine.digital
 hosting.lookin-link.net
 hosting.rytika.com
+hosting.zeptolab.com
 hottest.hu
 hpc-5-3.xroadmedia.com
 hr.no
@@ -2527,6 +2536,7 @@ iuspim.gfeserver.de
 iw.mapandroute.de
 j.nrich.ai
 japi.myappventure.de
+japora.ro
 jcypackagingmachine.olvycloud.net
 jernurt.dk
 jersey.java.net
@@ -2538,6 +2548,7 @@ jitsi-meatmike-01-u18164.vm.elestio.app
 jitsi.abraum.de
 jitsi.github.io
 jitsi.org
+jitsi.thelisteningcircle.net
 jma-dev.nwtsaas.com
 joesfriends.it
 joindaba.com
@@ -2845,6 +2856,7 @@ mail.smarthost.dev
 mail.smsinstitute.com
 mail.solarverse.com.ua
 mail.solgenics.info
+mail.solidrock-co.com
 mail.sonnensilber.de
 mail.sourceobby.com
 mail.spamopfer.de
@@ -2852,7 +2864,6 @@ mail.sptreinamentos.com.br
 mail.storksoft.by
 mail.thataibot.com
 mail.tiket.eu
-mail.tyr020.umtec.net
 mail.unicat.ua
 mail.uniranks.com
 mail.vendo-ai.email
@@ -2922,7 +2933,6 @@ meet2.playgarden.edu.rs
 meeting.viva.de
 mein.berlin.de
 meldestelle.rottweil.de
-mensa.de
 meo-media.shop
 mercantilbanco.com.pa
 merkur-druck.com
@@ -2964,6 +2974,7 @@ milisa.net
 minecraft-modding.wiki
 minhabio.link
 miniwebtool.com
+mipanel.cl
 mixloads.to
 mixpost.workspaces.store
 mixposure.com
@@ -2976,6 +2987,7 @@ monitor.verser.info
 monitoring.elpasonline.de
 monitoring.feelb.fr
 mono.fastfixx.com
+monsters.io
 moodle-test.edusmart.global
 moppys.eu.com
 mpg-uat-17.openfellas.com
@@ -3175,7 +3187,6 @@ panades-assets.paniniadrenalyn.com
 panel.center
 panel.subwith.me
 papantoniou.trustservers.gr
-paper.io
 paperless-ngx-ldkvh-u54836.vm.elestio.app
 parent.id
 partyup.de
@@ -3310,7 +3321,6 @@ poste.io
 power.uhostmk5.com
 predictive.lamiedoree.eu
 premiumdatingscript.com
-primary.is
 primeportal.cc
 privacy-proxy.usercentrics.eu
 privacyaustralia.net
@@ -3410,7 +3420,6 @@ s3.amazonaws.com
 s3.nl-ams.scw.cloud
 s5.elcaballodetoth.com
 s68a64.meinserver.io
-s7.e-host.org.ua
 sa1.dustlabs.io
 saf.nixpal.com
 saim.social.br
@@ -3587,7 +3596,6 @@ squirrelwisdom.com
 src.craigmcilwrath.com
 srv-prod.sensestack.ie
 srv-sfv-wes01.sun4vision.com
-srv.timschoellhammer.eu
 srv2.m-host.nl
 srv2.mboost.fr
 srv2.rmt.pl
@@ -6122,8 +6130,10 @@ static.7.167.75.5.clients.your-server.de
 static.7.170.75.5.clients.your-server.de
 static.7.191.27.37.clients.your-server.de
 static.7.200.161.5.clients.your-server.de
+static.7.55.161.5.clients.your-server.de
 static.7.63.88.23.clients.your-server.de
 static.70.112.9.5.clients.your-server.de
+static.70.129.75.5.clients.your-server.de
 static.70.140.75.5.clients.your-server.de
 static.70.142.75.5.clients.your-server.de
 static.70.178.78.5.clients.your-server.de
@@ -6226,15 +6236,18 @@ static.78.50.88.23.clients.your-server.de
 static.78.77.161.5.clients.your-server.de
 static.79.102.88.23.clients.your-server.de
 static.79.103.161.5.clients.your-server.de
+static.79.106.9.5.clients.your-server.de
 static.79.132.75.5.clients.your-server.de
 static.79.139.75.5.clients.your-server.de
 static.79.142.75.5.clients.your-server.de
 static.79.188.27.37.clients.your-server.de
 static.79.250.75.5.clients.your-server.de
 static.79.43.161.5.clients.your-server.de
+static.79.46.78.5.clients.your-server.de
 static.79.65.78.5.clients.your-server.de
 static.79.88.4.46.clients.your-server.de
 static.79.96.9.5.clients.your-server.de
+static.8.105.161.5.clients.your-server.de
 static.8.109.161.5.clients.your-server.de
 static.8.122.78.5.clients.your-server.de
 static.8.126.88.23.clients.your-server.de
@@ -6274,11 +6287,13 @@ static.81.239.75.5.clients.your-server.de
 static.81.61.161.5.clients.your-server.de
 static.81.89.161.5.clients.your-server.de
 static.82.111.161.5.clients.your-server.de
+static.82.158.62.46.clients.your-server.de
 static.82.17.27.37.clients.your-server.de
 static.82.188.78.5.clients.your-server.de
 static.82.229.75.5.clients.your-server.de
 static.82.65.78.5.clients.your-server.de
 static.83.109.161.5.clients.your-server.de
+static.83.129.27.37.clients.your-server.de
 static.83.192.27.37.clients.your-server.de
 static.83.194.9.5.clients.your-server.de
 static.83.214.78.5.clients.your-server.de
@@ -6295,6 +6310,7 @@ static.84.58.161.5.clients.your-server.de
 static.84.8.88.23.clients.your-server.de
 static.84.86.88.23.clients.your-server.de
 static.85.112.161.5.clients.your-server.de
+static.85.120.4.46.clients.your-server.de
 static.85.125.88.23.clients.your-server.de
 static.85.166.75.5.clients.your-server.de
 static.85.172.75.5.clients.your-server.de
@@ -6323,6 +6339,8 @@ static.87.172.27.37.clients.your-server.de
 static.87.187.78.5.clients.your-server.de
 static.87.254.4.46.clients.your-server.de
 static.87.57.78.5.clients.your-server.de
+static.87.91.78.5.clients.your-server.de
+static.88.110.161.5.clients.your-server.de
 static.88.118.9.5.clients.your-server.de
 static.88.132.75.5.clients.your-server.de
 static.88.209.161.5.clients.your-server.de
@@ -6339,6 +6357,7 @@ static.89.123.161.5.clients.your-server.de
 static.89.137.78.5.clients.your-server.de
 static.89.141.62.46.clients.your-server.de
 static.89.144.75.5.clients.your-server.de
+static.89.147.78.5.clients.your-server.de
 static.89.157.78.5.clients.your-server.de
 static.89.208.161.5.clients.your-server.de
 static.89.218.225.46.clients.your-server.de
@@ -6347,24 +6366,32 @@ static.89.249.75.5.clients.your-server.de
 static.89.254.9.5.clients.your-server.de
 static.89.31.9.5.clients.your-server.de
 static.89.59.88.23.clients.your-server.de
+static.89.88.161.5.clients.your-server.de
 static.9.150.62.46.clients.your-server.de
+static.9.173.75.5.clients.your-server.de
 static.9.175.62.46.clients.your-server.de
 static.9.193.75.5.clients.your-server.de
 static.9.204.75.5.clients.your-server.de
+static.9.229.75.5.clients.your-server.de
 static.9.240.62.46.clients.your-server.de
 static.9.72.161.5.clients.your-server.de
 static.90.118.88.23.clients.your-server.de
+static.90.138.75.5.clients.your-server.de
 static.90.145.75.5.clients.your-server.de
 static.90.154.75.5.clients.your-server.de
 static.90.160.161.5.clients.your-server.de
 static.90.172.62.46.clients.your-server.de
 static.90.184.75.5.clients.your-server.de
+static.90.195.62.46.clients.your-server.de
 static.90.2.88.23.clients.your-server.de
 static.90.236.75.5.clients.your-server.de
+static.90.30.9.5.clients.your-server.de
 static.90.73.161.5.clients.your-server.de
+static.91.116.224.46.clients.your-server.de
 static.91.119.27.37.clients.your-server.de
 static.91.132.75.5.clients.your-server.de
 static.91.135.75.5.clients.your-server.de
+static.91.149.78.5.clients.your-server.de
 static.91.186.75.5.clients.your-server.de
 static.91.19.4.46.clients.your-server.de
 static.91.190.75.5.clients.your-server.de
@@ -6402,6 +6429,7 @@ static.93.250.75.5.clients.your-server.de
 static.93.252.75.5.clients.your-server.de
 static.93.43.161.5.clients.your-server.de
 static.93.44.88.23.clients.your-server.de
+static.94.165.75.5.clients.your-server.de
 static.94.203.161.5.clients.your-server.de
 static.94.223.62.46.clients.your-server.de
 static.94.249.75.5.clients.your-server.de
@@ -6424,16 +6452,19 @@ static.95.68.78.5.clients.your-server.de
 static.95.93.161.5.clients.your-server.de
 static.95.96.88.23.clients.your-server.de
 static.96.131.78.5.clients.your-server.de
+static.96.169.75.5.clients.your-server.de
 static.96.182.161.5.clients.your-server.de
 static.96.193.62.46.clients.your-server.de
 static.96.231.161.5.clients.your-server.de
 static.96.233.62.46.clients.your-server.de
+static.97.107.88.23.clients.your-server.de
 static.97.131.78.5.clients.your-server.de
 static.97.152.62.46.clients.your-server.de
 static.97.170.62.46.clients.your-server.de
 static.97.182.75.5.clients.your-server.de
 static.97.222.9.5.clients.your-server.de
 static.97.236.62.46.clients.your-server.de
+static.97.83.78.5.clients.your-server.de
 static.98.112.4.46.clients.your-server.de
 static.98.120.161.5.clients.your-server.de
 static.98.124.161.5.clients.your-server.de
@@ -6450,9 +6481,12 @@ static.98.66.161.5.clients.your-server.de
 static.98.97.27.37.clients.your-server.de
 static.99.135.62.46.clients.your-server.de
 static.99.145.9.5.clients.your-server.de
+static.99.149.75.5.clients.your-server.de
 static.99.160.75.5.clients.your-server.de
+static.99.182.27.37.clients.your-server.de
 static.99.192.78.5.clients.your-server.de
 static.99.195.62.46.clients.your-server.de
+static.99.210.9.5.clients.your-server.de
 static.99.34.161.5.clients.your-server.de
 static.99.77.161.5.clients.your-server.de
 static.addtoany.com
@@ -6466,7 +6500,6 @@ static.docents.ru
 static.facebook.com
 static.ghost.org
 static.hotjar.com
-static.olark.com
 static.sabaidea.cloud
 static.tildacdn.com
 static1.squarespace.com
@@ -6589,6 +6622,7 @@ talk.plesk.com
 target.style
 tasolution.se
 taubertal-festival.de
+tawk.to
 teams.show
 tecfi.gishrm.online
 techenthusiast.info
@@ -6634,7 +6668,6 @@ tile.red
 tiles.maps.opensearch.org
 time.com
 time.day
-timschoellhammer.eu
 tkfoo.com
 tn03.simplinx.net
 toast.info
@@ -6666,7 +6699,6 @@ tree-nation.com
 trilby.media
 trinity.dmandr.net
 tronsetbio.com
-trustlogo.comodo.com
 trustseal.enamad.ir
 tudou.com
 turkutest.decidim.mainiotech.fi
@@ -6674,7 +6706,6 @@ twitch.tv
 twitter.com
 typo3.org
 typo3.slack.com
-tyr020.umtec.net
 u.email
 u.pl
 u0022com.atlassian.jira.agile.darkfeature.sprint.auto.management
@@ -6688,6 +6719,7 @@ ubuntu2204.microco.de
 ubuntucx31.x5servers.cloud
 uchatcentral.com
 uefaeuro17.cfa.com.cy
+uhost.mk
 ui.design
 uisp.com
 uk7.exprodo.com
@@ -6804,6 +6836,7 @@ webs67.webserver.planet-ocean.hosting
 webserver.infra.omninetworks.nl
 website-widgets.pages.dev
 website.page
+websitesubmit.hypermart.net
 websrv.sdimaging.co.uk
 wellensteyn-dev.ruffnet.hu
 whatsapp-cdn-shv-01-akl1.fbcdn.net
@@ -6884,6 +6917,7 @@ www.14hacks.com
 www.3point.be
 www.aapanel.com
 www.accelerandos.com
+www.acerosmx.com
 www.actionbike.de
 www.acwda.at
 www.addthis.com
@@ -6892,6 +6926,7 @@ www.agenziaimpress.it
 www.agricolamatrix.com
 www.aia-sport.no
 www.airsxm.com
+www.akcevmladeboleslavi.cz
 www.akosvero.com
 www.allabolag.se
 www.almalinux.org
@@ -6906,9 +6941,9 @@ www.apache.org
 www.apad.or.at
 www.apatt.org
 www.apple.com
-www.architekt-karl.de
 www.arioste.fr
 www.arthropovision.org
+www.attorneyservice.com
 www.axent.exchange
 www.bahn.de
 www.bahnfahren-im-suedwesten.de
@@ -6926,6 +6961,7 @@ www.bio-organik.com.mx
 www.bitmonkey.org
 www.bkr.se
 www.black-russian-terrier-dog-breed-store.com
+www.blogblog.com
 www.blogger.com
 www.bmb.gv.at
 www.boxer-dog-breed-store.com
@@ -7021,6 +7057,7 @@ www.gene-atlas.com
 www.german-shepherd-dog-breed-store.com
 www.gesetze-im-internet.de
 www.getsabio.com
+www.glami.ro
 www.gnu.org
 www.google-analytics.com
 www.google.com
@@ -7055,6 +7092,7 @@ www.islonline.com
 www.ispconfig.org
 www.iufro.org
 www.jagals.de
+www.japora.ro
 www.jboss.org
 www.jetbrains.com
 www.kaupo.de
@@ -7071,7 +7109,6 @@ www.laureanopinturas.com.br
 www.leadhub.co
 www.learnbase.de
 www.learnnext.com
-www.lexonline.paragraf.rs
 www.lighthousedepot.com
 www.limesurvey.org
 www.linkedin.com
@@ -7103,6 +7140,8 @@ www.meteolive.it
 www.mgm.gov.tr
 www.microsoft.com
 www.miletic.net
+www.mipanel.cl
+www.mixposure.com
 www.mobego.de
 www.molitor-dietzel.de
 www.monsterinsights.com
@@ -7128,14 +7167,11 @@ www.octanemotorsports.com
 www.odoo.com
 www.oead.at
 www.oerbv.at
-www.olark.com
 www.olympia.at
 www.onlyoffice.com
-www.opencart.com
 www.openproject.org
 www.openstreetmap.org
 www.oracle.com
-www.original-herm-sprenger-dog-collars-japan.com
 www.osomwphost.com
 www.paninigroup.com
 www.passbolt.com
@@ -7186,6 +7222,7 @@ www.seolight.cz
 www.serveravatar.com
 www.sesotec.cn
 www.sesotec.com
+www.sesotec.com.cn
 www.shedpool.de
 www.shedscore-com.l.ink
 www.shedscore.com
@@ -7198,13 +7235,13 @@ www.softether-download.com
 www.softether.org
 www.solarex.ro
 www.sozialministerium.gv.at
+www.spacexchimp.com
 www.spl.de
 www.splendid-internet.de
 www.statcounter.com
 www.superiormetals.ae
 www.suprnova.cc
 www.sw-comnizept.de
-www.swiss-mountain-dog-store.com
 www.syncs.online
 www.tanzenteilen.at
 www.tanzsportverband.at
@@ -7222,6 +7259,7 @@ www.transvanu.com
 www.tumblr.com
 www.turnpages.nl
 www.twitter.com
+www.uhost.mk
 www.uncommonpractice.works
 www.unimake.xyz
 www.uniranks.com
@@ -7232,6 +7270,7 @@ www.venddor.com.br
 www.vmware.com
 www.vtiger.com
 www.w3.org
+www.wabashamn.org
 www.waldschule-berumerfehn.de
 www.whatbrowser.org
 www.wikidata.org
@@ -7241,7 +7280,6 @@ www.worlddancesport.org
 www.worwo.pl
 www.x-cart.com
 www.xclinical.com
-www.xing.com
 www.yourbourse.com
 www.youtube-nocookie.com
 www.youtube.com
@@ -7304,7 +7342,6 @@ zabbix.ordenacion.hu
 zakhrafah.com
 zammad.com
 zauberware.com
-zaya.io
 zbx-02.hel.webinc.global
 zentraap.com
 zimobi-other-public.s3.us-east-1.amazonaws.com
