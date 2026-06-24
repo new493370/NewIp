@@ -270,15 +270,30 @@ def tcp_scan(
 
     cache = load_cache()
 
+    all_ips = []
+
+    try:
+        with open(input_file, "r", encoding="utf-8") as f:
+            for line in f:
+                ip = line.strip()
+                if not ip:
+                    continue
+                if not any(already_scanned(cache, ip, port) for port in ports):
+                    all_ips.append(ip)
+    except:
+        pass
+
+    if not all_ips:
+        print("NO NEW IPS TO SCAN")
+        return
+
     total_live = 0
     total_batch = 0
 
-    for batch in read_batches(
-        input_file,
-        batch_size
-    ):
-
+    for i in range(0, len(all_ips), batch_size):
+        batch = all_ips[i:i+batch_size]
         total_batch += 1
+
         stage_live = []
 
         print(
