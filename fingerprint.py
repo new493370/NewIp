@@ -1,5 +1,4 @@
 import requests
-import socket
 
 requests.packages.urllib3.disable_warnings()
 
@@ -43,28 +42,13 @@ TLS_PORTS = {
     2096
 }
 
-CDN_HOSTNAME_PATTERNS = {
-    "cloudflare": ["cloudflare"],
-    "fastly": ["fastly"],
-    "akamai": ["akamai"],
-    "bunny": ["bunnycdn", "b-cdn"],
-    "vercel": ["vercel"],
-    "cloudfront": ["cloudfront"],
-    "facebook": ["facebook", "fbcdn"],
-    "telegram": ["telegram", "tgcdn"],
-    "google": ["google", "googlecdn"],
-    "aws": ["aws", "amazonaws"],
-    "azure": ["azure"],
-    "gcore": ["gcore"],
-    "hetzner": ["hetzner"],
-    "digitalocean": ["digitalocean"]
-}
 
 def safe_lower(v):
     try:
         return str(v).lower()
     except:
         return ""
+
 
 def normalize_headers(headers):
     if not headers:
@@ -81,6 +65,7 @@ def normalize_headers(headers):
         return {}
 
     return out
+
 
 def detect_cdn_from_headers(headers):
     headers = normalize_headers(headers)
@@ -124,26 +109,10 @@ def detect_cdn_from_headers(headers):
 
     return "unknown"
 
-def detect_cdn_by_hostname(ip):
-    try:
-        hostname = socket.gethostbyaddr(ip)[0]
-        hostname = hostname.lower()
-        
-        for cdn, patterns in CDN_HOSTNAME_PATTERNS.items():
-            for pattern in patterns:
-                if pattern in hostname:
-                    return cdn
-                    
-    except:
-        pass
-    
-    return "unknown"
 
 def detect_cdn(ip=None, port=None, headers=None):
     if headers is not None:
-        result = detect_cdn_from_headers(headers)
-        if result != "unknown":
-            return result
+        return detect_cdn_from_headers(headers)
 
     if ip is None or port is None:
         return "unknown"
@@ -162,17 +131,9 @@ def detect_cdn(ip=None, port=None, headers=None):
             allow_redirects=True
         )
 
-        result = detect_cdn_from_headers(r.headers)
-        
-        if result != "unknown":
-            return result
+        return detect_cdn_from_headers(r.headers)
 
     except:
         pass
-
-    result = detect_cdn_by_hostname(ip)
-    
-    if result != "unknown":
-        return result
 
     return "unknown"
