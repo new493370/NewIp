@@ -48,6 +48,11 @@ CDN_HEADERS = {
         "x-amz-cf-pop",
         "x-cache"
     ],
+    "cloudfront": [
+        "x-amz-cf-id",
+        "x-amz-cf-pop",
+        "x-cache"
+    ],
     "incapsula": [
         "x-cdn",
         "x-iinfo",
@@ -177,20 +182,16 @@ def detect_cdn_from_tls(issuer, sni, alpn):
     issuer_lower = safe_lower(issuer)
     sni_lower = safe_lower(sni)
     
-    cloudflare_patterns = ["cloudflare", "cloudflare inc", "cf"]
-    if any(p in issuer_lower for p in cloudflare_patterns) or any(p in sni_lower for p in cloudflare_patterns):
-        return "cloudflare"
-    
     cdn_identifiers = {
-        "cloudflare": ["cloudflare", "cloudflare inc", "cf"],
+        "cloudflare": ["cloudflare"],
         "fastly": ["fastly"],
         "akamai": ["akamai"],
-        "azure": ["azure", "microsoft"],
+        "azure": ["azure"],
         "bunny": ["bunny"],
         "gcore": ["gcore"],
         "vercel": ["vercel"],
-        "cloudfront": ["cloudfront", "amazon"],
-        "incapsula": ["incapsula", "imperva"],
+        "cloudfront": ["cloudfront"],
+        "incapsula": ["incapsula"],
         "sucuri": ["sucuri"],
         "stackpath": ["stackpath"],
         "leaseweb": ["leaseweb"],
