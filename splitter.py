@@ -100,18 +100,27 @@ def read_chunk(
     return chunk
 
 
-def clean_output_files():
+def clean_stage_files():
     files_to_clean = [
         "output/tcp_live.txt",
         "output/tls_live.txt",
         "output/https_live.txt",
         "output/fingerprint_results.txt",
+        "output/https_meta.json"
+    ]
+    for f in files_to_clean:
+        if os.path.exists(f):
+            os.remove(f)
+            print(f"REMOVED STAGE: {f}")
+
+
+def clean_output_files():
+    files_to_clean = [
         "output/results.txt",
         "output/best_ips.txt",
         "output/domains_raw.txt",
         "output/domains.txt",
         "output/live_bank.txt",
-        "output/https_meta.json",
         "output/geo_cache.json"
     ]
     for f in files_to_clean:
@@ -152,6 +161,8 @@ def split_file(
 
     cursor = load_cursor()
 
+    clean_stage_files()
+
     clear_cache()
 
     scanned_cache = {}
@@ -162,6 +173,7 @@ def split_file(
         print("=" * 60)
         
         clean_output_files()
+        clean_stage_files()
         
         reset_cursor()
         cursor = 0
@@ -193,6 +205,7 @@ def split_file(
         if cursor >= total:
             print("RESTARTING SCAN CYCLE")
             reset_cursor()
+            clean_stage_files()
             clean_output_files()
             return split_file(infile)
         print("NO NEW IPS AVAILABLE")
