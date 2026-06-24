@@ -39,49 +39,32 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Reset scan_cursor
-        run: |
-          mkdir -p output
-          echo "0" > output/scan_cursor.txt
-
-      - name: Restore live_bank
-        uses: actions/cache@v3
+      - name: Restore Rolling State
+        uses: actions/download-artifact@v4
         with:
-          path: output/live_bank.txt
-          key: live-bank-${{ github.run_id }}
-          restore-keys: |
-            live-bank-
+          name: arista-output
+          path: output
+        continue-on-error: true
 
       - name: Prepare Bank
         run: |
           mkdir -p output
-          rm -f output/ip_bank.txt
-          rm -f output/clean_ips.txt
-          python downloader.py
-          python cleaner.py
 
-      - name: Cache clean_ips
-        uses: actions/cache@v3
+          if [ ! -s output/ip_bank.txt ]; then
+            python downloader.py
+          fi
+
+          if [ ! -s output/clean_ips.txt ]; then
+            python cleaner.py
+          fi
+
+      - name: Save Rolling State
+        uses: actions/upload-artifact@v4
         with:
-          path: output/clean_ips.txt
-          key: clean-ips-${{ github.run_id }}
-
-      - name: Save live_bank
-        uses: actions/cache@v3
-        with:
-          path: output/live_bank.txt
-          key: live-bank-${{ github.run_id }}
-
-      - name: Save scan_cursor
-        uses: actions/cache@v3
-        with:
-          path: output/scan_cursor.txt
-          key: scan-cursor-${{ github.run_id }}
-
-      - name: Cleanup heavy files
-        run: |
-          rm -f output/ip_bank.txt
-          rm -f output/*.tmp
+          name: arista-output
+          path: output
+          overwrite: true
+          retention-days: 3
 
   tcp:
     needs: prepare
@@ -100,57 +83,24 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Restore scan_cursor
-        uses: actions/cache@v3
+      - name: Restore State
+        uses: actions/download-artifact@v4
         with:
-          path: output/scan_cursor.txt
-          key: scan-cursor-${{ github.run_id }}
-          restore-keys: |
-            scan-cursor-
-
-      - name: Restore live_bank
-        uses: actions/cache@v3
-        with:
-          path: output/live_bank.txt
-          key: live-bank-${{ github.run_id }}
-          restore-keys: |
-            live-bank-
-
-      - name: Restore clean_ips
-        uses: actions/cache@v3
-        with:
-          path: output/clean_ips.txt
-          key: clean-ips-${{ github.run_id }}
+          name: arista-output
+          path: output
+        continue-on-error: true
 
       - name: TCP Scan
         run: |
-          mkdir -p output
           python main.py --tcp
 
-      - name: Cache TCP results
-        uses: actions/cache@v3
+      - name: Save State
+        uses: actions/upload-artifact@v4
         with:
-          path: output/tcp_live.txt
-          key: tcp-live-${{ github.run_id }}
-
-      - name: Save live_bank
-        uses: actions/cache@v3
-        with:
-          path: output/live_bank.txt
-          key: live-bank-${{ github.run_id }}
-
-      - name: Save scan_cursor
-        uses: actions/cache@v3
-        with:
-          path: output/scan_cursor.txt
-          key: scan-cursor-${{ github.run_id }}
-
-      - name: Cleanup temporary files
-        run: |
-          rm -f output/clean_ips.txt
-          rm -f output/current_part.txt
-          rm -f output/scanned_cache.txt
-          rm -f output/*.tmp
+          name: arista-output
+          path: output
+          overwrite: true
+          retention-days: 3
 
   tls:
     needs: tcp
@@ -169,56 +119,24 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Restore scan_cursor
-        uses: actions/cache@v3
+      - name: Restore State
+        uses: actions/download-artifact@v4
         with:
-          path: output/scan_cursor.txt
-          key: scan-cursor-${{ github.run_id }}
-          restore-keys: |
-            scan-cursor-
-
-      - name: Restore live_bank
-        uses: actions/cache@v3
-        with:
-          path: output/live_bank.txt
-          key: live-bank-${{ github.run_id }}
-          restore-keys: |
-            live-bank-
-
-      - name: Restore TCP results
-        uses: actions/cache@v3
-        with:
-          path: output/tcp_live.txt
-          key: tcp-live-${{ github.run_id }}
+          name: arista-output
+          path: output
+        continue-on-error: true
 
       - name: TLS Scan
         run: |
-          mkdir -p output
           python main.py --tls
 
-      - name: Cache TLS results
-        uses: actions/cache@v3
+      - name: Save State
+        uses: actions/upload-artifact@v4
         with:
-          path: output/tls_live.txt
-          key: tls-live-${{ github.run_id }}
-
-      - name: Save live_bank
-        uses: actions/cache@v3
-        with:
-          path: output/live_bank.txt
-          key: live-bank-${{ github.run_id }}
-
-      - name: Save scan_cursor
-        uses: actions/cache@v3
-        with:
-          path: output/scan_cursor.txt
-          key: scan-cursor-${{ github.run_id }}
-
-      - name: Cleanup temporary files
-        run: |
-          rm -f output/tcp_live.txt
-          rm -f output/current_part.txt
-          rm -f output/*.tmp
+          name: arista-output
+          path: output
+          overwrite: true
+          retention-days: 3
 
   https:
     needs: tls
@@ -237,56 +155,24 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Restore scan_cursor
-        uses: actions/cache@v3
+      - name: Restore State
+        uses: actions/download-artifact@v4
         with:
-          path: output/scan_cursor.txt
-          key: scan-cursor-${{ github.run_id }}
-          restore-keys: |
-            scan-cursor-
-
-      - name: Restore live_bank
-        uses: actions/cache@v3
-        with:
-          path: output/live_bank.txt
-          key: live-bank-${{ github.run_id }}
-          restore-keys: |
-            live-bank-
-
-      - name: Restore TLS results
-        uses: actions/cache@v3
-        with:
-          path: output/tls_live.txt
-          key: tls-live-${{ github.run_id }}
+          name: arista-output
+          path: output
+        continue-on-error: true
 
       - name: HTTPS Validation
         run: |
-          mkdir -p output
           python main.py --https
 
-      - name: Cache HTTPS results
-        uses: actions/cache@v3
+      - name: Save State
+        uses: actions/upload-artifact@v4
         with:
-          path: output/https_live.txt
-          key: https-live-${{ github.run_id }}
-
-      - name: Save live_bank
-        uses: actions/cache@v3
-        with:
-          path: output/live_bank.txt
-          key: live-bank-${{ github.run_id }}
-
-      - name: Save scan_cursor
-        uses: actions/cache@v3
-        with:
-          path: output/scan_cursor.txt
-          key: scan-cursor-${{ github.run_id }}
-
-      - name: Cleanup temporary files
-        run: |
-          rm -f output/tls_live.txt
-          rm -f output/current_part.txt
-          rm -f output/*.tmp
+          name: arista-output
+          path: output
+          overwrite: true
+          retention-days: 3
 
   fingerprint:
     needs: https
@@ -305,56 +191,24 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Restore scan_cursor
-        uses: actions/cache@v3
+      - name: Restore State
+        uses: actions/download-artifact@v4
         with:
-          path: output/scan_cursor.txt
-          key: scan-cursor-${{ github.run_id }}
-          restore-keys: |
-            scan-cursor-
-
-      - name: Restore live_bank
-        uses: actions/cache@v3
-        with:
-          path: output/live_bank.txt
-          key: live-bank-${{ github.run_id }}
-          restore-keys: |
-            live-bank-
-
-      - name: Restore HTTPS results
-        uses: actions/cache@v3
-        with:
-          path: output/https_live.txt
-          key: https-live-${{ github.run_id }}
+          name: arista-output
+          path: output
+        continue-on-error: true
 
       - name: Fingerprint
         run: |
-          mkdir -p output
           python main.py --fp
 
-      - name: Cache Fingerprint results
-        uses: actions/cache@v3
+      - name: Save State
+        uses: actions/upload-artifact@v4
         with:
-          path: output/fingerprint_results.txt
-          key: fp-results-${{ github.run_id }}
-
-      - name: Save live_bank
-        uses: actions/cache@v3
-        with:
-          path: output/live_bank.txt
-          key: live-bank-${{ github.run_id }}
-
-      - name: Save scan_cursor
-        uses: actions/cache@v3
-        with:
-          path: output/scan_cursor.txt
-          key: scan-cursor-${{ github.run_id }}
-
-      - name: Cleanup temporary files
-        run: |
-          rm -f output/https_live.txt
-          rm -f output/current_part.txt
-          rm -f output/*.tmp
+          name: arista-output
+          path: output
+          overwrite: true
+          retention-days: 3
 
   geo:
     needs: fingerprint
@@ -373,56 +227,24 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Restore scan_cursor
-        uses: actions/cache@v3
+      - name: Restore State
+        uses: actions/download-artifact@v4
         with:
-          path: output/scan_cursor.txt
-          key: scan-cursor-${{ github.run_id }}
-          restore-keys: |
-            scan-cursor-
-
-      - name: Restore live_bank
-        uses: actions/cache@v3
-        with:
-          path: output/live_bank.txt
-          key: live-bank-${{ github.run_id }}
-          restore-keys: |
-            live-bank-
-
-      - name: Restore Fingerprint results
-        uses: actions/cache@v3
-        with:
-          path: output/fingerprint_results.txt
-          key: fp-results-${{ github.run_id }}
+          name: arista-output
+          path: output
+        continue-on-error: true
 
       - name: GEO
         run: |
-          mkdir -p output
           python main.py --geo
 
-      - name: Cache GEO results
-        uses: actions/cache@v3
+      - name: Save State
+        uses: actions/upload-artifact@v4
         with:
-          path: output/results.txt
-          key: results-${{ github.run_id }}
-
-      - name: Save live_bank
-        uses: actions/cache@v3
-        with:
-          path: output/live_bank.txt
-          key: live-bank-${{ github.run_id }}
-
-      - name: Save scan_cursor
-        uses: actions/cache@v3
-        with:
-          path: output/scan_cursor.txt
-          key: scan-cursor-${{ github.run_id }}
-
-      - name: Cleanup temporary files
-        run: |
-          rm -f output/fingerprint_results.txt
-          rm -f output/current_part.txt
-          rm -f output/*.tmp
+          name: arista-output
+          path: output
+          overwrite: true
+          retention-days: 3
 
   finalize:
     needs: geo
@@ -441,52 +263,24 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Restore scan_cursor
-        uses: actions/cache@v3
+      - name: Restore State
+        uses: actions/download-artifact@v4
         with:
-          path: output/scan_cursor.txt
-          key: scan-cursor-${{ github.run_id }}
-          restore-keys: |
-            scan-cursor-
-
-      - name: Restore live_bank
-        uses: actions/cache@v3
-        with:
-          path: output/live_bank.txt
-          key: live-bank-${{ github.run_id }}
-          restore-keys: |
-            live-bank-
-
-      - name: Restore results
-        uses: actions/cache@v3
-        with:
-          path: output/results.txt
-          key: results-${{ github.run_id }}
-
-      - name: Restore GEO cache
-        uses: actions/cache@v3
-        with:
-          path: output/geo_cache.json
-          key: geo-cache-${{ github.run_id }}
-          restore-keys: |
-            geo-cache-
+          name: arista-output
+          path: output
+        continue-on-error: true
 
       - name: Finalize
         run: |
-          mkdir -p output
           python main.py --finalize
 
-      - name: Save live_bank
-        uses: actions/cache@v3
+      - name: Save Final State
+        uses: actions/upload-artifact@v4
         with:
-          path: output/live_bank.txt
-          key: live-bank-${{ github.run_id }}
-
-      - name: Save scan_cursor
-        uses: actions/cache@v3
-        with:
-          path: output/scan_cursor.txt
-          key: scan-cursor-${{ github.run_id }}
+          name: arista-output
+          path: output
+          overwrite: true
+          retention-days: 3
 
       - name: Commit Final Output
         run: |
@@ -498,9 +292,16 @@ jobs:
           [ -f output/best_ips.txt ] && git add output/best_ips.txt
           [ -f output/domains.txt ] && git add output/domains.txt
           [ -f output/results.txt ] && git add output/results.txt
-          [ -f output/geo_cache.json ] && git add output/geo_cache.json
-          [ -f output/https_meta.json ] && git add output/https_meta.json
           [ -f output/scan_cursor.txt ] && git add output/scan_cursor.txt
+          [ -f output/current_part.txt ] && git add output/current_part.txt
+
+          [ -f output/tcp_live.txt ] && git add output/tcp_live.txt
+          [ -f output/tls_live.txt ] && git add output/tls_live.txt
+          [ -f output/https_live.txt ] && git add output/https_live.txt
+          [ -f output/fingerprint_results.txt ] && git add output/fingerprint_results.txt
+          [ -f output/scanned_cache.txt ] && git add output/scanned_cache.txt
+          [ -f output/geo_cache.json ] && git add output/geo_cache.json
+          [ -f output/live_bank.txt ] && git add output/live_bank.txt
 
           if ! git diff --cached --quiet; then
             git commit -m "ARISTA $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
@@ -515,15 +316,3 @@ jobs:
             done
             exit 1
           fi
-
-      - name: Cleanup all caches and files
-        run: |
-          rm -f output/ip_bank.txt
-          rm -f output/clean_ips.txt
-          rm -f output/current_part.txt
-          rm -f output/tcp_live.txt
-          rm -f output/tls_live.txt
-          rm -f output/https_live.txt
-          rm -f output/fingerprint_results.txt
-          rm -f output/scanned_cache.txt
-          rm -f output/*.tmp
