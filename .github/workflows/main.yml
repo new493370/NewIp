@@ -121,8 +121,6 @@ jobs:
         with:
           path: output/clean_ips.txt
           key: clean-ips-${{ github.run_id }}
-          restore-keys: |
-            clean-ips-
 
       - name: TCP Scan
         run: |
@@ -192,8 +190,6 @@ jobs:
         with:
           path: output/tcp_live.txt
           key: tcp-live-${{ github.run_id }}
-          restore-keys: |
-            tcp-live-
 
       - name: TLS Scan
         run: |
@@ -262,8 +258,6 @@ jobs:
         with:
           path: output/tls_live.txt
           key: tls-live-${{ github.run_id }}
-          restore-keys: |
-            tls-live-
 
       - name: HTTPS Validation
         run: |
@@ -332,8 +326,6 @@ jobs:
         with:
           path: output/https_live.txt
           key: https-live-${{ github.run_id }}
-          restore-keys: |
-            https-live-
 
       - name: Fingerprint
         run: |
@@ -402,8 +394,6 @@ jobs:
         with:
           path: output/fingerprint_results.txt
           key: fp-results-${{ github.run_id }}
-          restore-keys: |
-            fp-results-
 
       - name: GEO
         run: |
@@ -472,8 +462,6 @@ jobs:
         with:
           path: output/results.txt
           key: results-${{ github.run_id }}
-          restore-keys: |
-            results-
 
       - name: Restore GEO cache
         uses: actions/cache@v3
