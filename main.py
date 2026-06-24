@@ -124,8 +124,6 @@ def run_tcp():
 def run_tls():
     prepare()
 
-    clean_stage_files_before_stage()
-
     if not exists(
         "output/tcp_live.txt"
     ):
@@ -149,8 +147,6 @@ def run_tls():
 
 def run_https():
     prepare()
-
-    clean_stage_files_before_stage()
 
     if not exists(
         "output/tls_live.txt"
@@ -176,8 +172,6 @@ def run_https():
 def run_fp():
     prepare()
 
-    clean_stage_files_before_stage()
-
     if not exists(
         "output/https_live.txt"
     ):
@@ -201,8 +195,6 @@ def run_fp():
 
 def run_geo():
     prepare()
-
-    clean_stage_files_before_stage()
 
     if not exists(
         "output/fingerprint_results.txt"
