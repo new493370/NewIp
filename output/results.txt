@@ -1,0 +1,33 @@
+5.28.193.15|443|301|569|http/1.1|1.0|0|cloudflare|Germany|Vodafone
+5.28.193.215|443|301|419|http/1.1|1.0|0|cloudflare|Germany|Vodafone
+5.28.193.61|443|301|525|http/1.1|1.0|0|cloudflare|Germany|Vodafone
+5.28.192.49|443|301|504|h2|1.0|0|cloudflare|Germany|Vodafone
+5.28.193.198|443|301|376|h2|1.0|0|cloudflare|Germany|Vodafone
+5.28.192.33|443|301|526|http/1.1|1.0|0|cloudflare|Germany|Vodafone
+5.28.192.108|443|301|440|h2|1.0|0|cloudflare|Germany|Vodafone
+5.28.192.137|443|301|388|h2|1.0|0|cloudflare|Germany|Vodafone
+5.28.193.119|443|301|515|http/1.1|1.0|0|cloudflare|Germany|Vodafone
+5.28.193.106|443|301|537|http/1.1|1.0|0|cloudflare|Germany|Vodafone
+5.28.193.130|443|301|581|http/1.1|1.0|0|cloudflare|Germany|Vodafone
+5.28.192.195|443|301|408|http/1.1|1.0|0|cloudflare|Germany|Vodafone
+5.28.192.132|443|301|323|http/1.1|1.0|0|cloudflare|Germany|Vodafone
+5.28.192.146|443|301|494|http/1.1|1.0|0|cloudflare|Germany|Vodafone
+5.28.193.0|443|301|483|http/1.1|1.0|0|cloudflare|Germany|Vodafone
+5.28.192.38|443|301|227|http/1.1|1.0|0|cloudflare|Germany|Vodafone
+5.28.192.10|443|301|483|http/1.1|1.0|0|cloudflare|Germany|Vodafone
+5.28.192.217|443|301|472|http/1.1|1.0|0|cloudflare|Germany|Vodafone
+5.28.192.216|443|301|430|h2|1.0|0|cloudflare|Germany|Vodafone
+5.28.192.202|443|301|259|http/1.1|1.0|0|cloudflare|Germany|Vodafone
+5.28.192.119|443|301|215|h2|1.0|0|cloudflare|Germany|Vodafone
+5.28.193.155|443|301|238|http/1.1|1.0|0|cloudflare|Germany|Vodafone
+5.28.193.254|443|301|366|http/1.1|1.0|0|cloudflare|Germany|Vodafone
+5.28.193.53|443|301|205|http/1.1|1.0|0|cloudflare|Germany|Vodafone
+5.28.193.7|443|301|344|http/1.1|1.0|0|cloudflare|Germany|Vodafone
+5.28.193.147|443|301|397|h2|1.0|0|cloudflare|Germany|Vodafone
+5.28.193.122|443|301|461|http/1.1|1.0|0|cloudflare|Germany|Vodafone
+5.28.192.218|443|301|355|h2|1.0|0|cloudflare|Germany|Vodafone
+5.28.193.166|443|301|334|h2|1.0|0|cloudflare|Germany|Vodafone
+5.28.192.35|443|301|451|h2|1.0|0|cloudflare|Germany|Vodafone
+5.28.193.152|443|301|312|http/1.1|1.0|0|cloudflare|Germany|Vodafone
+95.161.64.100|443|302|301|http/1.1|1.0|0|cloudflare|Netherlands|Telegram Msg.
+95.161.64.99|443|302|248|http/1.1|1.0|0|cloudflare|Netherlands|Telegram Msg.

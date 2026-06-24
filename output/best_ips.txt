@@ -1,0 +1,33 @@
+5.28.192.119:443 S=10 TTFB=215ms PROTO=h2 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.193.166:443 S=9 TTFB=334ms PROTO=h2 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.192.218:443 S=9 TTFB=355ms PROTO=h2 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.193.198:443 S=9 TTFB=376ms PROTO=h2 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.192.137:443 S=9 TTFB=388ms PROTO=h2 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.193.147:443 S=9 TTFB=397ms PROTO=h2 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.192.216:443 S=9 TTFB=430ms PROTO=h2 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.192.108:443 S=9 TTFB=440ms PROTO=h2 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.192.35:443 S=9 TTFB=451ms PROTO=h2 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.193.53:443 S=8 TTFB=205ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.192.38:443 S=8 TTFB=227ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.193.155:443 S=8 TTFB=238ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+95.161.64.99:443 S=8 TTFB=248ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Netherlands | Provider=Telegram Msg.
+5.28.192.202:443 S=8 TTFB=259ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.192.49:443 S=8 TTFB=504ms PROTO=h2 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+95.161.64.100:443 S=7 TTFB=301ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Netherlands | Provider=Telegram Msg.
+5.28.193.152:443 S=7 TTFB=312ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.192.132:443 S=7 TTFB=323ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.193.7:443 S=7 TTFB=344ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.193.254:443 S=7 TTFB=366ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.192.195:443 S=7 TTFB=408ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.193.215:443 S=7 TTFB=419ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.193.122:443 S=7 TTFB=461ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.192.217:443 S=7 TTFB=472ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.193.0:443 S=7 TTFB=483ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.192.10:443 S=7 TTFB=483ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.192.146:443 S=7 TTFB=494ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.193.119:443 S=6 TTFB=515ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.193.61:443 S=6 TTFB=525ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.192.33:443 S=6 TTFB=526ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.193.106:443 S=6 TTFB=537ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.193.15:443 S=6 TTFB=569ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone
+5.28.193.130:443 S=6 TTFB=581ms PROTO=http/1.1 REL=1.0 CDN=cloudflare Country=Germany | Provider=Vodafone

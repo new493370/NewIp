@@ -1,0 +1,11 @@
+accounts.google.com
+core.telegram.org
+date.now
+en.wikipedia.org
+google.ml
+google.sn
+schema.org
+telegram.org
+twitter.com
+www.google.com
+www.gstatic.com
