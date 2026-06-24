@@ -1,7 +1,7 @@
 import requests
 from cache import load_geo_cache, save_geo_cache
 
-API_TIMEOUT = 5
+API_TIMEOUT = 8
 
 def geo_lookup(ip):
     cache = load_geo_cache()
@@ -9,24 +9,73 @@ def geo_lookup(ip):
     if ip in cache:
         return cache[ip]
 
-    try:
-        r = requests.get(
-            f"https://ipwho.is/{ip}",
-            timeout=API_TIMEOUT
-        )
+    result = None
 
-        data = r.json()
+    sources = [
+        {
+            "url": f"http://ip-api.com/json/{ip}?fields=status,message,country,regionName,city,isp,org,as,mobile,proxy,hosting",
+            "parser": lambda d: {
+                "country": d.get("country"),
+                "region": d.get("regionName"),
+                "city": d.get("city"),
+                "provider": d.get("isp") or d.get("org"),
+                "asn": d.get("as")
+            } if d.get("status") == "success" else None
+        },
+        {
+            "url": f"https://ipwho.is/{ip}",
+            "parser": lambda d: {
+                "country": d.get("country"),
+                "region": d.get("region"),
+                "city": d.get("city"),
+                "provider": d.get("connection", {}).get("isp"),
+                "asn": d.get("connection", {}).get("asn")
+            } if d.get("success") is not False else None
+        },
+        {
+            "url": f"https://ipapi.co/{ip}/json/",
+            "parser": lambda d: {
+                "country": d.get("country_name"),
+                "region": d.get("region"),
+                "city": d.get("city"),
+                "provider": d.get("org"),
+                "asn": d.get("asn")
+            } if d.get("country_name") else None
+        },
+        {
+            "url": f"https://freeipapi.com/api/json/{ip}",
+            "parser": lambda d: {
+                "country": d.get("countryName"),
+                "region": d.get("regionName"),
+                "city": d.get("cityName"),
+                "provider": None,
+                "asn": None
+            } if d.get("countryName") else None
+        }
+    ]
 
+    for source in sources:
+        try:
+            r = requests.get(source["url"], timeout=API_TIMEOUT, headers={"User-Agent": "Mozilla/5.0"})
+            if r.status_code == 200:
+                data = r.json()
+                parsed = source["parser"](data)
+                if parsed and parsed.get("country"):
+                    result = parsed
+                    break
+        except:
+            continue
+
+    if result is None:
         result = {
-            "country": data.get("country"),
-            "asn": data.get("connection", {}).get("asn"),
-            "provider": data.get("connection", {}).get("isp")
+            "country": "Unknown",
+            "region": "Unknown",
+            "city": "Unknown",
+            "provider": "Unknown",
+            "asn": "Unknown"
         }
 
-        cache[ip] = result
-        save_geo_cache(cache)
+    cache[ip] = result
+    save_geo_cache(cache)
 
-        return result
-
-    except:
-        return {}
+    return result
