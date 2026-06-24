@@ -48,13 +48,6 @@ jobs:
           restore-keys: |
             ip-bank-
 
-      - name: Restore Rolling State
-        uses: actions/download-artifact@v4
-        with:
-          name: arista-output
-          path: output
-        continue-on-error: true
-
       - name: Prepare Bank
         run: |
           mkdir -p output
@@ -64,27 +57,6 @@ jobs:
             python downloader.py
             python cleaner.py
           fi
-
-      - name: Save Rolling State
-        uses: actions/upload-artifact@v4
-        with:
-          name: arista-output
-          path: |
-            output/tcp_live.txt
-            output/tls_live.txt
-            output/https_live.txt
-            output/fingerprint_results.txt
-            output/scanned_cache.txt
-            output/geo_cache.json
-            output/live_bank.txt
-            output/scan_cursor.txt
-            output/current_part.txt
-            output/domains_raw.txt
-            output/domains.txt
-            output/results.txt
-            output/best_ips.txt
-          overwrite: true
-          retention-days: 3
 
   tcp:
     needs: prepare
@@ -111,37 +83,9 @@ jobs:
           restore-keys: |
             ip-bank-
 
-      - name: Restore State
-        uses: actions/download-artifact@v4
-        with:
-          name: arista-output
-          path: output
-        continue-on-error: true
-
       - name: TCP Scan
         run: |
           python main.py --tcp
-
-      - name: Save State
-        uses: actions/upload-artifact@v4
-        with:
-          name: arista-output
-          path: |
-            output/tcp_live.txt
-            output/tls_live.txt
-            output/https_live.txt
-            output/fingerprint_results.txt
-            output/scanned_cache.txt
-            output/geo_cache.json
-            output/live_bank.txt
-            output/scan_cursor.txt
-            output/current_part.txt
-            output/domains_raw.txt
-            output/domains.txt
-            output/results.txt
-            output/best_ips.txt
-          overwrite: true
-          retention-days: 3
 
   tls:
     needs: tcp
@@ -168,37 +112,9 @@ jobs:
           restore-keys: |
             ip-bank-
 
-      - name: Restore State
-        uses: actions/download-artifact@v4
-        with:
-          name: arista-output
-          path: output
-        continue-on-error: true
-
       - name: TLS Scan
         run: |
           python main.py --tls
-
-      - name: Save State
-        uses: actions/upload-artifact@v4
-        with:
-          name: arista-output
-          path: |
-            output/tcp_live.txt
-            output/tls_live.txt
-            output/https_live.txt
-            output/fingerprint_results.txt
-            output/scanned_cache.txt
-            output/geo_cache.json
-            output/live_bank.txt
-            output/scan_cursor.txt
-            output/current_part.txt
-            output/domains_raw.txt
-            output/domains.txt
-            output/results.txt
-            output/best_ips.txt
-          overwrite: true
-          retention-days: 3
 
   https:
     needs: tls
@@ -225,37 +141,9 @@ jobs:
           restore-keys: |
             ip-bank-
 
-      - name: Restore State
-        uses: actions/download-artifact@v4
-        with:
-          name: arista-output
-          path: output
-        continue-on-error: true
-
       - name: HTTPS Validation
         run: |
           python main.py --https
-
-      - name: Save State
-        uses: actions/upload-artifact@v4
-        with:
-          name: arista-output
-          path: |
-            output/tcp_live.txt
-            output/tls_live.txt
-            output/https_live.txt
-            output/fingerprint_results.txt
-            output/scanned_cache.txt
-            output/geo_cache.json
-            output/live_bank.txt
-            output/scan_cursor.txt
-            output/current_part.txt
-            output/domains_raw.txt
-            output/domains.txt
-            output/results.txt
-            output/best_ips.txt
-          overwrite: true
-          retention-days: 3
 
   fingerprint:
     needs: https
@@ -282,37 +170,9 @@ jobs:
           restore-keys: |
             ip-bank-
 
-      - name: Restore State
-        uses: actions/download-artifact@v4
-        with:
-          name: arista-output
-          path: output
-        continue-on-error: true
-
       - name: Fingerprint
         run: |
           python main.py --fp
-
-      - name: Save State
-        uses: actions/upload-artifact@v4
-        with:
-          name: arista-output
-          path: |
-            output/tcp_live.txt
-            output/tls_live.txt
-            output/https_live.txt
-            output/fingerprint_results.txt
-            output/scanned_cache.txt
-            output/geo_cache.json
-            output/live_bank.txt
-            output/scan_cursor.txt
-            output/current_part.txt
-            output/domains_raw.txt
-            output/domains.txt
-            output/results.txt
-            output/best_ips.txt
-          overwrite: true
-          retention-days: 3
 
   geo:
     needs: fingerprint
@@ -339,37 +199,9 @@ jobs:
           restore-keys: |
             ip-bank-
 
-      - name: Restore State
-        uses: actions/download-artifact@v4
-        with:
-          name: arista-output
-          path: output
-        continue-on-error: true
-
       - name: GEO
         run: |
           python main.py --geo
-
-      - name: Save State
-        uses: actions/upload-artifact@v4
-        with:
-          name: arista-output
-          path: |
-            output/tcp_live.txt
-            output/tls_live.txt
-            output/https_live.txt
-            output/fingerprint_results.txt
-            output/scanned_cache.txt
-            output/geo_cache.json
-            output/live_bank.txt
-            output/scan_cursor.txt
-            output/current_part.txt
-            output/domains_raw.txt
-            output/domains.txt
-            output/results.txt
-            output/best_ips.txt
-          overwrite: true
-          retention-days: 3
 
   finalize:
     needs: geo
@@ -396,37 +228,9 @@ jobs:
           restore-keys: |
             ip-bank-
 
-      - name: Restore State
-        uses: actions/download-artifact@v4
-        with:
-          name: arista-output
-          path: output
-        continue-on-error: true
-
       - name: Finalize
         run: |
           python main.py --finalize
-
-      - name: Save Final State
-        uses: actions/upload-artifact@v4
-        with:
-          name: arista-output
-          path: |
-            output/tcp_live.txt
-            output/tls_live.txt
-            output/https_live.txt
-            output/fingerprint_results.txt
-            output/scanned_cache.txt
-            output/geo_cache.json
-            output/live_bank.txt
-            output/scan_cursor.txt
-            output/current_part.txt
-            output/domains_raw.txt
-            output/domains.txt
-            output/results.txt
-            output/best_ips.txt
-          overwrite: true
-          retention-days: 3
 
       - name: Commit Final Output
         run: |
