@@ -9,6 +9,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 requests.packages.urllib3.disable_warnings()
 
 TLS_INPUT_FILE = "output/tls_live.txt"
+RESULTS_INPUT_FILE = "output/results.txt"
 RAW_FILE = "output/domains_raw.txt"
 
 DOMAIN_RE = re.compile(
@@ -290,6 +291,43 @@ def read_tls_cache():
     return items
 
 
+def read_results():
+    items = []
+
+    try:
+        with open(
+            RESULTS_INPUT_FILE,
+            "r",
+            encoding="utf-8"
+        ) as f:
+
+            for line in f:
+                line = line.strip()
+
+                if not line:
+                    continue
+
+                parts = line.split("|")
+
+                if len(parts) < 2:
+                    continue
+
+                try:
+                    ip = parts[0]
+                    port = int(parts[1])
+                except:
+                    continue
+
+                items.append(
+                    (ip, port)
+                )
+
+    except:
+        pass
+
+    return items
+
+
 def extract_worker(item):
     ip, port = item
 
@@ -329,6 +367,72 @@ def extract_domains():
 
     print(
         f"TLS INPUT={len(live_items)} "
+        f"THREADS={threads}"
+    )
+
+    domains = set()
+
+    with ThreadPoolExecutor(
+        max_workers=threads
+    ) as ex:
+
+        futures = [
+            ex.submit(
+                extract_worker,
+                item
+            )
+            for item in live_items
+        ]
+
+        for fut in as_completed(
+            futures
+        ):
+            try:
+                res = fut.result()
+
+                if res:
+                    domains.update(res)
+
+            except:
+                continue
+
+    domains = sorted(
+        {
+            d
+            for d in domains
+            if d and "." in d
+        }
+    )
+
+    with open(
+        RAW_FILE,
+        "w",
+        encoding="utf-8"
+    ) as f:
+        f.write(
+            "\n".join(domains)
+        )
+
+    print(
+        f"DOMAINS={len(domains)}"
+    )
+
+
+def extract_domains_from_results():
+    cfg = load_config()
+
+    threads = min(
+        cfg.get(
+            "threads",
+            300
+        ),
+        100
+    )
+
+    live_items = read_results()
+
+    print(
+        f"RESULTS INPUT={len(live_items)} "
         f"THREADS={threads}"
     )
 
