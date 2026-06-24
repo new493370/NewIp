@@ -13,16 +13,6 @@ def geo_lookup(ip):
 
     sources = [
         {
-            "url": f"https://ipinfo.io/{ip}/json",
-            "parser": lambda d: {
-                "country": d.get("country"),
-                "region": d.get("region"),
-                "city": d.get("city"),
-                "provider": d.get("org"),
-                "asn": d.get("asn")
-            } if d.get("country") else None
-        },
-        {
             "url": f"http://ip-api.com/json/{ip}?fields=status,message,country,regionName,city,isp,org,as,mobile,proxy,hosting",
             "parser": lambda d: {
                 "country": d.get("country"),
@@ -61,23 +51,12 @@ def geo_lookup(ip):
                 "provider": None,
                 "asn": None
             } if d.get("countryName") else None
-        },
-        {
-            "url": f"https://api.ipvigilante.com/{ip}",
-            "parser": lambda d: {
-                "country": d.get("data", {}).get("country_name"),
-                "region": d.get("data", {}).get("subdivision_1_name"),
-                "city": d.get("data", {}).get("city_name"),
-                "provider": d.get("data", {}).get("isp"),
-                "asn": d.get("data", {}).get("asn")
-            } if d.get("status") == "success" else None
         }
     ]
 
     for source in sources:
         try:
-            headers = {"User-Agent": "Mozilla/5.0", "Accept": "application/json"}
-            r = requests.get(source["url"], timeout=API_TIMEOUT, headers=headers)
+            r = requests.get(source["url"], timeout=API_TIMEOUT, headers={"User-Agent": "Mozilla/5.0"})
             if r.status_code == 200:
                 data = r.json()
                 parsed = source["parser"](data)
