@@ -11,8 +11,6 @@ anycast-control-ext-shv-02-cgk1.facebook.com
 anycast-control-ext-shv-02-eze1.facebook.com
 anycast-control-ext-shv-02-gru1.facebook.com
 anycast-control-ext-shv-02-hbe1.facebook.com
-b.pro
-b.prototype.to
 cloud-tia-bridge-shv-01-cpt1.facebook.com
 cloud-tia-bridge-shv-01-gmp1.facebook.com
 cloud-tia-bridge-shv-01-hbe1.facebook.com
@@ -439,6 +437,7 @@ edge-z-p3-shv-01-man2.facebook.com
 edge-z-p3-shv-01-mia5.facebook.com
 edge-z-p3-shv-01-vie1.facebook.com
 edge-z-p3-shv-02-hbe1.facebook.com
+edge-z-p4-shv-01-cpt1.facebook.com
 edge-z-p4-shv-01-hbe1.facebook.com
 edge-z-p4-shv-01-jnb2.facebook.com
 edge-z-p4-shv-02-dfw5.facebook.com
