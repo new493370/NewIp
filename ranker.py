@@ -194,18 +194,6 @@ def rank_results():
             else:
                 location = "-"
             
-            line = (
-                f'{item["ip"]}:{item["port"]} '
-                f'S={item["score"]} '
-                f'TTFB={item.get("ttfb", "-")}ms '
-                f'PROTO={item.get("proto", "-")} '
-                f'REL={item.get("reliability", "-")} '
-                f'CDN={item.get("cdn", "-")} '
-                f'{location}\n'
-            )
-            
-            f.write(line)
-            
             colored_line = (
                 f'{COLOR_IP}{item["ip"]}{COLOR_RESET}'
                 f':{COLOR_PORT}{item["port"]}{COLOR_RESET} '
@@ -217,9 +205,9 @@ def rank_results():
                 f'{COLOR_COUNTRY}{location}{COLOR_RESET}\n'
             )
             
-            print(colored_line, end="")
+            f.write(colored_line)
 
-    print(f"\nRANKED={len(ranked)} DOMAINS={len(domains)}")
+    print(f"RANKED={len(ranked)} DOMAINS={len(domains)}")
 
 
 if __name__ == "__main__":
