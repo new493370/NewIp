@@ -57,6 +57,223 @@
 149.154.174.101|443|403|811|h2|1.0|0|unknown|United States|Telegram Messenger INC
 149.154.175.204|443|302|110|http/1.1|1.0|0|unknown|United States|Telegram Messenger INC
 149.154.175.205|443|302|85|h2|1.0|0|unknown|United States|Telegram Messenger INC
+5.28.192.120|443|301|1527|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.109|443|301|1587|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.171|443|301|1065|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.163|443|301|1043|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.246|443|301|734|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.162|443|301|1587|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.58|443|301|1600|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.112|443|301|595|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.187|443|301|927|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.169|443|301|1039|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.186|443|301|937|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.250|443|301|1005|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.27|443|301|991|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.140|443|301|1588|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.135|443|301|766|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.149|443|301|1548|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.168|443|301|831|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.53|443|301|772|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.30|443|301|789|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.235|443|301|1569|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.95|443|301|1054|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.18|443|301|906|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.63|443|301|1587|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.228|443|301|980|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.43|443|301|890|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.90|443|301|610|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.216|443|301|730|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.174|443|301|1588|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.155|443|301|671|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.213|443|301|725|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+95.161.64.99|443|302|417|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+95.161.64.100|443|302|286|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.161.145|443|302|960|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.163.241|443|403|1089|h2|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.3|443|403|488|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.13|443|302|575|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.24|443|302|950|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.26|443|302|396|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.25|443|302|497|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.133|443|302|504|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.137|443|302|542|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.195|443|301|483|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.196|443|301|589|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.194|443|301|655|h2|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.193|443|301|355|h2|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.166.110|443|302|527|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.167.32|443|302|531|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.167.80|443|403|281|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.167.99|443|302|495|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.167.132|443|302|457|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.167.220|443|302|471|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.170.96|443|403|1041|http/1.1|0.5|0|unknown|Singapore|Telegram Messenger INC
+149.154.170.100|443|403|1004|http/1.1|0.5|0|unknown|Singapore|Telegram Messenger INC
+149.154.170.200|443|403|1002|http/1.1|0.5|0|unknown|Singapore|Telegram Messenger INC
+149.154.171.236|443|302|1102|http/1.1|1.0|0|unknown|Singapore|Telegram Messenger INC
+149.154.171.237|443|302|1100|h2|1.0|0|unknown|Singapore|Telegram Messenger INC
+149.154.174.101|443|403|987|h2|1.0|0|unknown|United States|Telegram Messenger INC
+149.154.175.204|443|302|1015|h2|1.0|0|unknown|United States|Telegram Messenger INC
+149.154.175.205|443|302|69|http/1.1|1.0|0|unknown|United States|Telegram Messenger INC
+5.28.192.120|443|301|387|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.109|443|301|986|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.171|443|301|884|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.163|443|301|331|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.246|443|301|1049|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.162|443|301|894|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.58|443|301|819|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.112|443|301|809|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.187|443|301|580|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.169|443|301|948|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.186|443|301|660|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.250|443|301|463|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.27|443|301|628|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.140|443|301|749|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.135|443|301|959|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.149|443|301|1011|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.168|443|301|932|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.53|443|301|452|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.30|443|301|798|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.235|443|301|692|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.95|443|301|879|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.18|443|301|858|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.63|443|301|666|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.228|443|301|853|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.43|443|301|706|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.90|443|301|698|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.216|443|301|856|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.174|443|301|989|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.155|443|301|846|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.213|443|301|981|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+95.161.64.99|443|302|793|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+95.161.64.100|443|302|953|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.161.145|443|302|909|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.163.241|443|403|1296|h2|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.3|443|403|875|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.13|443|302|947|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.24|443|302|708|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.26|443|302|753|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.25|443|302|835|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.133|443|302|867|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.137|443|302|886|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.195|443|301|805|h2|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.196|443|301|984|h2|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.194|443|301|994|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.193|443|301|747|h2|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.166.110|443|302|917|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.167.32|443|302|928|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.167.80|443|403|700|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.167.99|443|302|896|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.167.132|443|302|824|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.167.220|443|302|814|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.170.96|443|403|1092|http/1.1|1.0|0|unknown|Singapore|Telegram Messenger INC
+149.154.170.100|443|403|1059|http/1.1|1.0|0|unknown|Singapore|Telegram Messenger INC
+149.154.170.200|443|403|1040|http/1.1|1.0|0|unknown|Singapore|Telegram Messenger INC
+149.154.171.236|443|302|1088|http/1.1|1.0|0|unknown|Singapore|Telegram Messenger INC
+149.154.171.237|443|302|1032|h2|1.0|0|unknown|Singapore|Telegram Messenger INC
+149.154.174.101|443|403|1000|h2|1.0|0|unknown|United States|Telegram Messenger INC
+149.154.175.204|443|302|656|http/1.1|0.5|0|unknown|United States|Telegram Messenger INC
+149.154.175.205|443|302|1005|http/1.1|1.0|0|unknown|United States|Telegram Messenger INC
+5.28.192.132|443|301|776|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.100|443|301|869|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.165|443|301|764|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.201|443|301|860|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.3|443|301|828|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.154|443|301|766|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.134|443|301|787|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.116|443|301|805|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.138|443|301|785|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.218|443|301|774|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.112|443|301|816|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.35|443|301|599|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.33|443|301|641|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.31|443|301|640|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.54|443|301|650|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.22|443|301|579|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.84|443|301|622|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.206|443|301|651|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.225|443|301|745|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.62|443|301|568|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.17|443|301|661|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.176|443|301|631|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.10|443|301|580|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.104|443|301|578|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+31.13.71.14|443|404|1082|h2|1.0|0|unknown|United States|Facebook, Inc.
+31.13.89.25|443|400|892|http/1.1|1.0|0|unknown|Mexico|Facebook, Inc.
+31.13.89.34|443|404|1056|h2|1.0|0|unknown|Mexico|Facebook, Inc.
+31.13.84.35|443|404|1072|h2|1.0|0|unknown|Austria|Facebook, Inc.
+31.13.82.32|443|404|1074|h2|1.0|0|unknown|Japan|Facebook, Inc.
+31.13.93.230|443|404|902|h2|1.0|0|unknown|United States|Facebook, Inc.
+31.13.69.15|443|404|1092|h2|1.0|0|unknown|Italy|Facebook, Inc.
+31.13.80.56|443|404|1031|http/1.1|1.0|0|unknown|Canada|Facebook, Inc.
+31.13.93.174|443|404|912|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.72.225|443|404|1049|http/1.1|1.0|0|unknown|Sweden|Facebook, Inc.
+31.13.80.41|443|407|1010|http/1.1|1.0|0|unknown|Canada|Facebook, Inc.
+31.13.80.41|8443|407|1006|http/1.1|1.0|0|unknown|Canada|Facebook, Inc.
+31.13.78.21|443|404|1169|h2|1.0|0|unknown|New Zealand|Facebook, Inc.
+31.13.73.63|443|404|921|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.70.51|443|400|757|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.73.215|443|404|880|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.73.14|443|400|727|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.91.174|443|404|1061|h2|1.0|0|unknown|Brazil|Facebook, Inc.
+31.13.78.60|443|404|1118|h2|1.0|0|unknown|New Zealand|Facebook, Inc.
+31.13.87.49|443|400|970|h2|1.0|0|unknown|Taiwan|Facebook, Inc.
+31.13.72.40|443|404|1057|http/1.1|1.0|0|unknown|Sweden|Facebook, Inc.
+31.13.73.2|443|404|911|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.76.8|443|404|873|h2|1.0|0|unknown|Republic of Korea|Facebook, Inc.
+31.13.66.227|443|404|674|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.82.19|443|200|820|http/1.1|1.0|0|unknown|Japan|Facebook, Inc.
+31.13.93.49|443|400|840|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.84.41|443|407|782|http/1.1|1.0|0|unknown|Austria|Facebook, Inc.
+31.13.84.41|8443|407|721|http/1.1|1.0|0|unknown|Austria|Facebook, Inc.
+31.13.70.7|443|404|878|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.84.19|443|200|974|http/1.1|1.0|0|unknown|Austria|Facebook, Inc.
+31.13.84.8|443|400|835|h2|1.0|0|unknown|Austria|Facebook, Inc.
+31.13.69.216|443|404|811|h2|1.0|0|unknown|Italy|Facebook, Inc.
+31.13.82.225|443|404|866|h2|1.0|0|unknown|Japan|Facebook, Inc.
+31.13.64.227|443|400|804|h2|1.0|0|unknown|India|Facebook, Inc.
+31.13.95.21|443|404|809|h2|1.0|0|unknown|Indonesia|Facebook, Inc.
+31.13.78.174|443|404|832|h2|1.0|0|unknown|New Zealand|Facebook, Inc.
+31.13.82.18|443|400|693|http/1.1|1.0|0|unknown|Japan|Facebook, Inc.
+31.13.80.36|443|400|815|http/1.1|1.0|0|unknown|Canada|Facebook, Inc.
+31.13.94.210|443|404|754|http/1.1|1.0|0|unknown|Argentina|Facebook, Inc.
+31.13.73.50|443|400|945|h2|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.73.167|443|404|856|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.73.202|443|404|867|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.93.227|443|400|859|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.76.40|443|404|822|h2|1.0|0|unknown|Republic of Korea|Facebook, Inc.
+31.13.80.37|443|400|825|http/1.1|1.0|0|unknown|Canada|Facebook, Inc.
+31.13.93.53|443|404|848|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.72.167|443|404|831|http/1.1|1.0|0|unknown|Sweden|Facebook, Inc.
+31.13.72.52|443|404|761|http/1.1|1.0|0|unknown|Sweden|Facebook, Inc.
+31.13.91.12|443|404|867|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+31.13.82.11|443|400|857|h2|1.0|0|unknown|Japan|Facebook, Inc.
+31.13.72.17|443|400|696|http/1.1|1.0|0|unknown|Sweden|Facebook, Inc.
+31.13.69.230|443|404|743|http/1.1|1.0|0|unknown|Italy|Facebook, Inc.
+31.13.91.17|443|404|738|h2|1.0|0|unknown|Brazil|Facebook, Inc.
+31.13.91.42|443|407|794|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+31.13.91.42|8443|407|728|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+31.13.91.14|443|404|763|h2|1.0|0|unknown|Brazil|Facebook, Inc.
+31.13.66.16|443|404|682|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.144.138.134|443|200|822|h2|1.0|0|unknown|Kenya|Facebook, Inc.
+57.144.105.129|443|404|828|h2|1.0|0|unknown|United States|Facebook, Inc.
+57.144.254.145|443|404|844|http/1.1|1.0|0|unknown|France|Facebook, Inc.
+57.144.211.195|443|404|835|h2|1.0|0|unknown|India|Facebook, Inc.
+57.144.185.180|443|200|538|h2|1.0|0|unknown|Philippines|Facebook, Inc.
+57.144.74.37|443|404|687|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.144.174.136|443|400|881|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.145.15.191|443|404|977|h2|1.0|0|unknown|Ireland|Facebook, Inc.
+57.144.86.33|443|404|845|h2|1.0|0|unknown|India|Facebook, Inc.
+57.144.252.1|443|400|850|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.144.182.141|443|400|756|h2|1.0|0|unknown|Philippines|Facebook, Inc.
+57.144.196.192|443|404|818|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.144.144.128|443|404|824|h2|1.0|0|unknown|Singapore|Facebook, Inc.
+57.144.197.134|443|400|850|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.144.54.131|443|404|831|http/1.1|1.0|0|unknown|India|Facebook, Inc.
+57.145.14.192|443|404|955|h2|1.0|0|unknown|Ireland|Facebook, Inc.
+57.144.65.164|443|404|813|h2|1.0|0|unknown|Hong Kong|Facebook, Inc.
+66.220.149.254|443|404|901|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
 5.28.192.120|443|301|625|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
 5.28.193.109|443|301|724|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
 5.28.192.171|443|301|834|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
@@ -333,3 +550,739 @@
 57.145.14.192|443|404|955|h2|1.0|0|unknown|Ireland|Facebook, Inc.
 57.144.65.164|443|404|813|h2|1.0|0|unknown|Hong Kong|Facebook, Inc.
 66.220.149.254|443|404|901|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+5.28.192.120|443|301|1002|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.109|443|301|954|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.171|443|301|806|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.163|443|301|979|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.246|443|301|1089|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.162|443|301|1012|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.58|443|301|1644|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.112|443|301|1053|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.187|443|301|1028|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.169|443|301|1644|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.186|443|301|920|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.250|443|301|794|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.27|443|301|990|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.140|443|301|1076|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.135|443|301|1066|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.149|443|301|1077|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.168|443|301|1644|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.53|443|301|1041|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.30|443|301|1065|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.235|443|301|1024|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.95|443|301|966|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.18|443|301|897|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.63|443|301|1056|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.228|443|301|875|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.43|443|301|1643|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.90|443|301|759|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.216|443|301|726|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.174|443|301|1014|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.155|443|301|1642|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.213|443|301|1641|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+95.161.64.99|443|302|453|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+95.161.64.100|443|302|679|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.161.145|443|302|702|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.163.241|443|403|1208|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.3|443|403|441|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.13|443|302|658|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.24|443|302|430|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.26|443|302|1024|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.25|443|302|301|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.133|443|302|635|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.137|443|302|555|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.195|443|301|524|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.196|443|301|501|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.194|443|301|546|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.193|443|301|603|h2|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.166.110|443|302|590|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.167.32|443|302|381|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.167.80|443|403|566|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.167.99|443|302|312|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.167.132|443|302|533|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.167.220|443|302|370|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.170.96|443|403|938|http/1.1|0.5|0|unknown|Singapore|Telegram Messenger INC
+149.154.170.100|443|403|953|http/1.1|0.5|0|unknown|Singapore|Telegram Messenger INC
+149.154.170.200|443|403|957|http/1.1|0.5|0|unknown|Singapore|Telegram Messenger INC
+149.154.171.236|443|302|713|http/1.1|0.5|0|unknown|Singapore|Telegram Messenger INC
+149.154.171.237|443|302|694|http/1.1|0.5|0|unknown|Singapore|Telegram Messenger INC
+149.154.174.101|443|403|1195|h2|1.0|0|unknown|United States|Telegram Messenger INC
+149.154.175.204|443|302|1081|http/1.1|1.0|0|unknown|United States|Telegram Messenger INC
+149.154.175.205|443|302|1108|http/1.1|1.0|0|unknown|United States|Telegram Messenger INC
+5.28.192.132|443|301|944|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.100|443|301|714|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.165|443|301|933|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.201|443|301|1104|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.3|443|301|784|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.154|443|301|349|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.134|443|301|909|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.116|443|301|327|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.138|443|301|1022|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.218|443|301|885|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.112|443|301|862|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.35|443|301|852|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.33|443|301|828|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.31|443|301|749|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.54|443|301|647|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.22|443|301|624|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.84|443|301|409|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.206|443|301|818|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.225|443|301|841|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.62|443|301|580|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.17|443|301|670|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.176|443|301|771|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.10|443|301|360|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.104|443|301|738|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+31.13.71.14|443|404|341|h2|1.0|0|unknown|United States|Facebook, Inc.
+31.13.89.25|443|400|481|http/1.1|0.5|0|unknown|Mexico|Facebook, Inc.
+31.13.89.34|443|404|1182|http/1.1|1.0|0|unknown|Mexico|Facebook, Inc.
+31.13.84.35|443|404|1386|http/1.1|1.0|0|unknown|Austria|Facebook, Inc.
+31.13.82.32|443|404|801|http/1.1|0.5|0|unknown|Japan|Facebook, Inc.
+31.13.93.230|443|404|1194|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.69.15|443|404|999|http/1.1|1.0|0|unknown|Italy|Facebook, Inc.
+31.13.80.56|443|404|1199|http/1.1|1.0|0|unknown|Canada|Facebook, Inc.
+31.13.93.174|443|404|1158|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.72.225|443|404|1124|http/1.1|1.0|0|unknown|Sweden|Facebook, Inc.
+31.13.80.41|443|407|1211|http/1.1|1.0|0|unknown|Canada|Facebook, Inc.
+31.13.80.41|8443|407|1188|http/1.1|1.0|0|unknown|Canada|Facebook, Inc.
+31.13.78.21|443|404|1409|h2|1.0|0|unknown|New Zealand|Facebook, Inc.
+31.13.73.63|443|404|1200|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.70.51|443|400|1054|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.73.215|443|404|1189|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.73.14|443|400|1060|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.91.174|443|404|987|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+31.13.78.60|443|404|1098|http/1.1|1.0|0|unknown|New Zealand|Facebook, Inc.
+31.13.87.49|443|400|784|http/1.1|1.0|0|unknown|Taiwan|Facebook, Inc.
+31.13.72.40|443|404|1135|http/1.1|1.0|0|unknown|Sweden|Facebook, Inc.
+31.13.73.2|443|404|1121|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.76.8|443|404|1008|http/1.1|1.0|0|unknown|Republic of Korea|Facebook, Inc.
+31.13.66.227|443|404|737|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.82.19|443|200|985|h2|1.0|0|unknown|Japan|Facebook, Inc.
+31.13.93.49|443|400|1047|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.84.41|443|407|1035|http/1.1|1.0|0|unknown|Austria|Facebook, Inc.
+31.13.84.41|8443|407|1080|http/1.1|1.0|0|unknown|Austria|Facebook, Inc.
+31.13.70.7|443|404|1020|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.84.19|443|200|1157|http/1.1|1.0|0|unknown|Austria|Facebook, Inc.
+31.13.84.8|443|400|1002|http/1.1|1.0|0|unknown|Austria|Facebook, Inc.
+31.13.69.216|443|404|952|http/1.1|1.0|0|unknown|Italy|Facebook, Inc.
+31.13.82.225|443|404|1097|h2|1.0|0|unknown|Japan|Facebook, Inc.
+31.13.64.227|443|400|1111|h2|1.0|0|unknown|India|Facebook, Inc.
+31.13.95.21|443|404|957|h2|1.0|0|unknown|Indonesia|Facebook, Inc.
+31.13.78.174|443|404|985|h2|1.0|0|unknown|New Zealand|Facebook, Inc.
+31.13.82.18|443|400|742|http/1.1|1.0|0|unknown|Japan|Facebook, Inc.
+31.13.80.36|443|400|322|http/1.1|0.5|0|unknown|Canada|Facebook, Inc.
+31.13.94.210|443|404|1024|http/1.1|1.0|0|unknown|Argentina|Facebook, Inc.
+31.13.73.50|443|400|936|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.73.167|443|404|1099|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.73.202|443|404|1132|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.93.227|443|400|1136|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.76.40|443|404|996|h2|1.0|0|unknown|Republic of Korea|Facebook, Inc.
+31.13.80.37|443|400|1032|http/1.1|1.0|0|unknown|Canada|Facebook, Inc.
+31.13.93.53|443|404|1128|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.72.167|443|404|1058|http/1.1|1.0|0|unknown|Sweden|Facebook, Inc.
+31.13.72.52|443|404|963|http/1.1|1.0|0|unknown|Sweden|Facebook, Inc.
+31.13.91.12|443|404|1043|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+31.13.82.11|443|400|818|http/1.1|1.0|0|unknown|Japan|Facebook, Inc.
+31.13.72.17|443|400|862|http/1.1|1.0|0|unknown|Sweden|Facebook, Inc.
+31.13.69.230|443|404|942|http/1.1|1.0|0|unknown|Italy|Facebook, Inc.
+31.13.91.17|443|404|993|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+31.13.91.42|443|407|1032|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+31.13.91.42|8443|407|1065|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+31.13.91.14|443|404|1021|h2|1.0|0|unknown|Brazil|Facebook, Inc.
+31.13.66.16|443|404|749|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.144.138.134|443|200|798|h2|1.0|0|unknown|Kenya|Facebook, Inc.
+57.144.105.129|443|404|1133|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.144.254.145|443|404|1147|http/1.1|1.0|0|unknown|France|Facebook, Inc.
+57.144.211.195|443|404|934|h2|1.0|0|unknown|India|Facebook, Inc.
+57.144.185.180|443|200|682|http/1.1|1.0|0|unknown|Philippines|Facebook, Inc.
+57.144.74.37|443|404|1161|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.144.174.136|443|400|334|http/1.1|0.5|0|unknown|United States|Facebook, Inc.
+57.145.15.191|443|404|1045|h2|1.0|0|unknown|Ireland|Facebook, Inc.
+57.144.86.33|443|404|1061|h2|1.0|0|unknown|India|Facebook, Inc.
+57.144.252.1|443|400|1055|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.144.182.141|443|400|764|http/1.1|1.0|0|unknown|Philippines|Facebook, Inc.
+57.144.196.192|443|404|284|http/1.1|0.5|0|unknown|United States|Facebook, Inc.
+57.144.144.128|443|404|991|h2|1.0|0|unknown|Singapore|Facebook, Inc.
+57.144.197.134|443|400|1155|h2|1.0|0|unknown|United States|Facebook, Inc.
+57.144.54.131|443|404|1272|h2|1.0|0|unknown|India|Facebook, Inc.
+57.145.14.192|443|404|1341|h2|1.0|0|unknown|Ireland|Facebook, Inc.
+57.144.65.164|443|404|1256|h2|1.0|0|unknown|Hong Kong|Facebook, Inc.
+66.220.149.254|443|404|1238|http/1.1|0.5|0|unknown|United States|Facebook, Inc.
+5.28.192.120|443|301|770|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.109|443|301|933|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.171|443|301|846|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.163|443|301|714|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.246|443|301|728|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.162|443|301|1185|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.58|443|301|1595|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.112|443|301|1042|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.187|443|301|730|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.169|443|301|1063|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.186|443|301|804|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.250|443|301|667|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.27|443|301|1007|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.140|443|301|1051|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.135|443|301|944|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.149|443|301|978|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.168|443|301|1235|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.53|443|301|1012|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.30|443|301|1087|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.235|443|301|968|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.95|443|301|1019|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.18|443|301|890|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.63|443|301|985|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.228|443|301|918|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.43|443|301|1594|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.90|443|301|811|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.216|443|301|641|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.174|443|301|697|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.155|443|301|1581|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.213|443|301|1076|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+95.161.64.99|443|302|874|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+95.161.64.100|443|302|749|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.161.145|443|302|710|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.163.241|443|403|1154|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.3|443|403|851|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.13|443|302|638|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.24|443|302|862|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.26|443|302|786|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.164.25|443|302|672|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.133|443|302|677|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.137|443|302|568|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.195|443|301|557|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.196|443|301|1031|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.194|443|301|634|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.165.193|443|301|623|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.166.110|443|302|560|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.167.32|443|302|829|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.167.80|443|403|542|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.167.99|443|302|818|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.167.132|443|302|918|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.167.220|443|302|807|http/1.1|1.0|0|unknown|Netherlands|Telegram Messenger INC
+149.154.170.96|443|403|1127|http/1.1|1.0|0|unknown|Singapore|Telegram Messenger INC
+149.154.170.100|443|403|1082|http/1.1|1.0|0|unknown|Singapore|Telegram Messenger INC
+149.154.170.200|443|403|1093|http/1.1|1.0|0|unknown|Singapore|Telegram Messenger INC
+149.154.171.236|443|302|1121|h2|1.0|0|unknown|Singapore|Telegram Messenger INC
+149.154.171.237|443|302|1104|h2|1.0|0|unknown|Singapore|Telegram Messenger INC
+149.154.174.101|443|403|1108|h2|1.0|0|unknown|United States|Telegram Messenger INC
+149.154.175.204|443|302|727|h2|1.0|0|unknown|United States|Telegram Messenger INC
+149.154.175.205|443|302|783|http/1.1|1.0|0|unknown|United States|Telegram Messenger INC
+5.28.192.132|443|301|922|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.100|443|301|976|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.165|443|301|929|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.201|443|301|1019|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.3|443|301|840|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.154|443|301|942|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.134|443|301|679|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.116|443|301|931|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.138|443|301|797|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.218|443|301|907|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.112|443|301|879|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.35|443|301|873|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.33|443|301|857|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.31|443|301|827|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.54|443|301|964|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.22|443|301|952|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.84|443|301|509|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.206|443|301|1128|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.225|443|301|1139|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.62|443|301|510|http/1.1|0.5|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.17|443|301|1117|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.176|443|301|853|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.10|443|301|907|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.104|443|301|832|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+31.13.71.14|443|404|1127|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.89.25|443|400|1086|http/1.1|1.0|0|unknown|Mexico|Facebook, Inc.
+31.13.89.34|443|404|1142|http/1.1|1.0|0|unknown|Mexico|Facebook, Inc.
+31.13.84.35|443|404|1148|http/1.1|1.0|0|unknown|Austria|Facebook, Inc.
+31.13.82.32|443|404|1109|h2|1.0|0|unknown|Japan|Facebook, Inc.
+31.13.93.230|443|404|1157|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.69.15|443|404|981|http/1.1|1.0|0|unknown|Italy|Facebook, Inc.
+31.13.80.56|443|404|242|http/1.1|0.5|0|unknown|Canada|Facebook, Inc.
+31.13.93.174|443|404|1146|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.72.225|443|404|1045|http/1.1|1.0|0|unknown|Sweden|Facebook, Inc.
+31.13.80.41|443|407|230|http/1.1|0.5|0|unknown|Canada|Facebook, Inc.
+31.13.80.41|8443|407|1116|http/1.1|1.0|0|unknown|Canada|Facebook, Inc.
+31.13.78.21|443|404|1044|h2|1.0|0|unknown|New Zealand|Facebook, Inc.
+31.13.73.63|443|404|1113|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.70.51|443|400|1062|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.73.215|443|404|1090|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.73.14|443|400|1051|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.91.174|443|404|967|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+31.13.78.60|443|404|1055|h2|1.0|0|unknown|New Zealand|Facebook, Inc.
+31.13.87.49|443|400|839|h2|1.0|0|unknown|Taiwan|Facebook, Inc.
+31.13.72.40|443|404|1170|http/1.1|1.0|0|unknown|Sweden|Facebook, Inc.
+31.13.73.2|443|404|1101|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.76.8|443|404|1033|h2|1.0|0|unknown|Republic of Korea|Facebook, Inc.
+31.13.66.227|443|404|654|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.82.19|443|200|747|http/1.1|1.0|0|unknown|Japan|Facebook, Inc.
+31.13.93.49|443|400|1057|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.84.41|443|407|1080|http/1.1|1.0|0|unknown|Austria|Facebook, Inc.
+31.13.84.41|8443|407|1136|http/1.1|1.0|0|unknown|Austria|Facebook, Inc.
+31.13.70.7|443|404|1145|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.84.19|443|200|949|http/1.1|1.0|0|unknown|Austria|Facebook, Inc.
+31.13.84.8|443|400|995|http/1.1|1.0|0|unknown|Austria|Facebook, Inc.
+31.13.69.216|443|404|992|http/1.1|1.0|0|unknown|Italy|Facebook, Inc.
+31.13.82.225|443|404|1120|http/1.1|1.0|0|unknown|Japan|Facebook, Inc.
+31.13.64.227|443|400|1120|h2|1.0|0|unknown|India|Facebook, Inc.
+31.13.95.21|443|404|1095|h2|1.0|0|unknown|Indonesia|Facebook, Inc.
+31.13.78.174|443|404|978|h2|1.0|0|unknown|New Zealand|Facebook, Inc.
+31.13.82.18|443|400|685|http/1.1|1.0|0|unknown|Japan|Facebook, Inc.
+31.13.80.36|443|400|1083|http/1.1|1.0|0|unknown|Canada|Facebook, Inc.
+31.13.94.210|443|404|1130|h2|1.0|0|unknown|Argentina|Facebook, Inc.
+31.13.73.50|443|400|929|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.73.167|443|404|1024|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.73.202|443|404|1034|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.93.227|443|400|1100|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.76.40|443|404|1000|h2|1.0|0|unknown|Republic of Korea|Facebook, Inc.
+31.13.80.37|443|400|306|http/1.1|0.5|0|unknown|Canada|Facebook, Inc.
+31.13.93.53|443|404|1123|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.72.167|443|404|1091|http/1.1|1.0|0|unknown|Sweden|Facebook, Inc.
+31.13.72.52|443|404|1034|http/1.1|1.0|0|unknown|Sweden|Facebook, Inc.
+31.13.91.12|443|404|1162|h2|1.0|0|unknown|Brazil|Facebook, Inc.
+31.13.82.11|443|400|788|h2|1.0|0|unknown|Japan|Facebook, Inc.
+31.13.72.17|443|400|839|http/1.1|1.0|0|unknown|Sweden|Facebook, Inc.
+31.13.69.230|443|404|1001|http/1.1|1.0|0|unknown|Italy|Facebook, Inc.
+31.13.91.17|443|404|911|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+31.13.91.42|443|407|1151|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+31.13.91.42|8443|407|1207|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+31.13.91.14|443|404|922|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+31.13.66.16|443|404|520|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.144.138.134|443|200|815|h2|1.0|0|unknown|Kenya|Facebook, Inc.
+57.144.105.129|443|404|1153|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.144.254.145|443|404|1192|http/1.1|1.0|0|unknown|France|Facebook, Inc.
+57.144.211.195|443|404|1209|h2|1.0|0|unknown|India|Facebook, Inc.
+57.144.185.180|443|200|835|h2|1.0|0|unknown|Philippines|Facebook, Inc.
+57.144.74.37|443|404|219|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.144.174.136|443|400|1138|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.145.15.191|443|404|1232|h2|1.0|0|unknown|Ireland|Facebook, Inc.
+57.144.86.33|443|404|1186|h2|1.0|0|unknown|India|Facebook, Inc.
+57.144.252.1|443|400|1083|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.144.182.141|443|400|910|h2|1.0|0|unknown|Philippines|Facebook, Inc.
+57.144.196.192|443|404|1194|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.144.144.128|443|404|1141|h2|1.0|0|unknown|Singapore|Facebook, Inc.
+57.144.197.134|443|400|1109|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.144.54.131|443|404|1218|h2|1.0|0|unknown|India|Facebook, Inc.
+57.145.14.192|443|404|1243|h2|1.0|0|unknown|Ireland|Facebook, Inc.
+57.144.65.164|443|404|1186|http/1.1|1.0|0|unknown|Hong Kong|Facebook, Inc.
+66.220.149.254|443|404|1017|http/1.1|0.5|0|unknown|United States|Facebook, Inc.
+5.28.193.136|443|301|814|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.81|443|301|827|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.174|443|301|882|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.212|443|301|804|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.98|443|301|1055|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.52|443|301|961|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.175|443|301|1022|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.54|443|301|973|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.173|443|301|1067|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.86|443|301|1043|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.50|443|301|782|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.40|443|301|860|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.26|443|301|1032|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.239|443|301|794|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.85|443|301|940|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.191|443|301|848|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.140|443|301|917|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.39|443|301|929|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.131|443|301|1077|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.167|443|301|951|h2|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.69|443|301|1000|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.249|443|301|1010|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.85|443|301|893|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.24|443|301|872|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.16|443|301|837|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.193.239|443|301|916|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+5.28.192.89|443|301|984|http/1.1|1.0|0|unknown|Netherlands|Vodafone Group PLC
+31.13.93.20|443|404|1199|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.78.54|443|400|1453|h2|1.0|0|unknown|New Zealand|Facebook, Inc.
+31.13.71.63|443|404|1218|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.87.23|443|404|1138|h2|1.0|0|unknown|Taiwan|Facebook, Inc.
+31.13.94.142|443|404|1177|h2|1.0|0|unknown|Argentina|Facebook, Inc.
+31.13.83.168|443|404|1096|http/1.1|1.0|0|unknown|Spain|Facebook, Inc.
+31.13.69.26|443|404|1129|http/1.1|1.0|0|unknown|Italy|Facebook, Inc.
+31.13.82.52|443|404|1251|h2|1.0|0|unknown|Japan|Facebook, Inc.
+31.13.76.167|443|404|1219|h2|1.0|0|unknown|Republic of Korea|Facebook, Inc.
+31.13.76.18|443|400|1039|http/1.1|1.0|0|unknown|Republic of Korea|Facebook, Inc.
+31.13.87.18|443|400|843|http/1.1|1.0|0|unknown|Taiwan|Facebook, Inc.
+31.13.66.3|443|200|257|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.89.49|443|400|888|http/1.1|0.5|0|unknown|Mexico|Facebook, Inc.
+31.13.78.6|443|404|1206|http/1.1|1.0|0|unknown|New Zealand|Facebook, Inc.
+31.13.72.53|443|404|1122|http/1.1|1.0|0|unknown|Sweden|Facebook, Inc.
+31.13.84.53|443|400|1087|http/1.1|1.0|0|unknown|Austria|Facebook, Inc.
+31.13.64.194|443|404|1197|h2|1.0|0|unknown|India|Facebook, Inc.
+31.13.89.230|443|404|1161|http/1.1|1.0|0|unknown|Mexico|Facebook, Inc.
+31.13.69.14|443|400|650|http/1.1|1.0|0|unknown|Italy|Facebook, Inc.
+31.13.83.161|443|404|1050|http/1.1|1.0|0|unknown|Spain|Facebook, Inc.
+31.13.94.230|443|404|1162|h2|1.0|0|unknown|Argentina|Facebook, Inc.
+31.13.91.40|443|404|1062|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+31.13.87.230|443|404|1126|h2|1.0|0|unknown|Taiwan|Facebook, Inc.
+31.13.87.24|443|200|883|h2|1.0|0|unknown|Taiwan|Facebook, Inc.
+31.13.93.169|443|400|1069|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.80.25|443|200|1126|http/1.1|1.0|0|unknown|Canada|Facebook, Inc.
+31.13.78.36|443|400|967|h2|1.0|0|unknown|New Zealand|Facebook, Inc.
+31.13.86.225|443|404|1177|http/1.1|1.0|0|unknown|Italy|Facebook, Inc.
+31.13.94.36|443|400|1069|h2|1.0|0|unknown|Argentina|Facebook, Inc.
+31.13.89.167|443|404|1138|http/1.1|1.0|0|unknown|Mexico|Facebook, Inc.
+31.13.80.9|443|404|1183|http/1.1|1.0|0|unknown|Canada|Facebook, Inc.
+31.13.66.37|443|404|897|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.78.161|443|404|1173|h2|1.0|0|unknown|New Zealand|Facebook, Inc.
+31.13.86.56|443|404|1166|http/1.1|1.0|0|unknown|Italy|Facebook, Inc.
+31.13.86.37|443|400|1108|http/1.1|1.0|0|unknown|Italy|Facebook, Inc.
+31.13.82.23|443|404|1240|h2|1.0|0|unknown|Japan|Facebook, Inc.
+31.13.87.142|443|404|982|h2|1.0|0|unknown|Taiwan|Facebook, Inc.
+31.13.94.26|443|404|953|http/1.1|1.0|0|unknown|Argentina|Facebook, Inc.
+31.13.73.35|443|400|421|http/1.1|0.5|0|unknown|Ireland|Facebook, Inc.
+31.13.71.208|443|404|310|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.82.141|443|404|896|http/1.1|1.0|0|unknown|Japan|Facebook, Inc.
+31.13.73.142|443|404|1186|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+31.13.72.22|443|404|1067|http/1.1|1.0|0|unknown|Sweden|Facebook, Inc.
+57.144.234.195|443|404|82|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+31.13.84.36|443|400|1139|http/1.1|1.0|0|unknown|Austria|Facebook, Inc.
+57.145.7.163|443|404|753|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+31.13.83.174|443|404|1143|http/1.1|1.0|0|unknown|Spain|Facebook, Inc.
+31.13.95.172|443|404|1085|h2|1.0|0|unknown|Indonesia|Facebook, Inc.
+31.13.72.222|443|404|1127|http/1.1|1.0|0|unknown|Sweden|Facebook, Inc.
+31.13.95.222|443|404|1062|h2|1.0|0|unknown|Indonesia|Facebook, Inc.
+57.144.244.139|443|400|503|http/1.1|0.5|0|unknown|Germany|Facebook, Inc.
+57.144.135.189|443|404|1201|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.144.66.35|443|404|1048|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+57.144.182.192|443|404|1024|h2|1.0|0|unknown|Philippines|Facebook, Inc.
+57.144.181.129|443|404|994|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.144.111.195|443|404|1082|http/1.1|1.0|0|unknown|Poland|Facebook, Inc.
+57.144.206.152|443|404|942|http/1.1|1.0|0|unknown|Argentina|Facebook, Inc.
+57.144.46.195|443|404|1085|h2|1.0|0|unknown|India|Facebook, Inc.
+57.144.184.142|443|404|1013|h2|1.0|0|unknown|Philippines|Facebook, Inc.
+57.144.236.129|443|404|167|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.144.248.11|443|407|1165|http/1.1|1.0|0|unknown|Germany|Facebook, Inc.
+57.144.248.11|8443|407|1152|http/1.1|1.0|0|unknown|Germany|Facebook, Inc.
+57.144.219.163|443|404|1210|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.144.40.129|443|404|1061|h2|1.0|0|unknown|India|Facebook, Inc.
+57.144.22.135|443|400|1105|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.144.242.192|443|404|969|h2|1.0|0|unknown|India|Facebook, Inc.
+57.144.162.143|443|400|1184|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+57.144.255.195|443|404|1141|http/1.1|1.0|0|unknown|France|Facebook, Inc.
+57.144.249.146|443|400|1130|http/1.1|1.0|0|unknown|Germany|Facebook, Inc.
+102.132.97.41|443|407|819|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.41|8443|407|852|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.3|443|404|723|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.9|443|200|1285|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.14|443|400|778|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.10|443|429|1026|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.8|443|404|1053|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.22|443|400|668|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.16|443|404|1144|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.23|443|200|888|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.18|443|429|813|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.21|443|404|1105|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.26|443|429|608|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.33|443|404|1061|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.27|443|404|737|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.35|443|429|931|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.38|443|404|1039|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.37|443|429|887|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.51|443|400|910|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.49|443|400|1174|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.56|443|404|973|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.54|443|404|984|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.63|443|404|855|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.20|443|400|857|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.15|443|404|874|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.13|443|404|788|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.40|443|404|690|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.62|443|404|1148|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.167|443|404|987|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.169|443|400|588|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.97.141|443|404|461|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.97.172|443|404|462|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.97.142|443|404|1187|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.174|443|404|1156|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.161|443|404|1193|h2|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.168|443|404|484|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.97.210|443|404|1220|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.222|443|404|1169|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.223|443|404|435|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.97.225|443|404|436|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.97.216|443|200|992|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.97.218|443|404|421|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.97.227|443|400|1387|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.97.230|443|404|433|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.99.1|443|429|467|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.4|443|404|1329|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.5|443|400|1224|http/1.1|0.5|0|unknown|South Africa|Facebook, Inc.
+102.132.99.7|443|200|1180|http/1.1|0.5|0|unknown|South Africa|Facebook, Inc.
+102.132.99.9|443|400|1221|http/1.1|0.5|0|unknown|South Africa|Facebook, Inc.
+102.132.99.14|443|404|1253|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.13|443|404|1295|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.15|443|400|723|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.8|443|404|1284|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.18|443|429|600|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.17|443|404|939|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.41|443|407|853|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.41|8443|407|970|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.20|443|404|896|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.22|443|200|1037|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.32|443|404|1273|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.36|443|429|622|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.35|443|429|1080|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.39|443|404|949|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.54|443|400|918|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.53|443|404|853|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.60|443|404|1262|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.56|443|429|804|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.63|443|404|1163|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.21|443|404|710|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.26|443|400|939|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.40|443|404|1153|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.130|443|404|885|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.167|443|404|1099|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.142|443|404|1089|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.141|443|404|864|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.161|443|404|905|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.168|443|404|1079|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.169|443|429|997|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.172|443|404|1055|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.174|443|404|960|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.204|443|404|1025|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.213|443|404|1002|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.220|443|404|928|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.225|443|404|1121|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.217|443|200|561|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.222|443|404|1074|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.227|443|400|1052|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.99.230|443|404|1084|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.103.8|443|400|685|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.103.7|443|404|413|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.103.10|443|200|687|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.103.9|443|200|1030|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.103.12|443|400|819|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.103.15|443|400|488|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.103.16|443|429|417|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.103.19|443|400|886|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.1|443|404|755|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.5|443|404|374|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.103.14|443|404|873|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.32|443|407|841|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.32|8443|407|1025|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.20|443|404|1125|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.18|443|400|870|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.22|443|404|388|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.103.21|443|404|755|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.35|443|429|1061|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.42|443|400|688|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.103.37|443|404|830|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.38|443|404|1058|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.41|443|404|775|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.56|443|404|1103|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.60|443|404|359|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.103.59|443|429|660|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.63|443|404|1120|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.58|443|404|840|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.128|443|400|911|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.167|443|404|688|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.169|443|400|678|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.103.172|443|404|1157|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.174|443|404|916|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.141|443|404|379|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.103.142|443|404|877|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.199|443|404|938|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.207|443|404|820|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.211|443|404|395|http/1.1|0.5|0|unknown|Egypt|Facebook, Inc.
+102.132.103.161|443|404|1003|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.168|443|404|992|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.194|443|404|1186|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.196|443|200|949|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.225|443|404|1046|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.227|443|400|1425|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.103.230|443|404|1114|http/1.1|1.0|0|unknown|Egypt|Facebook, Inc.
+102.132.104.36|443|407|1033|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.36|8443|407|926|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.1|443|200|1176|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.3|443|200|954|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.2|443|400|911|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.6|443|429|791|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.5|443|404|979|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.14|443|404|972|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.18|443|429|780|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.19|443|404|882|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.21|443|429|576|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.22|443|400|975|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.23|443|404|936|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.35|443|429|663|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.37|443|429|845|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.38|443|404|969|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.16|443|404|848|http/1.1|0.5|0|unknown|South Africa|Facebook, Inc.
+102.132.104.13|443|404|1348|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.15|443|404|898|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.17|443|400|810|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.40|443|404|1378|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.53|443|400|1109|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.50|443|404|1048|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.60|443|404|994|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.58|443|400|1197|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.63|443|404|1304|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.32|443|404|1016|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.57|443|404|966|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.141|443|404|859|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.142|443|404|1243|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.167|443|404|1203|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.169|443|429|942|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.172|443|404|1038|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.174|443|404|909|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.161|443|404|1104|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.168|443|404|1193|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.196|443|404|994|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.197|443|404|984|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.202|443|404|822|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.207|443|404|1299|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.213|443|404|972|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.222|443|200|798|http/1.1|1.0|0|unknown|South Africa|Facebook, Inc.
+102.132.104.227|443|400|789|http/1.1|0.5|0|unknown|South Africa|Facebook, Inc.
+102.132.104.230|443|404|856|h2|1.0|0|unknown|South Africa|Facebook, Inc.
+157.240.12.37|443|404|1146|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+157.240.3.4|443|404|1138|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+157.240.22.19|443|400|351|http/1.1|0.5|0|unknown|United States|Facebook, Inc.
+157.240.9.167|443|404|1179|http/1.1|1.0|0|unknown|Bulgaria|Facebook, Inc.
+157.240.5.12|443|400|1076|http/1.1|1.0|0|unknown|Spain|Facebook, Inc.
+157.240.29.55|443|400|1183|h2|1.0|0|unknown|Qatar|Facebook, Inc.
+157.240.0.8|443|200|706|http/1.1|0.5|0|unknown|Germany|Facebook, Inc.
+157.240.5.38|443|400|959|http/1.1|1.0|0|unknown|Spain|Facebook, Inc.
+157.240.17.40|443|404|1107|http/1.1|1.0|0|unknown|Switzerland|Facebook, Inc.
+157.240.22.16|443|404|238|http/1.1|0.5|0|unknown|United States|Facebook, Inc.
+157.240.17.19|443|400|1079|http/1.1|1.0|0|unknown|Switzerland|Facebook, Inc.
+157.240.22.41|443|407|227|http/1.1|0.5|0|unknown|United States|Facebook, Inc.
+157.240.22.41|8443|407|212|http/1.1|0.5|0|unknown|United States|Facebook, Inc.
+157.240.5.142|443|404|1118|http/1.1|1.0|0|unknown|Spain|Facebook, Inc.
+157.240.8.19|443|404|1227|http/1.1|1.0|0|unknown|Australia|Facebook, Inc.
+157.240.31.220|443|200|864|http/1.1|1.0|0|unknown|Japan|Facebook, Inc.
+157.240.24.40|443|404|1152|h2|1.0|0|unknown|United States|Facebook, Inc.
+157.240.17.39|443|404|1151|http/1.1|1.0|0|unknown|Switzerland|Facebook, Inc.
+157.240.30.10|443|400|1092|http/1.1|1.0|0|unknown|Czech Republic|Facebook, Inc.
+157.240.11.220|443|404|189|http/1.1|0.5|0|unknown|United States|Facebook, Inc.
+157.240.15.40|443|404|1080|h2|1.0|0|unknown|Singapore|Facebook, Inc.
+157.240.3.227|443|404|1150|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+157.240.13.14|443|400|703|h2|1.0|0|unknown|Singapore|Facebook, Inc.
+157.240.3.172|443|404|1140|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+157.240.27.161|443|404|1162|http/1.1|1.0|0|unknown|Germany|Facebook, Inc.
+157.240.26.14|443|400|202|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+157.240.224.7|443|404|1084|http/1.1|1.0|0|unknown|Ukraine|Facebook, Inc.
+157.240.215.14|443|404|1083|http/1.1|1.0|0|unknown|Republic of Korea|Facebook, Inc.
+157.240.214.26|443|400|302|http/1.1|0.5|0|unknown|United Kingdom|Facebook, Inc.
+157.240.203.2|443|404|1140|http/1.1|1.0|0|unknown|Italy|Facebook, Inc.
+157.240.238.32|443|404|1062|http/1.1|1.0|0|unknown|Turkey|Facebook, Inc.
+157.240.209.141|443|404|1046|h2|1.0|0|unknown|Japan|Facebook, Inc.
+157.240.205.230|443|404|887|http/1.1|1.0|0|unknown|Finland|Facebook, Inc.
+157.240.223.161|443|404|1049|http/1.1|1.0|0|unknown|Germany|Facebook, Inc.
+157.240.215.51|443|400|872|http/1.1|1.0|0|unknown|Republic of Korea|Facebook, Inc.
+157.240.200.17|443|200|821|http/1.1|0.5|0|unknown|Denmark|Facebook, Inc.
+157.240.224.32|443|404|882|http/1.1|1.0|0|unknown|Ukraine|Facebook, Inc.
+157.240.205.63|443|404|1038|http/1.1|1.0|0|unknown|Finland|Facebook, Inc.
+157.240.233.2|443|404|232|http/1.1|0.5|0|unknown|Guatemala|Facebook, Inc.
+157.240.234.5|443|404|838|http/1.1|1.0|0|unknown|Bulgaria|Facebook, Inc.
+157.240.205.38|443|404|811|http/1.1|1.0|0|unknown|Finland|Facebook, Inc.
+157.240.226.18|443|400|1031|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+157.240.244.17|443|404|202|http/1.1|0.5|0|unknown|Mexico|Facebook, Inc.
+157.240.202.128|443|404|1022|http/1.1|1.0|0|unknown|France|Facebook, Inc.
+157.240.236.14|443|404|1014|h2|1.0|0|unknown|Malaysia|Facebook, Inc.
+157.240.200.36|443|400|1194|http/1.1|1.0|0|unknown|Denmark|Facebook, Inc.
+157.240.225.21|443|404|1139|http/1.1|1.0|0|unknown|United Kingdom|Facebook, Inc.
+157.240.214.11|443|404|247|http/1.1|0.5|0|unknown|United Kingdom|Facebook, Inc.
+157.240.254.33|443|404|960|h2|1.0|0|unknown|United States|Facebook, Inc.
+157.240.226.25|443|404|801|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+157.240.241.1|443|404|95|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+157.240.205.40|443|404|897|http/1.1|1.0|0|unknown|Finland|Facebook, Inc.
+157.240.226.22|443|200|1009|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+157.240.202.32|443|404|1077|http/1.1|1.0|0|unknown|France|Facebook, Inc.
+157.240.202.6|443|404|1120|http/1.1|1.0|0|unknown|France|Facebook, Inc.
+157.240.241.63|443|404|48|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+157.240.196.168|443|404|914|http/1.1|1.0|0|unknown|France|Facebook, Inc.
+157.240.226.220|443|404|844|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+157.240.196.128|443|404|903|http/1.1|1.0|0|unknown|France|Facebook, Inc.
+157.240.203.63|443|404|979|http/1.1|1.0|0|unknown|Italy|Facebook, Inc.
+157.240.209.18|443|400|893|h2|1.0|0|unknown|Japan|Facebook, Inc.
+157.240.243.11|443|400|864|http/1.1|1.0|0|unknown|Spain|Facebook, Inc.
+157.240.227.227|443|400|1032|http/1.1|1.0|0|unknown|Oman|Facebook, Inc.
+157.240.225.56|443|400|555|http/1.1|0.5|0|unknown|United Kingdom|Facebook, Inc.
+157.240.215.19|443|400|578|http/1.1|1.0|0|unknown|Republic of Korea|Facebook, Inc.
+157.240.225.130|443|404|1140|http/1.1|1.0|0|unknown|United Kingdom|Facebook, Inc.
+157.240.233.12|443|404|232|http/1.1|0.5|0|unknown|Guatemala|Facebook, Inc.
+157.240.196.36|443|400|1027|http/1.1|1.0|0|unknown|France|Facebook, Inc.
+157.240.226.169|443|400|966|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+157.240.208.63|443|404|1170|h2|1.0|0|unknown|Indonesia|Facebook, Inc.
+157.240.244.192|443|404|189|http/1.1|0.5|0|unknown|Mexico|Facebook, Inc.
+157.240.211.167|443|404|1069|http/1.1|1.0|0|unknown|Hong Kong|Facebook, Inc.
+157.240.234.202|443|404|828|http/1.1|1.0|0|unknown|Bulgaria|Facebook, Inc.
+157.240.238.33|443|404|937|http/1.1|1.0|0|unknown|Turkey|Facebook, Inc.
+157.240.226.36|443|400|930|http/1.1|1.0|0|unknown|Brazil|Facebook, Inc.
+157.240.200.167|443|404|1087|http/1.1|1.0|0|unknown|Denmark|Facebook, Inc.
+157.240.238.7|443|400|608|http/1.1|1.0|0|unknown|Turkey|Facebook, Inc.
+157.240.214.219|443|404|1077|http/1.1|1.0|0|unknown|United Kingdom|Facebook, Inc.
+157.240.196.13|443|404|881|http/1.1|1.0|0|unknown|France|Facebook, Inc.
+157.240.227.1|443|400|861|http/1.1|1.0|0|unknown|Oman|Facebook, Inc.
+157.240.205.4|443|404|728|http/1.1|1.0|0|unknown|Finland|Facebook, Inc.
+157.240.227.36|443|400|883|http/1.1|1.0|0|unknown|Oman|Facebook, Inc.
+157.240.233.209|443|200|229|http/1.1|0.5|0|unknown|Guatemala|Facebook, Inc.
+157.240.205.172|443|404|962|http/1.1|1.0|0|unknown|Finland|Facebook, Inc.
+157.240.231.39|443|404|920|http/1.1|1.0|0|unknown|Italy|Facebook, Inc.
+157.240.234.16|443|404|919|http/1.1|1.0|0|unknown|Bulgaria|Facebook, Inc.
+157.240.197.174|443|404|806|http/1.1|1.0|0|unknown|Peru|Facebook, Inc.
+157.240.231.35|443|400|952|http/1.1|1.0|0|unknown|Italy|Facebook, Inc.
+157.240.253.3|443|200|1149|http/1.1|1.0|0|unknown|Germany|Facebook, Inc.
+157.240.227.60|443|404|967|http/1.1|1.0|0|unknown|Oman|Facebook, Inc.
+157.240.209.217|443|200|604|http/1.1|1.0|0|unknown|Japan|Facebook, Inc.
+157.240.241.227|443|404|49|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+157.240.210.141|443|404|1059|http/1.1|1.0|0|unknown|Germany|Facebook, Inc.
+157.240.210.225|443|404|940|http/1.1|1.0|0|unknown|Germany|Facebook, Inc.
+157.240.233.230|443|404|253|http/1.1|0.5|0|unknown|Guatemala|Facebook, Inc.
+157.240.225.32|443|404|1106|http/1.1|1.0|0|unknown|United Kingdom|Facebook, Inc.
+157.240.205.199|443|404|892|http/1.1|1.0|0|unknown|Finland|Facebook, Inc.
+157.240.208.54|443|400|796|h2|1.0|0|unknown|Indonesia|Facebook, Inc.
+157.240.203.168|443|404|995|http/1.1|1.0|0|unknown|Italy|Facebook, Inc.
+157.240.205.222|443|404|753|h2|1.0|0|unknown|Finland|Facebook, Inc.
+157.240.231.36|443|429|588|http/1.1|1.0|0|unknown|Italy|Facebook, Inc.
+157.240.238.14|443|400|698|http/1.1|1.0|0|unknown|Turkey|Facebook, Inc.
+157.240.223.37|443|400|678|http/1.1|1.0|0|unknown|Germany|Facebook, Inc.
+157.240.233.32|443|404|770|http/1.1|1.0|0|unknown|Guatemala|Facebook, Inc.
+157.240.197.161|443|404|777|h2|1.0|0|unknown|Peru|Facebook, Inc.
+157.240.254.14|443|400|424|http/1.1|1.0|0|unknown|United States|Facebook, Inc.
+157.240.238.6|443|404|785|http/1.1|1.0|0|unknown|Turkey|Facebook, Inc.
+157.240.210.8|443|404|709|http/1.1|1.0|0|unknown|Germany|Facebook, Inc.
+157.240.231.6|443|400|578|http/1.1|1.0|0|unknown|Italy|Facebook, Inc.
+157.240.223.141|443|404|720|http/1.1|1.0|0|unknown|Germany|Facebook, Inc.
+157.240.212.9|443|404|761|http/1.1|1.0|0|unknown|Portugal|Facebook, Inc.
+157.240.197.18|443|200|733|http/1.1|1.0|0|unknown|Peru|Facebook, Inc.
+157.240.214.36|443|400|598|http/1.1|1.0|0|unknown|United Kingdom|Facebook, Inc.
+157.240.215.3|443|404|762|h2|1.0|0|unknown|Republic of Korea|Facebook, Inc.
+157.240.231.230|443|404|677|http/1.1|1.0|0|unknown|Italy|Facebook, Inc.
+157.240.227.174|443|404|775|http/1.1|1.0|0|unknown|Oman|Facebook, Inc.
+157.240.244.227|443|400|728|http/1.1|1.0|0|unknown|Mexico|Facebook, Inc.
+157.240.212.12|443|404|727|http/1.1|1.0|0|unknown|Portugal|Facebook, Inc.
+157.240.212.218|443|200|518|http/1.1|1.0|0|unknown|Portugal|Facebook, Inc.
+157.240.196.169|443|400|738|http/1.1|1.0|0|unknown|France|Facebook, Inc.
+157.240.211.54|443|400|908|h2|1.0|0|unknown|Hong Kong|Facebook, Inc.
+157.240.224.197|443|404|611|http/1.1|1.0|0|unknown|Ukraine|Facebook, Inc.
+157.240.212.40|443|404|688|http/1.1|1.0|0|unknown|Portugal|Facebook, Inc.
+163.70.128.20|443|404|764|http/1.1|1.0|0|unknown|France|Facebook, Inc.
+163.70.140.197|443|200|623|h2|1.0|0|unknown|India|Facebook, Inc.
+163.70.128.63|443|404|778|http/1.1|1.0|0|unknown|France|Facebook, Inc.
+163.70.144.227|443|400|870|h2|1.0|0|unknown|India|Facebook, Inc.
+163.70.137.18|443|404|828|h2|1.0|0|unknown|Malaysia|Facebook, Inc.
+163.70.144.161|443|404|830|h2|1.0|0|unknown|India|Facebook, Inc.
+163.70.132.168|443|404|817|h2|1.0|0|unknown|Malaysia|Facebook, Inc.
+163.70.140.19|443|404|795|h2|1.0|0|unknown|India|Facebook, Inc.
+163.70.132.60|443|404|872|h2|1.0|0|unknown|Malaysia|Facebook, Inc.
+163.70.151.9|443|400|610|http/1.1|1.0|0|unknown|United Kingdom|Facebook, Inc.
+163.70.151.141|443|404|748|http/1.1|1.0|0|unknown|United Kingdom|Facebook, Inc.
+163.70.144.6|443|400|793|h2|1.0|0|unknown|India|Facebook, Inc.
+163.70.131.20|443|400|775|h2|1.0|0|unknown|Philippines|Facebook, Inc.
+163.70.131.3|443|404|854|h2|1.0|0|unknown|Philippines|Facebook, Inc.
+163.70.145.161|443|404|943|h2|1.0|0|unknown|India|Facebook, Inc.
+163.70.145.11|443|200|877|h2|1.0|0|unknown|India|Facebook, Inc.
+163.77.132.1|443|404|447|h2|1.0|0|unknown|Ireland|Facebook, Inc.
+163.77.132.2|443|404|671|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+163.70.151.168|443|404|738|http/1.1|1.0|0|unknown|United Kingdom|Facebook, Inc.
+163.77.133.1|443|404|658|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+163.77.133.2|443|404|635|h2|1.0|0|unknown|Ireland|Facebook, Inc.
+163.77.136.1|443|404|657|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+163.77.136.2|443|404|646|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+163.77.137.1|443|404|713|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
+163.77.137.2|443|404|724|http/1.1|1.0|0|unknown|Ireland|Facebook, Inc.
