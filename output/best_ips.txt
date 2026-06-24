@@ -1,8 +1,8 @@
-149.154.164.24:443 S=[96m12[0m [93m302ms[0m TTFB=[93m419ms[0m PROTO=[96mhttp/1.1[0m REL=[92m1.0[0m CDN=unknown ALPN=http/1.1 Netherlands Telegram Messenger INC
-149.154.164.25:443 S=[96m12[0m [93m302ms[0m TTFB=[93m421ms[0m PROTO=[96mhttp/1.1[0m REL=[92m1.0[0m CDN=unknown ALPN=http/1.1 Netherlands Telegram Messenger INC
-149.154.164.26:443 S=[96m12[0m [93m302ms[0m TTFB=[93m414ms[0m PROTO=[96mhttp/1.1[0m REL=[92m1.0[0m CDN=unknown ALPN=http/1.1 Netherlands Telegram Messenger INC
-149.154.165.133:443 S=[96m12[0m [93m302ms[0m TTFB=[93m418ms[0m PROTO=[96mhttp/1.1[0m REL=[92m1.0[0m CDN=unknown ALPN=http/1.1 Netherlands Telegram Messenger INC
-149.154.165.137:443 S=[96m12[0m [93m302ms[0m TTFB=[93m414ms[0m PROTO=[96mhttp/1.1[0m REL=[92m1.0[0m CDN=unknown ALPN=http/1.1 Netherlands Telegram Messenger INC
+149.154.165.137:443 S=[96m14[0m [93m302ms[0m TTFB=[92m299ms[0m PROTO=[96mhttp/1.1[0m REL=[92m1.0[0m CDN=unknown ALPN=http/1.1 Netherlands Telegram Messenger INC
+149.154.164.24:443 S=[96m12[0m [93m302ms[0m TTFB=[93m315ms[0m PROTO=[96mhttp/1.1[0m REL=[92m1.0[0m CDN=unknown ALPN=http/1.1 Netherlands Telegram Messenger INC
+149.154.164.25:443 S=[96m12[0m [93m302ms[0m TTFB=[93m316ms[0m PROTO=[96mhttp/1.1[0m REL=[92m1.0[0m CDN=unknown ALPN=http/1.1 Netherlands Telegram Messenger INC
+149.154.164.26:443 S=[96m12[0m [93m302ms[0m TTFB=[93m311ms[0m PROTO=[96mhttp/1.1[0m REL=[92m1.0[0m CDN=unknown ALPN=http/1.1 Netherlands Telegram Messenger INC
+149.154.165.133:443 S=[96m12[0m [93m302ms[0m TTFB=[93m303ms[0m PROTO=[96mhttp/1.1[0m REL=[92m1.0[0m CDN=unknown ALPN=http/1.1 Netherlands Telegram Messenger INC
 149.154.170.200:443 S=[96m12[0m [91m403ms[0m TTFB=[93m700ms[0m PROTO=[96mhttp/1.1[0m REL=[92m1.0[0m CDN=unknown ALPN=http/1.1 Singapore Telegram Messenger INC
 149.154.170.100:443 S=[91m11[0m [91m403ms[0m TTFB=[91m809ms[0m PROTO=[96mhttp/1.1[0m REL=[92m1.0[0m CDN=unknown ALPN=http/1.1 Singapore Telegram Messenger INC
 149.154.170.96:443 S=[91m11[0m [91m403ms[0m TTFB=[91m814ms[0m PROTO=[96mhttp/1.1[0m REL=[92m1.0[0m CDN=unknown ALPN=http/1.1 Singapore Telegram Messenger INC
