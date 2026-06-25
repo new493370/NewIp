@@ -4,6 +4,7 @@ import json
 RESULT_FILE = "output/results.txt"
 BEST_FILE = "output/best_ips.txt"
 DOMAINS_RAW_FILE = "output/domains_raw.txt"
+DOMAINS_IPS_FILE = "output/domains_ips.txt"
 TLS_FILE = "output/tls_live.txt"
 GEO_FILE = "output/geo_cache.json"
 
@@ -87,6 +88,21 @@ def load_results():
         pass
 
     return data
+
+
+def load_domains_ips():
+    ips = set()
+    if not os.path.exists(DOMAINS_IPS_FILE):
+        return ips
+    try:
+        with open(DOMAINS_IPS_FILE, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    ips.add(line)
+    except:
+        pass
+    return ips
 
 
 def load_tls_sni():
@@ -188,6 +204,7 @@ def extract_ttfb_from_line(line):
 def rank_results():
     data = load_results()
     domains_set = load_domains_raw()
+    domains_ips = load_domains_ips()
     sni_map = load_tls_sni()
     city_map = load_geo_city()
 
@@ -196,6 +213,22 @@ def rank_results():
     for item in data:
         item["score"] = score(item)
         ranked.append(item)
+
+    existing_ips = {item['ip'] for item in ranked}
+
+    for ip in domains_ips:
+        if ip not in existing_ips:
+            ranked.append({
+                'ip': ip,
+                'port': 443,
+                'score': 5,
+                'ttfb': 500,
+                'proto': 'unknown',
+                'reliability': 0.5,
+                'cdn': 'unknown',
+                'country': 'Unknown',
+                'provider': 'Unknown'
+            })
 
     ranked.sort(
         key=lambda x: (
@@ -298,7 +331,7 @@ def rank_results():
 
     print(f"BEST_IPS_SIZE: {current_size_mb:.2f}MB")
     print(f"BEST_IPS_LINES: {len(combined)}")
-    print(f"RANKED={len(ranked)} DOMAINS={len(domains_set)}")
+    print(f"RANKED={len(ranked)} DOMAINS={len(domains_set)} DOMAIN_IPS={len(domains_ips)}")
 
 
 def ttfb_score(ttfb):
