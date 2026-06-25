@@ -48,11 +48,6 @@ CDN_HEADERS = {
         "x-amz-cf-pop",
         "x-cache"
     ],
-    "cloudfront": [
-        "x-amz-cf-id",
-        "x-amz-cf-pop",
-        "x-cache"
-    ],
     "incapsula": [
         "x-cdn",
         "x-iinfo",
@@ -101,6 +96,36 @@ CDN_HEADERS = {
     "cdn77": [
         "x-cdn77",
         "x-cdn77-cache"
+    ],
+    "facebook": [
+        "x-fb-",
+        "fb-",
+        "x-facebook"
+    ],
+    "google": [
+        "x-guploader",
+        "x-gstatic",
+        "alt-svc"
+    ],
+    "amazon": [
+        "x-amz-",
+        "server: AmazonS3"
+    ],
+    "microsoft": [
+        "x-ms-",
+        "azure"
+    ],
+    "twitter": [
+        "x-twitter",
+        "twimg"
+    ],
+    "instagram": [
+        "x-instagram",
+        "cdninstagram"
+    ],
+    "youtube": [
+        "x-youtube",
+        "ytimg"
     ]
 }
 
@@ -176,6 +201,20 @@ def detect_cdn_from_headers(headers):
         return "highwinds"
     if "cdn77" in server:
         return "cdn77"
+    if "facebook" in server:
+        return "facebook"
+    if "google" in server:
+        return "google"
+    if "amazon" in server:
+        return "amazon"
+    if "microsoft" in server:
+        return "microsoft"
+    if "twitter" in server:
+        return "twitter"
+    if "instagram" in server:
+        return "instagram"
+    if "youtube" in server:
+        return "youtube"
     return "unknown"
 
 def detect_cdn_from_tls(issuer, sni, alpn):
@@ -201,7 +240,15 @@ def detect_cdn_from_tls(issuer, sni, alpn):
         "cachefly": ["cachefly"],
         "edgemesh": ["edgemesh"],
         "highwinds": ["highwinds", "hwcdn"],
-        "cdn77": ["cdn77"]
+        "cdn77": ["cdn77"],
+        "facebook": ["facebook", "fbcdn"],
+        "google": ["google", "gstatic"],
+        "amazon": ["amazon", "aws"],
+        "microsoft": ["microsoft"],
+        "twitter": ["twitter", "twimg"],
+        "instagram": ["instagram"],
+        "youtube": ["youtube", "ytimg"],
+        "telegram": ["telegram", "tdesktop"]
     }
     
     for cdn, identifiers in cdn_identifiers.items():
@@ -233,7 +280,14 @@ def detect_cdn_from_asn(provider):
         "cachefly": ["cachefly"],
         "edgemesh": ["edgemesh"],
         "highwinds": ["highwinds", "stack"],
-        "cdn77": ["cdn77"]
+        "cdn77": ["cdn77"],
+        "facebook": ["facebook"],
+        "google": ["google"],
+        "amazon": ["amazon", "aws"],
+        "twitter": ["twitter"],
+        "instagram": ["instagram"],
+        "youtube": ["youtube"],
+        "telegram": ["telegram"]
     }
     
     for cdn, providers in cdn_providers.items():
