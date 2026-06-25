@@ -131,24 +131,26 @@ def load_tls_sni():
     return sni_map
 
 
-def load_geo_city():
-    city_map = {}
+def load_geo_data():
+    geo_data = {}
 
     if not os.path.exists(GEO_FILE):
-        return city_map
+        return geo_data
 
     try:
         with open(GEO_FILE, "r", encoding="utf-8") as f:
             data = json.load(f)
             for ip, info in data.items():
                 if isinstance(info, dict):
-                    city = info.get("city", "")
-                    if city and city != "Unknown":
-                        city_map[ip] = city
+                    geo_data[ip] = {
+                        "city": info.get("city", "Unknown"),
+                        "country": info.get("country", "Unknown"),
+                        "provider": info.get("provider", "Unknown")
+                    }
     except:
         pass
 
-    return city_map
+    return geo_data
 
 
 def load_domains_raw():
@@ -206,7 +208,7 @@ def rank_results():
     domains_set = load_domains_raw()
     domains_ips = load_domains_ips()
     sni_map = load_tls_sni()
-    city_map = load_geo_city()
+    geo_data = load_geo_data()
 
     ranked = []
 
@@ -218,6 +220,7 @@ def rank_results():
 
     for ip in domains_ips:
         if ip not in existing_ips:
+            geo = geo_data.get(ip, {})
             ranked.append({
                 'ip': ip,
                 'port': 443,
@@ -226,8 +229,9 @@ def rank_results():
                 'proto': 'unknown',
                 'reliability': 0.5,
                 'cdn': 'unknown',
-                'country': 'Unknown',
-                'provider': 'Unknown'
+                'country': geo.get('country', 'Unknown'),
+                'provider': geo.get('provider', 'Unknown'),
+                'city': geo.get('city', 'Unknown')
             })
 
     ranked.sort(
@@ -248,11 +252,9 @@ def rank_results():
 
         country = item.get("country", "-")
         provider = item.get("provider", "-")
+        city = item.get("city", "-")
 
         sni = sni_map.get(key, "-")
-
-        city = city_map.get(ip, "-")
-
         port_type = get_port_type(port)
 
         domain = "-"
