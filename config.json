@@ -24,8 +24,8 @@
         "https://raw.githubusercontent.com/rezakhosh78/RKh-CF-Scanner/main/ip-ranges/iran/Tookan.txt"
     ],
     "ports": [80, 443, 8080, 8443, 2052, 2053, 2083, 2087, 2095, 2096],
-    "threads": 300,
-    "batch_size": 20000,
+    "threads": 350,
+    "batch_size": 10000,
     "retries": 2,
     "timeout": 3,
     "latency_limit_ms": 500,
