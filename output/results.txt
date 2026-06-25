@@ -1,41 +1,37 @@
-1.178.4.6|443|404|335|h2|1.0|0|cloudflare|USA|Amazon.com
-1.178.4.5|443|404|370|http/1.1|1.0|0|cloudflare|USA|Amazon.com
-1.178.4.8|443|404|380|h2|1.0|0|cloudflare|USA|Amazon.com
-1.178.4.9|443|404|309|http/1.1|1.0|0|cloudflare|USA|Amazon.com
-1.178.4.7|443|404|291|http/1.1|1.0|0|cloudflare|USA|Amazon.com
-1.178.5.7|443|404|353|h2|1.0|0|cloudflare|USA|Amazon.com
-1.178.5.6|443|404|388|h2|1.0|0|cloudflare|USA|Amazon.com
-1.178.5.9|443|404|318|h2|1.0|0|cloudflare|USA|Amazon.com
-1.178.5.8|443|404|292|h2|1.0|0|cloudflare|USA|Amazon.com
-1.178.5.5|443|404|352|http/1.1|1.0|0|cloudflare|USA|Amazon.com
-1.178.6.8|443|404|283|http/1.1|1.0|0|cloudflare|USA|Amazon.com
-1.178.6.7|443|404|388|http/1.1|1.0|0|cloudflare|USA|Amazon.com
-1.178.6.10|443|404|407|http/1.1|1.0|0|cloudflare|USA|Amazon.com
-1.178.6.6|443|404|327|http/1.1|1.0|0|cloudflare|USA|Amazon.com
-1.178.6.5|443|404|334|http/1.1|1.0|0|cloudflare|USA|Amazon.com
-1.178.7.5|443|404|436|http/1.1|1.0|0|cloudflare|Ireland|Amazon.com
-1.178.7.4|443|404|437|http/1.1|1.0|0|cloudflare|Ireland|Amazon.com
-1.178.7.3|443|404|428|http/1.1|1.0|0|cloudflare|Ireland|Amazon.com
-1.178.8.4|443|404|406|http/1.1|1.0|0|cloudflare|USA|Amazon.com
-1.178.8.5|443|404|385|http/1.1|1.0|0|cloudflare|USA|Amazon.com
-1.178.8.3|443|404|403|http/1.1|1.0|0|cloudflare|USA|Amazon.com
-1.178.9.4|443|404|58|http/1.1|1.0|0|cloudflare|USA|Amazon.com
-1.178.9.7|443|404|48|http/1.1|1.0|0|cloudflare|USA|Amazon.com
-1.178.9.6|443|404|216|http/1.1|1.0|0|cloudflare|USA|Amazon.com
-1.178.9.5|443|404|66|http/1.1|1.0|0|cloudflare|USA|Amazon.com
-1.178.10.4|443|404|432|http/1.1|1.0|0|cloudflare|Germany|Amazon.com
-1.178.10.3|443|404|441|h2|1.0|0|cloudflare|Germany|Amazon.com
-1.178.10.5|443|404|423|h2|1.0|0|cloudflare|Germany|Amazon.com
-1.178.11.4|443|404|402|h2|1.0|0|cloudflare|Australia|Amazon.com
-1.178.11.5|443|404|411|http/1.1|1.0|0|cloudflare|Australia|Amazon.com
-1.178.11.3|443|404|419|http/1.1|1.0|0|cloudflare|Australia|Amazon.com
-1.178.17.1|443|404|468|h2|1.0|0|cloudflare|Italy|Amazon.com
-1.178.17.2|443|404|504|h2|1.0|0|cloudflare|Italy|Amazon.com
-1.178.18.1|443|404|635|h2|1.0|0|cloudflare|South Africa|Amazon.com
-1.178.18.2|443|404|618|h2|1.0|0|cloudflare|South Africa|Amazon.com
-1.178.19.2|443|404|477|h2|1.0|0|cloudflare|Indonesia|Amazon.com
-1.178.19.3|443|404|486|http/1.1|1.0|0|cloudflare|Indonesia|Amazon.com
-1.178.20.1|443|404|619|h2|1.0|0|cloudflare|UAE|Amazon.com
-1.178.21.3|443|404|494|h2|1.0|0|cloudflare|Switzerland|Amazon.com
-1.178.21.5|443|404|494|h2|1.0|0|cloudflare|Switzerland|Amazon.com
-1.178.21.4|443|404|485|h2|1.0|0|cloudflare|Switzerland|Amazon.com
+1.178.22.1|443|404|328|h2|1.0|0|cloudflare|Spain|Amazon.com
+1.178.22.2|443|404|319|h2|1.0|0|cloudflare|Spain|Amazon.com
+1.178.23.1|443|404|471|h2|1.0|0|cloudflare|India|Amazon.com
+1.178.23.2|443|404|472|h2|1.0|0|cloudflare|India|Amazon.com
+1.178.24.2|443|404|452|h2|1.0|0|cloudflare|Australia|Amazon.com
+1.178.24.1|443|404|468|h2|1.0|0|cloudflare|Australia|Amazon.com
+1.178.25.2|443|404|403|h2|1.0|0|cloudflare|Israel|Amazon.com
+1.178.25.1|443|404|394|h2|1.0|0|cloudflare|Israel|Amazon.com
+1.178.26.1|443|404|332|h2|1.0|0|cloudflare|Canada|Amazon.com
+1.178.26.2|443|404|355|h2|1.0|0|cloudflare|Canada|Amazon.com
+1.178.27.2|443|404|460|http/1.1|1.0|0|cloudflare|New Zealand|Amazon.com
+1.178.27.1|443|404|434|h2|1.0|0|cloudflare|New Zealand|Amazon.com
+1.178.28.1|443|404|544|http/1.1|1.0|0|cloudflare|Thailand|Amazon.com
+1.178.28.2|443|404|535|h2|1.0|0|cloudflare|Thailand|Amazon.com
+1.178.29.1|443|404|237|http/1.1|1.0|0|cloudflare|Mexico|Amazon.com
+1.178.29.2|443|404|227|http/1.1|1.0|0|cloudflare|Mexico|Amazon.com
+1.178.31.1|443|404|447|h2|1.0|0|cloudflare|Taiwan|Amazon.com
+1.178.31.2|443|404|456|http/1.1|1.0|0|cloudflare|Taiwan|Amazon.com
+1.178.64.3|443|404|484|http/1.1|1.0|0|cloudflare|Japan|Amazon.com
+1.178.64.1|443|404|475|http/1.1|1.0|0|cloudflare|Japan|Amazon.com
+1.178.65.7|443|404|349|http/1.1|1.0|0|cloudflare|USA|Amazon.com
+1.178.65.4|443|404|323|h2|1.0|0|cloudflare|USA|Amazon.com
+1.178.65.6|443|404|201|http/1.1|1.0|0|cloudflare|USA|Amazon.com
+1.178.65.5|443|404|219|http/1.1|1.0|0|cloudflare|USA|Amazon.com
+1.178.88.3|443|404|443|h2|1.0|0|cloudflare|India|Amazon.com
+1.178.88.5|443|404|468|h2|1.0|0|cloudflare|India|Amazon.com
+1.178.89.7|443|404|505|h2|1.0|0|cloudflare|Singapore|Amazon.com
+1.178.89.11|443|404|513|h2|1.0|0|cloudflare|Singapore|Amazon.com
+1.178.89.8|443|404|513|h2|1.0|0|cloudflare|Singapore|Amazon.com
+1.178.90.4|443|404|356|http/1.1|1.0|0|cloudflare|France|Amazon.com
+1.178.90.1|443|404|339|http/1.1|1.0|0|cloudflare|France|Amazon.com
+1.178.90.3|443|404|347|http/1.1|1.0|0|cloudflare|France|Amazon.com
+1.178.91.3|443|404|478|h2|1.0|0|cloudflare|South Korea|Amazon.com
+1.178.91.5|443|404|464|http/1.1|1.0|0|cloudflare|South Korea|Amazon.com
+1.178.91.4|443|404|473|http/1.1|1.0|0|cloudflare|South Korea|Amazon.com
+1.178.92.2|443|404|135|h2|1.0|0|cloudflare|Canada|Amazon.com
+1.178.92.5|443|404|127|h2|1.0|0|cloudflare|Canada|Amazon.com
