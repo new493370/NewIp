@@ -160,6 +160,7 @@ def normalize_headers(headers):
 
 def detect_cdn_from_headers(headers):
     headers = normalize_headers(headers)
+
     for cdn, signs in CDN_HEADERS.items():
         for sign in signs:
             sign = safe_lower(sign)
@@ -223,8 +224,10 @@ def detect_cdn_from_headers(headers):
     return "unknown"
 
 
-def detect_cdn_from_tls(issuer):
+def detect_cdn_from_tls(issuer, sni=None, alpn=None):
     issuer_lower = safe_lower(issuer)
+    sni_lower = safe_lower(sni) if sni else ""
+    alpn_lower = safe_lower(alpn) if alpn else ""
 
     cdn_identifiers = {
         "cloudflare": ["cloudflare"],
@@ -261,6 +264,15 @@ def detect_cdn_from_tls(issuer):
             if identifier in issuer_lower:
                 return cdn
 
+    for cdn, identifiers in cdn_identifiers.items():
+        for identifier in identifiers:
+            if identifier in sni_lower:
+                return cdn
+
+    if "h2" in alpn_lower or "http/1.1" in alpn_lower:
+        if "cloudflare" in sni_lower:
+            return "cloudflare"
+
     return "unknown"
 
 
@@ -275,7 +287,7 @@ def detect_cdn_from_asn(provider):
         "bunny": ["bunny"],
         "gcore": ["gcore"],
         "vercel": ["vercel"],
-        "cloudfront": ["cloudfront"],
+        "cloudfront": ["cloudfront", "amazon"],
         "incapsula": ["incapsula", "imperva"],
         "sucuri": ["sucuri"],
         "stackpath": ["stackpath"],
@@ -316,7 +328,7 @@ def detect_cdn(ip=None, port=None, headers=None, issuer=None, sni=None, alpn=Non
             return cdn
 
     if issuer is not None:
-        cdn = detect_cdn_from_tls(issuer)
+        cdn = detect_cdn_from_tls(issuer, sni, alpn)
         if cdn != "unknown":
             return cdn
 
@@ -324,7 +336,7 @@ def detect_cdn(ip=None, port=None, headers=None, issuer=None, sni=None, alpn=Non
         scheme = "https" if port in TLS_PORTS else "http"
         try:
             r = requests.get(
-                f"{scheme}://{ip}",
+                f"{scheme}://{ip}:{port}",
                 timeout=4,
                 verify=False,
                 allow_redirects=True,
