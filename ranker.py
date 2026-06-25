@@ -239,11 +239,11 @@ def rank_results():
             f'[TYPE={port_type}]'
         ]
 
-        if sni and sni != "-":
-            parts.append(f'[SNI={sni}]')
-
         if domain and domain != "-":
             parts.append(f'[DOMAIN={domain}]')
+
+        if sni and sni != "-":
+            parts.append(f'[SNI={sni}]')
 
         if city and city != "-" and city != "Unknown":
             parts.append(f'[City={city}]')
