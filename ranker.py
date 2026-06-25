@@ -252,7 +252,7 @@ def cdn_score(cdn):
     cdn = str(cdn).strip().lower()
     if cdn == "unknown":
         return 0
-    if cdn in ["cloudflare", "fastly", "akamai", "bunny", "gcore", "vercel", "cloudfront"]:
+    if cdn in ["cloudflare", "fastly", "akamai", "bunny", "gcore", "vercel", "cloudfront", "facebook", "google", "amazon", "microsoft", "twitter", "instagram", "youtube", "telegram"]:
         return KNOWN_CDN_BONUS
     return 0
 
