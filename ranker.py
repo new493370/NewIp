@@ -173,27 +173,23 @@ def rank_results():
             country = item.get("country", "-")
             provider = item.get("provider", "-")
             
+            parts = [
+                f'[IP: {item["ip"]}]',
+                f'[PORT: {item["port"]}]',
+                f'[SCORE={item["score"]}]',
+                f'[TTFB={item.get("ttfb", "-")}ms]',
+                f'[PROTO={item.get("proto", "-")}]',
+                f'[REL={item.get("reliability", "-")}]',
+                f'[CDN={item.get("cdn", "-")}]'
+            ]
+            
+            if country and country != "-" and country != "Unknown":
+                parts.append(f'[Country={country}]')
+            
             if provider and provider != "-" and provider != "Unknown":
-                if country and country != "-" and country != "Unknown":
-                    location = f"Country={country} | Provider={provider}"
-                else:
-                    location = f"Provider={provider}"
-            elif country and country != "-" and country != "Unknown":
-                location = f"Country={country}"
-            else:
-                location = "-"
+                parts.append(f'[Provider={provider}]')
             
-            line = (
-                f'[IP: {item["ip"]}] '
-                f'[PORT: {item["port"]}] '
-                f'SCORE={item["score"]} '
-                f'TTFB={item.get("ttfb", "-")}ms '
-                f'PROTO={item.get("proto", "-")} '
-                f'REL={item.get("reliability", "-")} '
-                f'CDN={item.get("cdn", "-")} '
-                f'{location}\n'
-            )
-            
+            line = " ".join(parts) + "\n"
             f.write(line)
 
     print(f"RANKED={len(ranked)} DOMAINS={len(domains)}")
