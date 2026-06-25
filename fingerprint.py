@@ -138,11 +138,13 @@ TLS_PORTS = {
     2096
 }
 
+
 def safe_lower(v):
     try:
         return str(v).lower()
     except:
         return ""
+
 
 def normalize_headers(headers):
     if not headers:
@@ -155,6 +157,7 @@ def normalize_headers(headers):
         return {}
     return out
 
+
 def detect_cdn_from_headers(headers):
     headers = normalize_headers(headers)
     for cdn, signs in CDN_HEADERS.items():
@@ -164,6 +167,7 @@ def detect_cdn_from_headers(headers):
                 return cdn
             if any(sign in v for v in headers.values()):
                 return cdn
+
     server = headers.get("server", "")
     if "cloudflare" in server:
         return "cloudflare"
@@ -215,12 +219,13 @@ def detect_cdn_from_headers(headers):
         return "instagram"
     if "youtube" in server:
         return "youtube"
+
     return "unknown"
 
-def detect_cdn_from_tls(issuer, sni, alpn):
+
+def detect_cdn_from_tls(issuer):
     issuer_lower = safe_lower(issuer)
-    sni_lower = safe_lower(sni)
-    
+
     cdn_identifiers = {
         "cloudflare": ["cloudflare"],
         "fastly": ["fastly"],
@@ -250,17 +255,18 @@ def detect_cdn_from_tls(issuer, sni, alpn):
         "youtube": ["youtube", "ytimg"],
         "telegram": ["telegram", "tdesktop"]
     }
-    
+
     for cdn, identifiers in cdn_identifiers.items():
         for identifier in identifiers:
-            if identifier in issuer_lower or identifier in sni_lower:
+            if identifier in issuer_lower:
                 return cdn
-    
+
     return "unknown"
+
 
 def detect_cdn_from_asn(provider):
     provider_lower = safe_lower(provider)
-    
+
     cdn_providers = {
         "cloudflare": ["cloudflare"],
         "fastly": ["fastly"],
@@ -269,7 +275,7 @@ def detect_cdn_from_asn(provider):
         "bunny": ["bunny"],
         "gcore": ["gcore"],
         "vercel": ["vercel"],
-        "cloudfront": ["cloudfront", "amazon"],
+        "cloudfront": ["cloudfront"],
         "incapsula": ["incapsula", "imperva"],
         "sucuri": ["sucuri"],
         "stackpath": ["stackpath"],
@@ -289,30 +295,31 @@ def detect_cdn_from_asn(provider):
         "youtube": ["youtube"],
         "telegram": ["telegram"]
     }
-    
+
     for cdn, providers in cdn_providers.items():
         for provider_name in providers:
             if provider_name in provider_lower:
                 return cdn
-    
+
     return "unknown"
+
 
 def detect_cdn(ip=None, port=None, headers=None, issuer=None, sni=None, alpn=None, provider=None):
     if headers is not None:
         cdn = detect_cdn_from_headers(headers)
         if cdn != "unknown":
             return cdn
-    
-    if issuer is not None or sni is not None:
-        cdn = detect_cdn_from_tls(issuer or "", sni or "", alpn or "")
-        if cdn != "unknown":
-            return cdn
-    
+
     if provider is not None:
         cdn = detect_cdn_from_asn(provider)
         if cdn != "unknown":
             return cdn
-    
+
+    if issuer is not None:
+        cdn = detect_cdn_from_tls(issuer)
+        if cdn != "unknown":
+            return cdn
+
     if ip is not None and port is not None:
         scheme = "https" if port in TLS_PORTS else "http"
         try:
@@ -328,5 +335,5 @@ def detect_cdn(ip=None, port=None, headers=None, issuer=None, sni=None, alpn=Non
                 return cdn
         except:
             pass
-    
+
     return "unknown"
