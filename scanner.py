@@ -106,15 +106,36 @@ def config_timeout(
     )
 
 
-def fresh_ips(input_file, cache, ports):
-    with open(input_file, "r", encoding="utf-8") as f:
-        for line in f:
-            ip = line.strip()
-            if not ip:
-                continue
-            if any(already_scanned(cache, ip, port) for port in ports):
-                continue
-            yield ip
+def read_batches(
+    path,
+    size
+):
+    batch = []
+
+    try:
+        with open(
+            path,
+            "r",
+            encoding="utf-8"
+        ) as f:
+
+            for line in f:
+                line = line.strip()
+
+                if not line:
+                    continue
+
+                batch.append(line)
+
+                if len(batch) >= size:
+                    yield batch
+                    batch = []
+
+            if batch:
+                yield batch
+
+    except:
+        return
 
 
 def tcp_check(
@@ -237,6 +258,11 @@ def tcp_scan(
         300
     )
 
+    batch_size = cfg.get(
+        "batch_size",
+        20000
+    )
+
     retries = cfg.get(
         "retries",
         2
@@ -244,103 +270,113 @@ def tcp_scan(
 
     cache = load_cache()
 
-    ip_generator = fresh_ips(
-        input_file,
-        cache,
-        ports
-    )
+    all_ips = []
+
+    try:
+        with open(input_file, "r", encoding="utf-8") as f:
+            for line in f:
+                ip = line.strip()
+                if not ip:
+                    continue
+                if not any(already_scanned(cache, ip, port) for port in ports):
+                    all_ips.append(ip)
+    except:
+        pass
+
+    if not all_ips:
+        print("NO NEW IPS TO SCAN")
+        return
 
     total_live = 0
     total_batch = 0
 
-    print(
-        f"THREADS={threads}"
-    )
+    for i in range(0, len(all_ips), batch_size):
+        batch = all_ips[i:i+batch_size]
+        total_batch += 1
 
-    with ThreadPoolExecutor(
-        max_workers=threads
-    ) as ex:
+        stage_live = []
 
-        pending = set()
-        iterator = iter(
-            ip_generator
+        print(
+            f"BATCH={total_batch} "
+            f"SIZE={len(batch)} "
+            f"CACHE={len(cache)} "
+            f"THREADS={threads}"
         )
 
-        while True:
+        with ThreadPoolExecutor(
+            max_workers=threads
+        ) as ex:
 
-            while len(
-                pending
-            ) < (
-                threads * 2
-            ):
-                try:
-                    ip = next(
-                        iterator
-                    )
-                except StopIteration:
-                    break
-
-                pending.add(
-                    ex.submit(
-                        tcp_worker,
-                        ip,
-                        ports,
-                        retries,
-                        cfg,
-                        cache
-                    )
-                )
-
-            if not pending:
-                break
-
-            done, pending = wait(
-                pending,
-                return_when=FIRST_COMPLETED
+            pending = set()
+            iterator = iter(
+                batch
             )
 
-            stage_live = []
+            while True:
 
-            for fut in done:
-                try:
-                    res = fut.result()
-
-                    if res:
-                        stage_live.extend(
-                            res
+                while len(
+                    pending
+                ) < (
+                    threads * 2
+                ):
+                    try:
+                        ip = next(
+                            iterator
                         )
-                except:
-                    continue
+                    except StopIteration:
+                        break
 
-            if stage_live:
-                append_tcp_live(
-                    stage_live
+                    pending.add(
+                        ex.submit(
+                            tcp_worker,
+                            ip,
+                            ports,
+                            retries,
+                            cfg,
+                            cache
+                        )
+                    )
+
+                if not pending:
+                    break
+
+                done, pending = wait(
+                    pending,
+                    return_when=FIRST_COMPLETED
                 )
 
-                append_live(
-                    stage_live
-                )
+                for fut in done:
+                    try:
+                        res = fut.result()
 
-                total_live += len(
-                    stage_live
-                )
+                        if res:
+                            stage_live.extend(
+                                res
+                            )
+                    except:
+                        continue
 
-                total_batch += 1
+        append_tcp_live(
+            stage_live
+        )
 
-                print(
-                    f"BATCH={total_batch} "
-                    f"LIVE={len(stage_live)} "
-                    f"TOTAL={total_live}"
-                )
+        append_live(
+            stage_live
+        )
 
-            if total_batch % 10 == 0:
-                save_cache(
-                    cache
-                )
+        save_cache(
+            cache
+        )
 
-    save_cache(
-        cache
-    )
+        total_live += len(
+            stage_live
+        )
+
+        print(
+            f"TCP_BATCH={len(batch)} "
+            f"LIVE={len(stage_live)} "
+            f"TOTAL={total_live}"
+        )
 
     print(
         f"TCP COMPLETE={total_live}"
