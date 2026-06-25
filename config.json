@@ -1,27 +1,6 @@
 {
     "sources": [
-        "https://raw.githubusercontent.com/123jjck/cdn-ip-ranges/main/telegram/telegram_plain_ipv4.txt",
-        "https://raw.githubusercontent.com/123jjck/cdn-ip-ranges/main/vercel/vercel_plain_ipv4.txt",
-        "https://raw.githubusercontent.com/123jjck/cdn-ip-ranges/main/meta/meta_plain_ipv4.txt",
-        "https://raw.githubusercontent.com/123jjck/cdn-ip-ranges/main/hetzner/hetzner_plain_ipv4.txt",
-        "https://raw.githubusercontent.com/123jjck/cdn-ip-ranges/main/fastly/fastly_plain_ipv4.txt",
-        "https://raw.githubusercontent.com/123jjck/cdn-ip-ranges/main/cloudflare/cloudflare_plain_ipv4.txt",
-        "https://raw.githubusercontent.com/123jjck/cdn-ip-ranges/main/akamai/akamai_plain_ipv4.txt",
-        "https://raw.githubusercontent.com/123jjck/cdn-ip-ranges/main/cdn77/cdn77_plain_ipv4.txt",
-        "https://raw.githubusercontent.com/123jjck/cdn-ip-ranges/main/cogent/cogent_plain_ipv4.txt",
-        "https://raw.githubusercontent.com/123jjck/cdn-ip-ranges/main/digitalocean/digitalocean_plain_ipv4.txt",
-        "https://raw.githubusercontent.com/rezakhosh78/RKh-CF-Scanner/main/ip-ranges/iran/Afranet.txt",
-        "https://raw.githubusercontent.com/rezakhosh78/RKh-CF-Scanner/main/ip-ranges/iran/AsiaTech-ip-CF.txt",
-        "https://raw.githubusercontent.com/rezakhosh78/RKh-CF-Scanner/main/ip-ranges/iran/Iran%20Telecommunication%20Company%20PJS.txt",
-        "https://raw.githubusercontent.com/rezakhosh78/RKh-CF-Scanner/main/ip-ranges/iran/Mizban%20Dade.txt",
-        "https://raw.githubusercontent.com/rezakhosh78/RKh-CF-Scanner/main/ip-ranges/iran/MnageIt.txt",
-        "https://raw.githubusercontent.com/rezakhosh78/RKh-CF-Scanner/main/ip-ranges/iran/Noyan%20Abr%20Arvan%20Co_1.txt",
-        "https://raw.githubusercontent.com/rezakhosh78/RKh-CF-Scanner/main/ip-ranges/iran/Noyan%20Abr%20Arvan%20Co_2.txt",
-        "https://raw.githubusercontent.com/rezakhosh78/RKh-CF-Scanner/main/ip-ranges/iran/Noyan%20Abr%20Arvan%20Co_3.txt",
-        "https://raw.githubusercontent.com/rezakhosh78/RKh-CF-Scanner/main/ip-ranges/iran/Pars%20Abr.txt",
-        "https://raw.githubusercontent.com/rezakhosh78/RKh-CF-Scanner/main/ip-ranges/iran/Pars%20Online.txt",
-        "https://raw.githubusercontent.com/rezakhosh78/RKh-CF-Scanner/main/ip-ranges/iran/Respina.txt",
-        "https://raw.githubusercontent.com/rezakhosh78/RKh-CF-Scanner/main/ip-ranges/iran/Tookan.txt"
+        "https://raw.githubusercontent.com/newtest2354-commits/test1/refs/heads/main/ipv4-aggregated.txt"
     ],
     "ports": [80, 443, 8080, 8443, 2052, 2053, 2083, 2087, 2095, 2096],
     "threads": 350,
