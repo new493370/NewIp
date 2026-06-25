@@ -1,16 +1,301 @@
-[91m57.144.202.146[0m:[93m443[0m S=[95m10[0m TTFB=[96m272ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
-[91m57.145.4.131[0m:[93m443[0m S=[95m10[0m TTFB=[96m294ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Netherlands | Provider=Facebook[0m
-[91m57.145.6.1[0m:[93m443[0m S=[95m9[0m TTFB=[96m402ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Brazil | Provider=Facebook[0m
-[91m57.144.246.131[0m:[93m443[0m S=[95m9[0m TTFB=[96m419ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Chile | Provider=Facebook[0m
-[91m57.144.179.32[0m:[93m443[0m S=[95m9[0m TTFB=[96m470ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Brazil | Provider=Facebook[0m
-[91m66.220.149.254[0m:[93m443[0m S=[95m8[0m TTFB=[96m259ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
-[91m57.145.8.145[0m:[93m443[0m S=[95m8[0m TTFB=[96m622ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Australia | Provider=Facebook[0m
-[91m57.144.56.37[0m:[93m443[0m S=[95m8[0m TTFB=[96m656ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=India | Provider=Facebook[0m
-[91m57.144.142.35[0m:[93m443[0m S=[95m8[0m TTFB=[96m668ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=India | Provider=Facebook[0m
-[91m57.144.160.129[0m:[93m443[0m S=[95m8[0m TTFB=[96m683ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Singapore | Provider=Facebook[0m
-[91m57.144.152.35[0m:[93m443[0m S=[95m8[0m TTFB=[96m683ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Singapore | Provider=Facebook[0m
-[91m57.144.14.131[0m:[93m443[0m S=[95m8[0m TTFB=[96m684ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Singapore | Provider=Facebook[0m
-[91m57.144.186.35[0m:[93m443[0m S=[95m8[0m TTFB=[96m692ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Singapore | Provider=Facebook[0m
-[91m57.144.52.34[0m:[93m443[0m S=[95m8[0m TTFB=[96m704ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=India | Provider=Facebook[0m
-[91m57.144.122.195[0m:[93m443[0m S=[95m8[0m TTFB=[96m726ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=India | Provider=Facebook[0m
-[91m57.144.55.180[0m:[93m443[0m S=[95m7[0m TTFB=[96m417ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=India | Provider=Facebook[0m
+[91m157.240.11.174[0m:[93m443[0m S=[95m12[0m TTFB=[96m43ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
+[91m157.240.212.16[0m:[93m443[0m S=[95m9[0m TTFB=[96m497ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Portugal | Provider=Facebook[0m
+[91m157.240.238.225[0m:[93m443[0m S=[95m8[0m TTFB=[96m721ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Türkiye | Provider=Facebook[0m
+[91m102.132.99.36[0m:[93m443[0m S=[95m8[0m TTFB=[96m756ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m163.70.144.6[0m:[93m443[0m S=[95m8[0m TTFB=[96m761ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=India | Provider=Facebook[0m
+[91m157.240.238.17[0m:[93m443[0m S=[95m8[0m TTFB=[96m766ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Turkey | Provider=Facebook[0m
+[91m102.132.97.161[0m:[93m443[0m S=[95m8[0m TTFB=[96m785ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.227.167[0m:[93m443[0m S=[95m8[0m TTFB=[96m816ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Oman | Provider=Facebook[0m
+[91m157.240.254.55[0m:[93m443[0m S=[95m8[0m TTFB=[96m821ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
+[91m157.240.29.22[0m:[93m443[0m S=[95m8[0m TTFB=[96m822ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Qatar | Provider=Facebook[0m
+[91m157.240.227.142[0m:[93m443[0m S=[95m8[0m TTFB=[96m825ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Oman | Provider=Facebook[0m
+[91m102.132.97.227[0m:[93m443[0m S=[95m8[0m TTFB=[96m830ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.227.32[0m:[93m443[0m S=[95m8[0m TTFB=[96m835ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Oman | Provider=Facebook[0m
+[91m157.240.254.4[0m:[93m443[0m S=[95m8[0m TTFB=[96m839ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
+[91m157.240.244.142[0m:[93m443[0m S=[95m8[0m TTFB=[96m841ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Mexico | Provider=Facebook[0m
+[91m157.240.26.10[0m:[93m443[0m S=[95m8[0m TTFB=[96m843ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
+[91m163.70.145.227[0m:[93m443[0m S=[95m8[0m TTFB=[96m843ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=India | Provider=Facebook[0m
+[91m157.240.254.142[0m:[93m443[0m S=[95m8[0m TTFB=[96m849ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
+[91m163.70.145.51[0m:[93m443[0m S=[95m8[0m TTFB=[96m870ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=India | Provider=Facebook[0m
+[91m102.132.104.63[0m:[93m443[0m S=[95m8[0m TTFB=[96m871ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m157.240.208.11[0m:[93m443[0m S=[95m8[0m TTFB=[96m871ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Indonesia | Provider=Facebook[0m
+[91m157.240.223.63[0m:[93m443[0m S=[95m8[0m TTFB=[96m876ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Germany | Provider=Facebook[0m
+[91m157.240.227.130[0m:[93m443[0m S=[95m8[0m TTFB=[96m904ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Oman | Provider=Facebook[0m
+[91m102.132.104.227[0m:[93m443[0m S=[95m8[0m TTFB=[96m914ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.99.225[0m:[93m443[0m S=[95m8[0m TTFB=[96m915ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.97.218[0m:[93m443[0m S=[95m8[0m TTFB=[96m921ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.104.174[0m:[93m443[0m S=[95m8[0m TTFB=[96m922ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m157.240.227.222[0m:[93m443[0m S=[95m8[0m TTFB=[96m922ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Oman | Provider=Facebook[0m
+[91m102.132.104.60[0m:[93m443[0m S=[95m8[0m TTFB=[96m930ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.104.172[0m:[93m443[0m S=[95m8[0m TTFB=[96m939ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.104.196[0m:[93m443[0m S=[95m8[0m TTFB=[96m948ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.104.197[0m:[93m443[0m S=[95m8[0m TTFB=[96m956ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.103.199[0m:[93m443[0m S=[95m8[0m TTFB=[96m959ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.99.22[0m:[93m443[0m S=[95m8[0m TTFB=[96m965ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.99.21[0m:[93m443[0m S=[95m8[0m TTFB=[96m966ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.103.211[0m:[93m443[0m S=[95m8[0m TTFB=[96m971ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.104.167[0m:[93m443[0m S=[95m8[0m TTFB=[96m973ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.103.142[0m:[93m443[0m S=[95m8[0m TTFB=[96m980ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.99.54[0m:[93m443[0m S=[95m8[0m TTFB=[96m982ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m157.240.14.225[0m:[93m443[0m S=[95m8[0m TTFB=[96m984ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
+[91m102.132.99.14[0m:[93m443[0m S=[95m8[0m TTFB=[96m986ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.99.13[0m:[93m443[0m S=[95m8[0m TTFB=[96m986ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.99.53[0m:[93m443[0m S=[95m8[0m TTFB=[96m991ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.99.39[0m:[93m443[0m S=[95m8[0m TTFB=[96m992ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.99.222[0m:[93m443[0m S=[95m8[0m TTFB=[96m992ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m157.240.227.141[0m:[93m443[0m S=[95m8[0m TTFB=[96m998ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Oman | Provider=Facebook[0m
+[91m102.132.99.168[0m:[93m443[0m S=[95m8[0m TTFB=[96m1001ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.99.141[0m:[93m443[0m S=[95m8[0m TTFB=[96m1002ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.99.230[0m:[93m443[0m S=[95m8[0m TTFB=[96m1003ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.104.202[0m:[93m443[0m S=[95m8[0m TTFB=[96m1016ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.103.141[0m:[93m443[0m S=[95m8[0m TTFB=[96m1017ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.200.9[0m:[93m443[0m S=[95m8[0m TTFB=[96m1017ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Denmark | Provider=Facebook[0m
+[91m102.132.97.174[0m:[93m443[0m S=[95m8[0m TTFB=[96m1020ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.103.161[0m:[93m443[0m S=[95m8[0m TTFB=[96m1026ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.104.141[0m:[93m443[0m S=[95m8[0m TTFB=[96m1034ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.103.168[0m:[93m443[0m S=[95m8[0m TTFB=[96m1035ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.99.4[0m:[93m443[0m S=[95m8[0m TTFB=[96m1045ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.103.207[0m:[93m443[0m S=[95m8[0m TTFB=[96m1048ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.103.225[0m:[93m443[0m S=[95m8[0m TTFB=[96m1052ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.99.63[0m:[93m443[0m S=[95m8[0m TTFB=[96m1078ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.99.220[0m:[93m443[0m S=[95m8[0m TTFB=[96m1080ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.103.20[0m:[93m443[0m S=[95m8[0m TTFB=[96m1093ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.104.15[0m:[93m443[0m S=[95m8[0m TTFB=[96m1095ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.97.40[0m:[93m443[0m S=[95m8[0m TTFB=[96m1102ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.99.20[0m:[93m443[0m S=[95m8[0m TTFB=[96m1105ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.99.174[0m:[93m443[0m S=[95m8[0m TTFB=[96m1106ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.104.142[0m:[93m443[0m S=[95m8[0m TTFB=[96m1112ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.99.32[0m:[93m443[0m S=[95m8[0m TTFB=[96m1114ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.99.142[0m:[93m443[0m S=[95m8[0m TTFB=[96m1123ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.97.27[0m:[93m443[0m S=[95m8[0m TTFB=[96m1131ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.99.40[0m:[93m443[0m S=[95m8[0m TTFB=[96m1132ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.103.37[0m:[93m443[0m S=[95m8[0m TTFB=[96m1137ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.12.230[0m:[93m443[0m S=[95m8[0m TTFB=[96m1144ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Brazil | Provider=Facebook[0m
+[91m157.240.13.15[0m:[93m443[0m S=[95m8[0m TTFB=[96m1145ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Singapore | Provider=Facebook[0m
+[91m102.132.104.161[0m:[93m443[0m S=[95m8[0m TTFB=[96m1147ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.97.168[0m:[93m443[0m S=[95m8[0m TTFB=[96m1158ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.99.8[0m:[93m443[0m S=[95m8[0m TTFB=[96m1158ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.104.230[0m:[93m443[0m S=[95m8[0m TTFB=[96m1165ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.104.3[0m:[93m443[0m S=[95m8[0m TTFB=[96m1170ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.99.60[0m:[93m443[0m S=[95m8[0m TTFB=[96m1176ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.104.57[0m:[93m443[0m S=[95m8[0m TTFB=[96m1190ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.99.130[0m:[93m443[0m S=[95m8[0m TTFB=[96m1194ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.99.167[0m:[93m443[0m S=[95m8[0m TTFB=[96m1206ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.104.38[0m:[93m443[0m S=[95m8[0m TTFB=[96m1208ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.99.17[0m:[93m443[0m S=[95m8[0m TTFB=[96m1213ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.104.40[0m:[93m443[0m S=[95m8[0m TTFB=[96m1213ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.104.168[0m:[93m443[0m S=[95m8[0m TTFB=[96m1234ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.103.38[0m:[93m443[0m S=[95m8[0m TTFB=[96m1242ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.99.161[0m:[93m443[0m S=[95m8[0m TTFB=[96m1245ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.99.172[0m:[93m443[0m S=[95m8[0m TTFB=[96m1246ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.103.58[0m:[93m443[0m S=[95m8[0m TTFB=[96m1252ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.29.168[0m:[93m443[0m S=[95m8[0m TTFB=[96m1308ms[0m PROTO=[94mh2[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Qatar | Provider=Facebook[0m
+[91m157.240.224.37[0m:[93m443[0m S=[95m6[0m TTFB=[96m503ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Ukraine | Provider=Facebook[0m
+[91m157.240.243.56[0m:[93m443[0m S=[95m6[0m TTFB=[96m504ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Spain | Provider=Facebook[0m
+[91m157.240.226.215[0m:[93m443[0m S=[95m6[0m TTFB=[96m538ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Brazil | Provider=Facebook[0m
+[91m157.240.205.9[0m:[93m443[0m S=[95m6[0m TTFB=[96m560ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Finland | Provider=Facebook[0m
+[91m157.240.238.19[0m:[93m443[0m S=[95m6[0m TTFB=[96m569ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Turkey | Provider=Facebook[0m
+[91m102.132.104.35[0m:[93m443[0m S=[95m6[0m TTFB=[96m576ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m157.240.234.10[0m:[93m443[0m S=[95m6[0m TTFB=[96m576ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Bulgaria | Provider=Facebook[0m
+[91m102.132.97.216[0m:[93m443[0m S=[95m6[0m TTFB=[96m588ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.104.222[0m:[93m443[0m S=[95m6[0m TTFB=[96m612ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m157.240.200.7[0m:[93m443[0m S=[95m6[0m TTFB=[96m616ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Denmark | Provider=Facebook[0m
+[91m157.240.203.54[0m:[93m443[0m S=[95m6[0m TTFB=[96m630ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Italy | Provider=Facebook[0m
+[91m157.240.238.11[0m:[93m443[0m S=[95m6[0m TTFB=[96m635ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Turkey | Provider=Facebook[0m
+[91m163.70.132.39[0m:[93m443[0m S=[95m6[0m TTFB=[96m636ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Malaysia | Provider=Facebook[0m
+[91m157.240.231.35[0m:[93m443[0m S=[95m6[0m TTFB=[96m640ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Italy | Provider=Facebook[0m
+[91m157.240.231.17[0m:[93m443[0m S=[95m6[0m TTFB=[96m643ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Italy | Provider=Facebook[0m
+[91m157.240.236.5[0m:[93m443[0m S=[95m6[0m TTFB=[96m645ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Malaysia | Provider=Facebook[0m
+[91m102.132.104.169[0m:[93m443[0m S=[95m6[0m TTFB=[96m658ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m157.240.236.172[0m:[93m443[0m S=[95m6[0m TTFB=[96m662ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Malaysia | Provider=Facebook[0m
+[91m102.132.99.9[0m:[93m443[0m S=[95m6[0m TTFB=[96m663ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.97.20[0m:[93m443[0m S=[95m6[0m TTFB=[96m668ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m163.70.144.8[0m:[93m443[0m S=[95m6[0m TTFB=[96m672ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=India | Provider=Facebook[0m
+[91m102.132.97.49[0m:[93m443[0m S=[95m6[0m TTFB=[96m678ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.97.14[0m:[93m443[0m S=[95m6[0m TTFB=[96m684ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.210.17[0m:[93m443[0m S=[95m6[0m TTFB=[96m684ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Germany | Provider=Facebook[0m
+[91m157.240.223.23[0m:[93m443[0m S=[95m6[0m TTFB=[96m688ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Germany | Provider=Facebook[0m
+[91m157.240.243.192[0m:[93m443[0m S=[95m6[0m TTFB=[96m688ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Spain | Provider=Facebook[0m
+[91m157.240.202.17[0m:[93m443[0m S=[95m6[0m TTFB=[96m695ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=France | Provider=Facebook[0m
+[91m157.240.231.19[0m:[93m443[0m S=[95m6[0m TTFB=[96m697ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Italy | Provider=Facebook[0m
+[91m157.240.22.172[0m:[93m443[0m S=[95m6[0m TTFB=[96m698ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
+[91m102.132.104.17[0m:[93m443[0m S=[95m6[0m TTFB=[96m699ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m157.240.22.62[0m:[93m443[0m S=[95m6[0m TTFB=[96m707ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
+[91m102.132.99.18[0m:[93m443[0m S=[95m6[0m TTFB=[96m723ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m163.70.130.228[0m:[93m443[0m S=[95m6[0m TTFB=[96m725ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Philippines | Provider=Facebook[0m
+[91m157.240.212.1[0m:[93m443[0m S=[95m6[0m TTFB=[96m729ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Portugal | Provider=Facebook[0m
+[91m157.240.212.161[0m:[93m443[0m S=[95m6[0m TTFB=[96m733ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Portugal | Provider=Facebook[0m
+[91m163.70.131.225[0m:[93m443[0m S=[95m6[0m TTFB=[96m734ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Philippines | Provider=Facebook[0m
+[91m157.240.243.53[0m:[93m443[0m S=[95m6[0m TTFB=[96m738ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Spain | Provider=Facebook[0m
+[91m102.132.99.56[0m:[93m443[0m S=[95m6[0m TTFB=[96m747ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m157.240.22.21[0m:[93m443[0m S=[95m6[0m TTFB=[96m749ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
+[91m102.132.99.217[0m:[93m443[0m S=[95m6[0m TTFB=[96m753ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.99.15[0m:[93m443[0m S=[95m6[0m TTFB=[96m756ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m157.240.224.172[0m:[93m443[0m S=[95m6[0m TTFB=[96m756ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Ukraine | Provider=Facebook[0m
+[91m157.240.226.221[0m:[93m443[0m S=[95m6[0m TTFB=[96m762ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Brazil | Provider=Facebook[0m
+[91m157.240.236.39[0m:[93m443[0m S=[95m6[0m TTFB=[96m764ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Malaysia | Provider=Facebook[0m
+[91m157.240.223.216[0m:[93m443[0m S=[95m6[0m TTFB=[96m764ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Germany | Provider=Facebook[0m
+[91m157.240.226.220[0m:[93m443[0m S=[95m6[0m TTFB=[96m769ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Brazil | Provider=Facebook[0m
+[91m157.240.205.20[0m:[93m443[0m S=[95m6[0m TTFB=[96m770ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Finland | Provider=Facebook[0m
+[91m102.132.99.5[0m:[93m443[0m S=[95m6[0m TTFB=[96m773ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m157.240.224.13[0m:[93m443[0m S=[95m6[0m TTFB=[96m774ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Ukraine | Provider=Facebook[0m
+[91m157.240.9.172[0m:[93m443[0m S=[95m6[0m TTFB=[96m775ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Bulgaria | Provider=Facebook[0m
+[91m102.132.99.26[0m:[93m443[0m S=[95m6[0m TTFB=[96m787ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m157.240.205.172[0m:[93m443[0m S=[95m6[0m TTFB=[96m787ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Finland | Provider=Facebook[0m
+[91m102.132.103.35[0m:[93m443[0m S=[95m6[0m TTFB=[96m791ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.223.15[0m:[93m443[0m S=[95m6[0m TTFB=[96m791ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Germany | Provider=Facebook[0m
+[91m157.240.234.12[0m:[93m443[0m S=[95m6[0m TTFB=[96m794ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Bulgaria | Provider=Facebook[0m
+[91m157.240.209.41[0m:[93m8443[0m S=[95m6[0m TTFB=[96m794ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Japan | Provider=Facebook[0m
+[91m157.240.196.2[0m:[93m443[0m S=[95m6[0m TTFB=[96m795ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=France | Provider=Facebook[0m
+[91m157.240.13.52[0m:[93m443[0m S=[95m6[0m TTFB=[96m797ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Singapore | Provider=Facebook[0m
+[91m157.240.208.6[0m:[93m443[0m S=[95m6[0m TTFB=[96m797ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Indonesia | Provider=Facebook[0m
+[91m102.132.99.35[0m:[93m443[0m S=[95m6[0m TTFB=[96m802ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m157.240.9.220[0m:[93m443[0m S=[95m6[0m TTFB=[96m802ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Bulgaria | Provider=Facebook[0m
+[91m157.240.253.174[0m:[93m443[0m S=[95m6[0m TTFB=[96m802ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Germany | Provider=Facebook[0m
+[91m157.240.224.7[0m:[93m443[0m S=[95m6[0m TTFB=[96m806ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Ukraine | Provider=Facebook[0m
+[91m157.240.202.55[0m:[93m443[0m S=[95m6[0m TTFB=[96m810ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=France | Provider=Facebook[0m
+[91m157.240.0.168[0m:[93m443[0m S=[95m6[0m TTFB=[96m811ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Germany | Provider=Facebook[0m
+[91m157.240.203.25[0m:[93m443[0m S=[95m6[0m TTFB=[96m813ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Italy | Provider=Facebook[0m
+[91m102.132.103.59[0m:[93m443[0m S=[95m6[0m TTFB=[96m819ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.97.13[0m:[93m443[0m S=[95m6[0m TTFB=[96m821ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.99.7[0m:[93m443[0m S=[95m6[0m TTFB=[96m826ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.103.10[0m:[93m443[0m S=[95m6[0m TTFB=[96m826ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.27.8[0m:[93m443[0m S=[95m6[0m TTFB=[96m828ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Germany | Provider=Facebook[0m
+[91m157.240.244.15[0m:[93m443[0m S=[95m6[0m TTFB=[96m832ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Mexico | Provider=Facebook[0m
+[91m157.240.253.192[0m:[93m443[0m S=[95m6[0m TTFB=[96m834ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Germany | Provider=Facebook[0m
+[91m102.132.99.1[0m:[93m443[0m S=[95m6[0m TTFB=[96m838ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m157.240.13.161[0m:[93m443[0m S=[95m6[0m TTFB=[96m843ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Singapore | Provider=Facebook[0m
+[91m157.240.203.3[0m:[93m443[0m S=[95m6[0m TTFB=[96m850ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Italy | Provider=Facebook[0m
+[91m157.240.253.222[0m:[93m443[0m S=[95m6[0m TTFB=[96m861ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Germany | Provider=Facebook[0m
+[91m163.70.151.23[0m:[93m443[0m S=[95m6[0m TTFB=[96m864ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=UK | Provider=Facebook[0m
+[91m102.132.97.222[0m:[93m443[0m S=[95m6[0m TTFB=[96m866ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.27.20[0m:[93m443[0m S=[95m6[0m TTFB=[96m876ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Germany | Provider=Facebook[0m
+[91m157.240.197.17[0m:[93m443[0m S=[95m6[0m TTFB=[96m877ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Peru | Provider=Facebook[0m
+[91m163.70.128.60[0m:[93m443[0m S=[95m6[0m TTFB=[96m878ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=France | Provider=Facebook[0m
+[91m102.132.97.172[0m:[93m443[0m S=[95m6[0m TTFB=[96m884ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.11.8[0m:[93m443[0m S=[95m6[0m TTFB=[96m884ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
+[91m157.240.26.18[0m:[93m443[0m S=[95m6[0m TTFB=[96m886ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
+[91m157.240.11.6[0m:[93m443[0m S=[95m6[0m TTFB=[96m893ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
+[91m157.240.241.141[0m:[93m443[0m S=[95m6[0m TTFB=[96m893ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
+[91m102.132.97.142[0m:[93m443[0m S=[95m6[0m TTFB=[96m894ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.209.16[0m:[93m443[0m S=[95m6[0m TTFB=[96m895ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Japan | Provider=Facebook[0m
+[91m157.240.254.33[0m:[93m443[0m S=[95m6[0m TTFB=[96m897ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
+[91m102.132.103.19[0m:[93m443[0m S=[95m6[0m TTFB=[96m909ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m163.70.131.50[0m:[93m443[0m S=[95m6[0m TTFB=[96m909ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Philippines | Provider=Facebook[0m
+[91m157.240.197.12[0m:[93m443[0m S=[95m6[0m TTFB=[96m913ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Peru | Provider=Facebook[0m
+[91m157.240.254.225[0m:[93m443[0m S=[95m6[0m TTFB=[96m915ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
+[91m157.240.197.161[0m:[93m443[0m S=[95m6[0m TTFB=[96m916ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Peru | Provider=Facebook[0m
+[91m102.132.103.15[0m:[93m443[0m S=[95m6[0m TTFB=[96m919ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.254.208[0m:[93m443[0m S=[95m6[0m TTFB=[96m924ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
+[91m157.240.241.216[0m:[93m443[0m S=[95m6[0m TTFB=[96m925ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
+[91m157.240.11.169[0m:[93m443[0m S=[95m6[0m TTFB=[96m927ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
+[91m102.132.97.3[0m:[93m443[0m S=[95m6[0m TTFB=[96m930ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.197.225[0m:[93m443[0m S=[95m6[0m TTFB=[96m933ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Peru | Provider=Facebook[0m
+[91m157.240.26.167[0m:[93m443[0m S=[95m6[0m TTFB=[96m936ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
+[91m102.132.104.53[0m:[93m443[0m S=[95m6[0m TTFB=[96m942ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m157.240.25.20[0m:[93m443[0m S=[95m6[0m TTFB=[96m942ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Mexico | Provider=Facebook[0m
+[91m157.240.210.60[0m:[93m443[0m S=[95m6[0m TTFB=[96m945ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Germany | Provider=Facebook[0m
+[91m157.240.211.198[0m:[93m443[0m S=[95m6[0m TTFB=[96m945ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Hong Kong | Provider=Facebook[0m
+[91m157.240.202.32[0m:[93m443[0m S=[95m6[0m TTFB=[96m946ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=France | Provider=Facebook[0m
+[91m157.240.24.225[0m:[93m443[0m S=[95m6[0m TTFB=[96m951ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=USA | Provider=Facebook[0m
+[91m157.240.197.40[0m:[93m443[0m S=[95m6[0m TTFB=[96m951ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Peru | Provider=Facebook[0m
+[91m163.70.128.220[0m:[93m443[0m S=[95m6[0m TTFB=[96m952ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=France | Provider=Facebook[0m
+[91m157.240.211.1[0m:[93m443[0m S=[95m6[0m TTFB=[96m955ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Hong Kong | Provider=Facebook[0m
+[91m102.132.97.223[0m:[93m443[0m S=[95m6[0m TTFB=[96m956ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.97.230[0m:[93m443[0m S=[95m6[0m TTFB=[96m956ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.225.4[0m:[93m443[0m S=[95m6[0m TTFB=[96m960ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=UK | Provider=Facebook[0m
+[91m102.132.97.16[0m:[93m443[0m S=[95m6[0m TTFB=[96m961ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.99.169[0m:[93m443[0m S=[95m6[0m TTFB=[96m962ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m157.240.209.41[0m:[93m443[0m S=[95m6[0m TTFB=[96m964ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Japan | Provider=Facebook[0m
+[91m157.240.233.35[0m:[93m443[0m S=[95m6[0m TTFB=[96m971ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Guatemala | Provider=Facebook[0m
+[91m157.240.200.222[0m:[93m443[0m S=[95m6[0m TTFB=[96m972ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Denmark | Provider=Facebook[0m
+[91m102.132.104.22[0m:[93m443[0m S=[95m6[0m TTFB=[96m974ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.103.12[0m:[93m443[0m S=[95m6[0m TTFB=[96m976ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.103.14[0m:[93m443[0m S=[95m6[0m TTFB=[96m980ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.97.167[0m:[93m443[0m S=[95m6[0m TTFB=[96m984ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.99.213[0m:[93m443[0m S=[95m6[0m TTFB=[96m984ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.104.6[0m:[93m443[0m S=[95m6[0m TTFB=[96m984ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.104.36[0m:[93m443[0m S=[95m6[0m TTFB=[96m987ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m157.240.27.38[0m:[93m443[0m S=[95m6[0m TTFB=[96m987ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Germany | Provider=Facebook[0m
+[91m102.132.103.174[0m:[93m443[0m S=[95m6[0m TTFB=[96m991ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.215.230[0m:[93m443[0m S=[95m6[0m TTFB=[96m991ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Korea | Provider=Facebook[0m
+[91m102.132.99.227[0m:[93m443[0m S=[95m6[0m TTFB=[96m992ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m157.240.214.60[0m:[93m443[0m S=[95m6[0m TTFB=[96m992ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=UK | Provider=Facebook[0m
+[91m102.132.97.210[0m:[93m443[0m S=[95m6[0m TTFB=[96m993ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.97.8[0m:[93m443[0m S=[95m6[0m TTFB=[96m994ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.103.56[0m:[93m443[0m S=[95m6[0m TTFB=[96m994ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.253.42[0m:[93m8443[0m S=[95m6[0m TTFB=[96m997ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Germany | Provider=Facebook[0m
+[91m157.240.253.42[0m:[93m443[0m S=[95m6[0m TTFB=[96m999ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Germany | Provider=Facebook[0m
+[91m102.132.103.42[0m:[93m443[0m S=[95m6[0m TTFB=[96m1001ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.215.38[0m:[93m443[0m S=[95m6[0m TTFB=[96m1001ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Korea | Provider=Facebook[0m
+[91m102.132.103.196[0m:[93m443[0m S=[95m6[0m TTFB=[96m1006ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.17.13[0m:[93m443[0m S=[95m6[0m TTFB=[96m1008ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Switzerland | Provider=Facebook[0m
+[91m102.132.103.9[0m:[93m443[0m S=[95m6[0m TTFB=[96m1010ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.97.10[0m:[93m443[0m S=[95m6[0m TTFB=[96m1011ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.97.38[0m:[93m443[0m S=[95m6[0m TTFB=[96m1012ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.27.227[0m:[93m443[0m S=[95m6[0m TTFB=[96m1013ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Germany | Provider=Facebook[0m
+[91m102.132.97.225[0m:[93m443[0m S=[95m6[0m TTFB=[96m1021ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.27.168[0m:[93m443[0m S=[95m6[0m TTFB=[96m1021ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Germany | Provider=Facebook[0m
+[91m102.132.104.18[0m:[93m443[0m S=[95m6[0m TTFB=[96m1027ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.97.141[0m:[93m443[0m S=[95m6[0m TTFB=[96m1029ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.103.60[0m:[93m443[0m S=[95m6[0m TTFB=[96m1029ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.97.54[0m:[93m443[0m S=[95m6[0m TTFB=[96m1030ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.103.41[0m:[93m443[0m S=[95m6[0m TTFB=[96m1041ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.8.56[0m:[93m443[0m S=[95m6[0m TTFB=[96m1043ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Australia | Provider=Facebook[0m
+[91m102.132.97.26[0m:[93m443[0m S=[95m6[0m TTFB=[96m1045ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.97.169[0m:[93m443[0m S=[95m6[0m TTFB=[96m1047ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.103.22[0m:[93m443[0m S=[95m6[0m TTFB=[96m1047ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.97.22[0m:[93m443[0m S=[95m6[0m TTFB=[96m1055ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.97.37[0m:[93m443[0m S=[95m6[0m TTFB=[96m1056ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.104.21[0m:[93m443[0m S=[95m6[0m TTFB=[96m1057ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.97.51[0m:[93m443[0m S=[95m6[0m TTFB=[96m1058ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.103.18[0m:[93m443[0m S=[95m6[0m TTFB=[96m1059ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.103.128[0m:[93m443[0m S=[95m6[0m TTFB=[96m1059ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m157.240.197.142[0m:[93m443[0m S=[95m6[0m TTFB=[96m1067ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Peru | Provider=Facebook[0m
+[91m102.132.99.41[0m:[93m8443[0m S=[95m6[0m TTFB=[96m1069ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.97.9[0m:[93m443[0m S=[95m6[0m TTFB=[96m1071ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.103.169[0m:[93m443[0m S=[95m6[0m TTFB=[96m1072ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.103.172[0m:[93m443[0m S=[95m6[0m TTFB=[96m1077ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.97.23[0m:[93m443[0m S=[95m6[0m TTFB=[96m1084ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.97.41[0m:[93m443[0m S=[95m6[0m TTFB=[96m1093ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.103.1[0m:[93m443[0m S=[95m6[0m TTFB=[96m1125ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.103.63[0m:[93m443[0m S=[95m6[0m TTFB=[96m1129ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.103.230[0m:[93m443[0m S=[95m6[0m TTFB=[96m1130ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.99.41[0m:[93m443[0m S=[95m6[0m TTFB=[96m1132ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m157.240.30.8[0m:[93m443[0m S=[95m6[0m TTFB=[96m1145ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Czech Republic | Provider=Facebook[0m
+[91m102.132.103.21[0m:[93m443[0m S=[95m6[0m TTFB=[96m1146ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.97.62[0m:[93m443[0m S=[95m6[0m TTFB=[96m1149ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.103.227[0m:[93m443[0m S=[95m6[0m TTFB=[96m1150ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.104.13[0m:[93m443[0m S=[95m6[0m TTFB=[96m1151ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.103.5[0m:[93m443[0m S=[95m6[0m TTFB=[96m1160ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.104.213[0m:[93m443[0m S=[95m6[0m TTFB=[96m1160ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m157.240.215.17[0m:[93m443[0m S=[95m6[0m TTFB=[96m1195ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Korea | Provider=Facebook[0m
+[91m102.132.104.36[0m:[93m8443[0m S=[95m6[0m TTFB=[96m1195ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.103.32[0m:[93m8443[0m S=[95m6[0m TTFB=[96m1196ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.103.194[0m:[93m443[0m S=[95m6[0m TTFB=[96m1211ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.104.32[0m:[93m443[0m S=[95m6[0m TTFB=[96m1221ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.103.167[0m:[93m443[0m S=[95m6[0m TTFB=[96m1224ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.97.41[0m:[93m8443[0m S=[95m6[0m TTFB=[96m1239ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.104.16[0m:[93m443[0m S=[95m6[0m TTFB=[96m1247ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.97.33[0m:[93m443[0m S=[95m6[0m TTFB=[96m1257ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.104.19[0m:[93m443[0m S=[95m6[0m TTFB=[96m1280ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.104.14[0m:[93m443[0m S=[95m6[0m TTFB=[96m1283ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.104.5[0m:[93m443[0m S=[95m6[0m TTFB=[96m1287ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.103.7[0m:[93m443[0m S=[95m6[0m TTFB=[96m1294ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.104.207[0m:[93m443[0m S=[95m6[0m TTFB=[96m1294ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.103.32[0m:[93m443[0m S=[95m6[0m TTFB=[96m1330ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.104.50[0m:[93m443[0m S=[95m6[0m TTFB=[96m1342ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.104.23[0m:[93m443[0m S=[95m6[0m TTFB=[96m1371ms[0m PROTO=[94mhttp/1.1[0m REL=[92m1.0[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.97.15[0m:[93m443[0m S=[95m3[0m TTFB=[96m548ms[0m PROTO=[94mhttp/1.1[0m REL=[92m0.5[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.97.63[0m:[93m443[0m S=[95m3[0m TTFB=[96m565ms[0m PROTO=[94mhttp/1.1[0m REL=[92m0.5[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.97.56[0m:[93m443[0m S=[95m3[0m TTFB=[96m607ms[0m PROTO=[94mhttp/1.1[0m REL=[92m0.5[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.103.8[0m:[93m443[0m S=[95m3[0m TTFB=[96m643ms[0m PROTO=[94mhttp/1.1[0m REL=[92m0.5[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.103.16[0m:[93m443[0m S=[95m3[0m TTFB=[96m741ms[0m PROTO=[94mhttp/1.1[0m REL=[92m0.5[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.97.18[0m:[93m443[0m S=[95m3[0m TTFB=[96m945ms[0m PROTO=[94mhttp/1.1[0m REL=[92m0.5[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.97.35[0m:[93m443[0m S=[95m3[0m TTFB=[96m964ms[0m PROTO=[94mhttp/1.1[0m REL=[92m0.5[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.99.204[0m:[93m443[0m S=[95m3[0m TTFB=[96m1139ms[0m PROTO=[94mhttp/1.1[0m REL=[92m0.5[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=FB-LOS2[0m
+[91m102.132.104.58[0m:[93m443[0m S=[95m3[0m TTFB=[96m1197ms[0m PROTO=[94mhttp/1.1[0m REL=[92m0.5[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.104.37[0m:[93m443[0m S=[95m3[0m TTFB=[96m1216ms[0m PROTO=[94mhttp/1.1[0m REL=[92m0.5[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.104.2[0m:[93m443[0m S=[95m3[0m TTFB=[96m1249ms[0m PROTO=[94mhttp/1.1[0m REL=[92m0.5[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
+[91m102.132.97.21[0m:[93m443[0m S=[95m3[0m TTFB=[96m1541ms[0m PROTO=[94mhttp/1.1[0m REL=[92m0.5[0m CDN=[36mcloudflare[0m [32mCountry=Egypt | Provider=Facebook[0m
+[91m102.132.104.1[0m:[93m443[0m S=[95m3[0m TTFB=[96m1635ms[0m PROTO=[94mhttp/1.1[0m REL=[92m0.5[0m CDN=[36mcloudflare[0m [32mCountry=South Africa | Provider=Facebook[0m
