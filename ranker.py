@@ -15,17 +15,6 @@ SLOW_TTFB_BONUS = 1
 STABLE_PORTS = {443, 2053, 2083, 2087, 2096, 8443}
 STABLE_PORT_BONUS = 1
 
-COLOR_RESET = "\033[0m"
-COLOR_IP = "\033[91m"
-COLOR_PORT = "\033[93m"
-COLOR_SCORE = "\033[95m"
-COLOR_TTFB = "\033[96m"
-COLOR_PROTO = "\033[94m"
-COLOR_REL = "\033[92m"
-COLOR_CDN = "\033[36m"
-COLOR_COUNTRY = "\033[32m"
-COLOR_PROVIDER = "\033[33m"
-
 
 def parse_line(line):
     line = line.strip()
@@ -194,18 +183,18 @@ def rank_results():
             else:
                 location = "-"
             
-            colored_line = (
-                f'{COLOR_IP}{item["ip"]}{COLOR_RESET}'
-                f':{COLOR_PORT}{item["port"]}{COLOR_RESET} '
-                f'S={COLOR_SCORE}{item["score"]}{COLOR_RESET} '
-                f'TTFB={COLOR_TTFB}{item.get("ttfb", "-")}ms{COLOR_RESET} '
-                f'PROTO={COLOR_PROTO}{item.get("proto", "-")}{COLOR_RESET} '
-                f'REL={COLOR_REL}{item.get("reliability", "-")}{COLOR_RESET} '
-                f'CDN={COLOR_CDN}{item.get("cdn", "-")}{COLOR_RESET} '
-                f'{COLOR_COUNTRY}{location}{COLOR_RESET}\n'
+            line = (
+                f'[IP: {item["ip"]}] '
+                f'[PORT: {item["port"]}] '
+                f'SCORE={item["score"]} '
+                f'TTFB={item.get("ttfb", "-")}ms '
+                f'PROTO={item.get("proto", "-")} '
+                f'REL={item.get("reliability", "-")} '
+                f'CDN={item.get("cdn", "-")} '
+                f'{location}\n'
             )
             
-            f.write(colored_line)
+            f.write(line)
 
     print(f"RANKED={len(ranked)} DOMAINS={len(domains)}")
 
