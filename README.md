@@ -14,17 +14,6 @@
 
 ---
 
-### 📦 **پروژه جمع‌آوری کانفیگ و سابسکریپشن‌ها برای استفاده در کلاینت‌های مختلف**  
-**V2rayNG • Hiddify • NekoBox • ClashMeta • SingBox • و سایر کلاینت‌های محبوب**
-
-<br>
-
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aristapanell-cell/AriataPanel)
-
-<br>
-
----
-
 </div>
 
 <div dir="rtl">
@@ -266,6 +255,16 @@ on:
 </div>
 
 <div align="center">
+
+### 📦 **پروژه جمع‌آوری کانفیگ و سابسکریپشن‌ها برای استفاده در کلاینت‌های مختلف**  
+**V2rayNG • Hiddify • NekoBox • ClashMeta • SingBox • و سایر کلاینت‌های محبوب**
+
+<br>
+
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aristapanell-cell/AriataPanel)
+
+<br>
+<br>
 
 ❤️ **ساخته شده توسط تیم آریستا** (🇲‌🇲‌🇩‌) ❤️
 
