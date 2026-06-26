@@ -1,4 +1,4 @@
-<div dir="rtl" align="center">
+=<div dir="rtl" align="center">
 
 # ⚡ ARISTA MATRIX PIPELINE ⚡
 
@@ -10,16 +10,6 @@
 [![Web Panel](https://img.shields.io/badge/Web_Panel-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://arista-panel.arista-panel.workers.dev/)
 
 <br>
-
-[![GitHub Stars](https://img.shields.io/github/stars/aristapanell-cell/AriataPanel?style=for-the-badge&logo=github&logoColor=white&color=yellow)](https://github.com/aristapanell-cell/AriataPanel)
-[![GitHub Forks](https://img.shields.io/github/forks/aristapanell-cell/AriataPanel?style=for-the-badge&logo=github&logoColor=white&color=blue)](https://github.com/aristapanell-cell/AriataPanel)
-[![GitHub Watchers](https://img.shields.io/github/watchers/aristapanell-cell/AriataPanel?style=for-the-badge&logo=github&logoColor=white&color=green)](https://github.com/aristapanell-cell/AriataPanel)
-[![GitHub License](https://img.shields.io/github/license/aristapanell-cell/AriataPanel?style=for-the-badge&logo=github&logoColor=white&color=purple)](https://github.com/aristapanell-cell/AriataPanel/blob/main/LICENSE)
-[![GitHub Issues](https://img.shields.io/github/issues/aristapanell-cell/AriataPanel?style=for-the-badge&logo=github&logoColor=white&color=red)](https://github.com/aristapanell-cell/AriataPanel/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/aristapanell-cell/AriataPanel?style=for-the-badge&logo=github&logoColor=white&color=orange)](https://github.com/aristapanell-cell/AriataPanel/pulls)
-[![GitHub Repo Size](https://img.shields.io/github/repo-size/aristapanell-cell/AriataPanel?style=for-the-badge&logo=github&logoColor=white&color=teal)](https://github.com/aristapanell-cell/AriataPanel)
-[![GitHub Last Commit](https://img.shields.io/github/last-commit/aristapanell-cell/AriataPanel?style=for-the-badge&logo=github&logoColor=white&color=darkred)](https://github.com/aristapanell-cell/AriataPanel/commits/main)
-
 <br>
 
 ---
