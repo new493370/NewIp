@@ -1,3 +1,14 @@
-developers.google.com
-go.microsoft.com
+node-4c6.pool-1-1.dynamic.nt-isp.net
+node-533.pool-1-1.dynamic.nt-isp.net
+node-a5t.pool-1-1.dynamic.nt-isp.net
+node-a6a.pool-1-1.dynamic.nt-isp.net
+node-aqf.pool-1-1.dynamic.nt-isp.net
+node-asd.pool-1-1.dynamic.nt-isp.net
+node-b84.pool-1-1.dynamic.nt-isp.net
+node-bch.pool-1-1.dynamic.nt-isp.net
+node-bd4.pool-1-1.dynamic.nt-isp.net
+node-bh2.pool-1-1.dynamic.nt-isp.net
+node-j7z.pool-1-1.dynamic.nt-isp.net
+node-jcm.pool-1-1.dynamic.nt-isp.net
+node-k98.pool-1-1.dynamic.nt-isp.net
 www.w3.org
