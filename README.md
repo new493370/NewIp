@@ -18,16 +18,16 @@
 
 <div dir="rtl">
 
-## <span style="color: #0066cc; font-size: 2.5em;">📌 معرفی پروژه</span>
+## <span style="color: #ffffff; font-size: 4em;">📌 معرفی پروژه</span>
 
-> ### <span style="color: #0066cc; font-size: 1.4em;">🔥 **ARISTA MATRIX PIPELINE**</span>
-> <span style="color: #0066cc; font-size: 1.2em;">یک سیستم پیشرفته و بهینه‌شده برای اسکن، شناسایی و رتبه‌بندی سرورهای Proxy و CDN است.</span>
+> ### <span style="color: #ffffff; font-size: 3em;">🔥 **ARISTA MATRIX PIPELINE**</span>
+> <span style="color: #ffffff; font-size: 2.5em;">یک سیستم پیشرفته و بهینه‌شده برای اسکن، شناسایی و رتبه‌بندی سرورهای Proxy و CDN است.</span>
 > 
-> <span style="color: #0066cc; font-size: 1.1em;">این پروژه با استفاده از معماری Pipeline، به صورت مرحله‌ای IP‌ها را از منابع مختلف جمع‌آوری، پالایش، اسکن و نهایتاً بهترین سرورها را بر اساس معیارهای متعدد رتبه‌بندی می‌کند.</span>
+> <span style="color: #ffffff; font-size: 2.2em;">این پروژه با استفاده از معماری Pipeline، به صورت مرحله‌ای IP‌ها را از منابع مختلف جمع‌آوری، پالایش، اسکن و نهایتاً بهترین سرورها را بر اساس معیارهای متعدد رتبه‌بندی می‌کند.</span>
 >
-> ### <span style="color: #0066cc; font-size: 1.3em;">✨ **قابلیت استخراج دوطرفه:**</span>
-> - <span style="color: #0066cc; font-size: 1.1em;">**استخراج دامنه از IP**: با بررسی گواهی SSL، هدرها و محتوای HTML</span>
-> - <span style="color: #0066cc; font-size: 1.1em;">**استخراج IP از دامنه**: با استفاده از Reverse DNS و رکوردهای A</span>
+> ### <span style="color: #ffffff; font-size: 2.8em;">✨ **قابلیت استخراج دوطرفه:**</span>
+> - <span style="color: #ffffff; font-size: 2em;">**استخراج دامنه از IP**: با بررسی گواهی SSL، هدرها و محتوای HTML</span>
+> - <span style="color: #ffffff; font-size: 2em;">**استخراج IP از دامنه**: با استفاده از Reverse DNS و رکوردهای A</span>
 
 ---
 
