@@ -1,7 +1,3 @@
-nebula.zyxel.com
-node-bf.pool-1-2.dynamic.nt-isp.net
-node-bfr.pool-1-2.dynamic.nt-isp.net
-node-dm.pool-1-2.dynamic.nt-isp.net
-node-kw6.pool-1-2.dynamic.nt-isp.net
-this.media
+node-24v.pool-1-2.dynamic.nt-isp.net
+node-39r.pool-1-2.dynamic.nt-isp.net
 www.w3.org
