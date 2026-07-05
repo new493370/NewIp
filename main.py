@@ -9,8 +9,7 @@ URLS = [
     "https://www.cloudflare.com/ips",
 ]
 
-# صفحات fetus
-for i in range(1, 10):
+for i in range(1, 11):
     URLS.append(
         f"https://ipv4.fetus.jp/ir?_lang=en-US&cidr-page=2&list-page={i}"
     )
@@ -43,10 +42,8 @@ for url in URLS:
     except Exception as e:
         print(f"Skip: {url} ({e})")
 
-# حذف تکراری + ترتیب پایه ثابت
 cidrs = sorted(cidrs)
 
-# همزن واقعی
 SystemRandom().shuffle(cidrs)
 
 with open("iran_ipv4.txt", "w", encoding="utf-8") as f:
