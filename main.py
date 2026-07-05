@@ -1,6 +1,7 @@
-import requests
 import re
-import random
+import time
+import requests
+from random import SystemRandom
 
 URLS = [
     "https://scansearch.net/en/resources/ip-ranges/ir/",
@@ -20,24 +21,36 @@ CIDR_RE = re.compile(
     r"/(?:3[0-2]|[12]?\d)\b"
 )
 
-cidrs = set()
-
-headers = {
-    "User-Agent": "Mozilla/5.0"
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/138.0 Safari/537.36"
+    )
 }
+
+session = requests.Session()
+session.headers.update(HEADERS)
+
+cidrs = set()
 
 for url in URLS:
     try:
-        print("Fetching:", url)
-        text = requests.get(url, headers=headers, timeout=30).text
-        cidrs.update(CIDR_RE.findall(text))
+        print(f"Fetching: {url}")
+        response = session.get(url, timeout=30)
+        response.raise_for_status()
+        cidrs.update(CIDR_RE.findall(response.text))
     except Exception as e:
-        print("Skip:", e)
+        print(f"Skip: {url} ({e})")
 
-cidrs = list(cidrs)
-random.shuffle(cidrs)
+# حذف تکراری + ترتیب پایه ثابت
+cidrs = sorted(cidrs)
 
-with open("iran_ipv4.txt", "w") as f:
+# همزن واقعی
+SystemRandom().shuffle(cidrs)
+
+with open("iran_ipv4.txt", "w", encoding="utf-8") as f:
+    f.write(f"# Updated: {time.strftime('%Y-%m-%d %H:%M:%S UTC', time.gmtime())}\n")
     f.write("\n".join(cidrs))
 
 print(f"Done. {len(cidrs)} IPv4 CIDRs saved.")
