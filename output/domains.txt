@@ -1,3 +1,0 @@
-node-24v.pool-1-2.dynamic.nt-isp.net
-node-39r.pool-1-2.dynamic.nt-isp.net
-www.w3.org
